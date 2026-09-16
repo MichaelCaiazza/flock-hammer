@@ -1,0 +1,31 @@
+# Runs every night, refreshes the data files, and commits them.
+# Optional repo settings:
+#   Variables -> SITE_URL       your GitHub Pages URL (used for links in the RSS feed and Discord posts)
+#   Variables -> ALERT_STATES   e.g. "Texas,Colorado" to only alert for some states
+#   Secrets   -> DISCORD_WEBHOOK  a Discord channel webhook URL to receive new-camera alerts
+name: Nightly camera export
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: node scripts/export.mjs
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+          ALERT_STATES: ${{ vars.ALERT_STATES }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+      - name: Commit if changed
+        run: |
+          git config user.name  "flock-hammer-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Nightly camera data $(date -u +%F)"
+          git push
