@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flock Hammer — ALPR camera map</title>
+<meta name="description" content="Community map of Flock Safety and other license-plate-reader cameras, from OpenStreetMap.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0e15; --glass: rgba(15,20,30,.72); --glass-line: rgba(255,255,255,.08);
+    --ink: #f2f5f9; --muted: #7d8899; --ice: #8fd3ff; --signal: #ff5a36; --signal-soft: rgba(255,90,54,.22);
+    --ok: #4ade80; --radius: 18px; --shadow: 0 20px 50px -20px rgba(0,0,0,.8), 0 0 0 1px var(--glass-line);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink);
+    font-family: Manrope, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  #app { position: relative; height: 100%; }
+  #map { position: absolute; inset: 0; background: var(--bg); }
+  .glass { position: absolute; z-index: 1000; background: var(--glass); backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%); border-radius: var(--radius); box-shadow: var(--shadow); }
+
+  .brand { top: 16px; left: 16px; padding: 18px 22px 16px; min-width: 210px; }
+  .brand h1 { margin: 0 0 10px; font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .brand .big { font-size: 44px; font-weight: 800; letter-spacing: -.04em; line-height: 1; font-variant-numeric: tabular-nums; }
+  .brand .sub { margin-top: 6px; font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+  .brand .sub b { color: var(--ink); font-weight: 600; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; }
+  .brand .links { margin-top: 12px; display: flex; gap: 14px; font-size: 13px; font-weight: 700; }
+  .brand .links a { color: var(--ice); text-decoration: none; }
+  .brand .links a:hover { text-decoration: underline; }
+
+  .search { top: 16px; right: 16px; display: flex; align-items: center; gap: 6px; padding: 6px; border-radius: 999px; width: 340px; max-width: calc(100vw - 32px); }
+  .search input { flex: 1; min-width: 0; font: inherit; font-size: 14px; padding: 9px 14px; border: 0; border-radius: 999px; background: rgba(255,255,255,.06); color: var(--ink); }
+  .search input::placeholder { color: var(--muted); }
+  .search input:focus-visible { outline: 2px solid var(--ice); outline-offset: 1px; }
+
+  .tools { top: 74px; right: 16px; display: flex; flex-direction: column; gap: 4px; padding: 8px; width: 340px; max-width: calc(100vw - 32px); }
+  .tools .row { display: flex; gap: 6px; }
+  .tools .row > * { flex: 1; }
+
+  .switch { display: flex; align-items: center; gap: 10px; padding: 8px 12px; font-size: 13px; font-weight: 600; cursor: pointer; user-select: none; border-radius: 12px; }
+  .switch:hover { background: rgba(255,255,255,.04); }
+  .switch input { position: absolute; opacity: 0; width: 0; height: 0; }
+  .switch .track { width: 34px; height: 20px; border-radius: 999px; background: rgba(255,255,255,.12); position: relative; transition: background .2s; flex: none; }
+  .switch .track::after { content: ""; position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: 50%; background: var(--ink); transition: transform .2s; }
+  .switch input:checked + .track { background: var(--signal); }
+  .switch.ice input:checked + .track { background: var(--ice); }
+  .switch input:checked + .track::after { transform: translateX(14px); }
+  .switch input:focus-visible + .track { outline: 2px solid var(--ice); outline-offset: 3px; }
+
+  button { font: inherit; font-size: 13px; font-weight: 700; padding: 9px 16px; cursor: pointer; border: 0; border-radius: 999px;
+    background: var(--ice); color: #06121c; transition: transform .12s, filter .12s; white-space: nowrap; }
+  button.ghost { background: rgba(255,255,255,.07); color: var(--ink); }
+  button.hot { background: var(--signal); color: #1a0600; }
+  button:hover { filter: brightness(1.08); }
+  button:active { transform: scale(.97); }
+  button:focus-visible { outline: 2px solid var(--ice); outline-offset: 3px; }
+
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); flex: none; }
+  .dot.live { background: var(--ok); box-shadow: 0 0 0 4px rgba(74,222,128,.18); }
+  .dot.busy { background: var(--signal); animation: pulse 1s infinite alternate; }
+  @keyframes pulse { to { opacity: .3; } }
+
+  .attrib { bottom: 12px; left: 16px; padding: 6px 12px; font-size: 11px; color: var(--muted); border-radius: 999px; }
+  .attrib a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--glass-line); }
+
+  .leaflet-container { font-family: inherit; }
+  .leaflet-control-zoom { border: 0 !important; box-shadow: var(--shadow) !important; border-radius: 12px !important; overflow: hidden; }
+  .leaflet-control-zoom a { background: var(--glass) !important; backdrop-filter: blur(18px); color: var(--ink) !important; border: 0 !important; width: 36px !important; height: 36px !important; line-height: 36px !important; }
+  .leaflet-control-zoom a:hover { background: rgba(255,255,255,.1) !important; }
+  .leaflet-control-attribution { display: none; }
+  .leaflet-popup-content-wrapper { background: var(--glass); backdrop-filter: blur(18px); color: var(--ink); border-radius: 14px; box-shadow: var(--shadow); }
+  .leaflet-popup-tip { background: var(--glass); }
+  .leaflet-popup-content { font-size: 13px; line-height: 1.5; margin: 14px 16px; min-width: 220px; }
+  .leaflet-popup-content strong { font-size: 15px; font-weight: 800; letter-spacing: -.01em; }
+  .leaflet-popup-content .new { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 999px; background: rgba(143,211,255,.18); color: var(--ice); font-size: 11px; font-weight: 700; vertical-align: 2px; }
+  .leaflet-popup-content dl { margin: 8px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; }
+  .leaflet-popup-content dt { color: var(--muted); font-family: "JetBrains Mono", monospace; font-size: 11px; padding-top: 2px; }
+  .leaflet-popup-content dd { margin: 0; }
+  .leaflet-popup-content .actions { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 10px; }
+  .leaflet-popup-content a { color: var(--ice); font-weight: 600; text-decoration: none; }
+  .leaflet-popup-content a.copy { cursor: pointer; }
+  .leaflet-popup-close-button { color: var(--muted) !important; }
+
+  .cluster { background: var(--signal-soft); border: 1.5px solid var(--signal); border-radius: 50%; color: var(--ink);
+    font-family: "JetBrains Mono", monospace; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 24px var(--signal-soft); backdrop-filter: blur(4px); }
+  .cluster.ice { background: rgba(143,211,255,.2); border-color: var(--ice); box-shadow: 0 0 24px rgba(143,211,255,.2); }
+
+  .notice { position: absolute; z-index: 1000; left: 50%; bottom: 20px; transform: translateX(-50%) translateY(6px);
+    background: var(--glass); backdrop-filter: blur(18px); border-radius: 999px; box-shadow: var(--shadow);
+    padding: 10px 18px; font-size: 13px; font-weight: 600; pointer-events: none; opacity: 0; transition: opacity .2s, transform .2s; max-width: 90vw; }
+  .notice.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* modal */
+  .scrim { position: fixed; inset: 0; z-index: 2000; background: rgba(5,8,12,.6); display: none; align-items: center; justify-content: center; padding: 16px; }
+  .scrim.open { display: flex; }
+  .modal { position: relative; max-width: 520px; width: 100%; max-height: 90vh; overflow: auto; padding: 26px 28px; font-size: 14px; line-height: 1.55; }
+  .modal h2 { margin: 0 0 6px; font-size: 22px; font-weight: 800; letter-spacing: -.02em; }
+  .modal p { margin: 10px 0; color: var(--muted); }
+  .modal p b { color: var(--ink); font-weight: 600; }
+  .modal ul { margin: 8px 0 12px; padding-left: 20px; color: var(--muted); }
+  .modal li b { color: var(--ink); font-weight: 600; }
+  .modal pre { margin: 12px 0; padding: 12px 14px; border-radius: 12px; background: rgba(0,0,0,.35); font-family: "JetBrains Mono", monospace; font-size: 12px; line-height: 1.6; overflow: auto; }
+  .modal .row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .modal .close { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; padding: 0; border-radius: 50%; background: rgba(255,255,255,.08); color: var(--ink); font-size: 18px; line-height: 32px; }
+
+  @media (prefers-reduced-motion: reduce) { .dot.busy { animation: none; } * { transition: none !important; } }
+  @media (max-width: 720px) {
+    .brand { left: 12px; top: 12px; right: 12px; min-width: 0; padding: 14px 16px; }
+    .brand .big { font-size: 34px; }
+    .search { top: auto; bottom: 118px; left: 12px; right: 12px; width: auto; }
+    .tools { top: auto; bottom: 48px; left: 12px; right: 12px; width: auto; flex-direction: row; overflow-x: auto; padding: 6px; }
+    .tools .row { flex: none; }
+    .tools .switch { white-space: nowrap; }
+    .attrib { bottom: 12px; }
+    .leaflet-bottom.leaflet-right { bottom: 232px; }
+    .leaflet-bottom.leaflet-right .leaflet-control { margin-bottom: 0; }
+  }
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="map"></div>
+
+  <section class="glass brand">
+    <h1>Flock Hammer</h1>
+    <div class="big" id="count">0</div>
+    <div class="sub"><span id="dot" class="dot"></span>cameras mapped · <b id="updated">—</b></div>
+    <div class="links"><a href="stats.html">Stats</a><a href="#" id="aboutLink">How to spot one</a><a href="data/feed.xml">New-camera feed</a></div>
+  </section>
+
+  <form class="glass search" id="searchForm">
+    <input id="q" type="search" placeholder="Search a city, address or intersection" autocomplete="off" aria-label="Search location">
+    <button type="submit">Go</button>
+  </form>
+
+  <div class="glass tools">
+    <div class="row">
+      <label class="switch"><input type="checkbox" id="flockOnly" checked><span class="track"></span>Flock only</label>
+      <label class="switch ice"><input type="checkbox" id="newOnly"><span class="track"></span>New (30 days)</label>
+    </div>
+    <div class="row">
+      <button class="hot" id="reportBtn">Report a camera</button>
+      <button class="ghost" id="downloadBtn">Download area</button>
+      <button class="ghost" id="refresh">Refresh</button>
+    </div>
+  </div>
+
+  <div class="glass attrib">Data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors · tiles © <a href="https://carto.com/" target="_blank" rel="noopener">CARTO</a></div>
+</div>
+<div id="notice" class="notice"></div>
+
+<div class="scrim" id="reportModal">
+  <div class="glass modal" role="dialog" aria-labelledby="reportTitle" style="position:relative">
+    <button class="close" data-close aria-label="Close">×</button>
+    <h2 id="reportTitle">Report a camera</h2>
+    <p>This map is built from OpenStreetMap, so adding a camera there puts it here (and on every other map using the data) within a day.</p>
+    <p><b>How to spot a Flock camera</b></p>
+    <ul>
+      <li>A <b>small black box</b> about the size of a hardcover book, mounted on its own pole or a light post, 8–12 ft up.</li>
+      <li>A <b>solar panel</b> on top or beside it, angled south.</li>
+      <li>Usually at <b>intersections, neighborhood entrances</b>, shopping-center exits and on-ramps, aimed at the lanes of traffic.</li>
+      <li>No visible lens dome or housing like a traffic camera; it looks like a plain box.</li>
+    </ul>
+    <p><b>Tags to use</b> (copy these into the editor):</p>
+    <pre id="tagBlock">man_made=surveillance
+surveillance=public
+surveillance:type=ALPR
+surveillance:zone=traffic
+camera:type=fixed
+camera:mount=pole
+manufacturer=Flock Safety
+direction=  (bearing 0–359 the lens points, or e.g. NE)
+operator=  (police dept or HOA, if known)</pre>
+    <p>Stand where the camera is, note the compass bearing it faces, then open the editor at your current view, place a point, and paste the tags.</p>
+    <div class="row">
+      <button id="copyTags">Copy tags</button>
+      <button class="ghost" id="openEditor">Open OSM editor here</button>
+      <a href="https://wiki.openstreetmap.org/wiki/Tag:surveillance:type%3DALPR" target="_blank" rel="noopener" style="align-self:center;color:var(--ice);font-weight:700;font-size:13px;text-decoration:none">Tagging guide</a>
+    </div>
+  </div>
+</div>
+
+<div class="scrim" id="dlModal">
+  <div class="glass modal" role="dialog" aria-labelledby="dlTitle">
+    <button class="close" data-close aria-label="Close">×</button>
+    <h2 id="dlTitle">Download cameras in view</h2>
+    <p><span id="dlCount">0</span> cameras match your current view and filters.</p>
+    <p><b>GPX</b> works with OsmAnd, Garmin devices and most nav apps and can give you proximity alerts while driving. <b>KML</b> opens in Google Earth and Google My Maps. <b>GeoJSON</b> is for developers.</p>
+    <div class="row">
+      <button data-fmt="gpx">GPX</button>
+      <button data-fmt="kml" class="ghost">KML</button>
+      <button data-fmt="geojson" class="ghost">GeoJSON</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+<script>
+(() => {
+  // ---------- config ----------
+  const DATA_URL   = 'data/cameras.geojson';
+  const OVERPASS   = 'https://overpass-api.de/api/interpreter';
+  const NOMINATIM  = 'https://nominatim.openstreetmap.org/search';
+  const REFRESH_MS = 30 * 60 * 1000;
+  const CONE_ZOOM  = 13;   // cones at this zoom and closer
+  const HEAT_ZOOM  = 8;    // heatmap below this zoom, clusters at/above
+  const CONE_LEN_M = 70, CONE_HALF = 30;
+  const NEW_DAYS   = 30;
+
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+  const notice = (msg, ms = 2500) => { const el = $('notice'); el.textContent = msg; el.classList.add('show'); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove('show'), ms); };
+
+  // ---------- map ----------
+  const hash = parseHash();
+  const map = L.map('map', { preferCanvas: true, zoomControl: false }).setView(hash.center || [39.5, -98.35], hash.zoom || 5);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 20 }).addTo(map);
+  L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+  const coneLayer = L.layerGroup().addTo(map);
+  const heat = L.heatLayer([], { radius: 22, blur: 18, minOpacity: .35, gradient: { .2: '#3b2a26', .5: '#ff5a36', 1: '#ffd6c8' } });
+  const clusters = L.markerClusterGroup({
+    maxClusterRadius: 50, disableClusteringAtZoom: 15, spiderfyOnMaxZoom: false, showCoverageOnHover: false, chunkedLoading: true,
+    iconCreateFunction: c => {
+      const n = c.getChildCount(), s = n < 10 ? 30 : n < 100 ? 38 : 46;
+      return L.divIcon({ html: n, className: 'cluster' + ($('newOnly').checked ? ' ice' : ''), iconSize: [s, s] });
+    }
+  });
+
+  // ---------- geometry ----------
+  const CARD = { N:0, NNE:22.5, NE:45, ENE:67.5, E:90, ESE:112.5, SE:135, SSE:157.5, S:180, SSW:202.5, SW:225, WSW:247.5, W:270, WNW:292.5, NW:315, NNW:337.5 };
+  function parseDirection(tags) {
+    const raw = tags['camera:direction'] ?? tags.direction; if (!raw) return null;
+    const s = String(raw).trim().toUpperCase();
+    if (s in CARD) return [CARD[s] - CONE_HALF, CARD[s] + CONE_HALF];
+    const r = s.match(/^(-?\d+(?:\.\d+)?)\s*-\s*(-?\d+(?:\.\d+)?)$/); if (r) return [+r[1], +r[2]];
+    const n = parseFloat(s); return isNaN(n) ? null : [n - CONE_HALF, n + CONE_HALF];
+  }
+  function dest(lat, lon, brg, d) {
+    const R = 6371000, b = brg * Math.PI / 180, p1 = lat * Math.PI / 180, l1 = lon * Math.PI / 180, dl = d / R;
+    const p2 = Math.asin(Math.sin(p1) * Math.cos(dl) + Math.cos(p1) * Math.sin(dl) * Math.cos(b));
+    const l2 = l1 + Math.atan2(Math.sin(b) * Math.sin(dl) * Math.cos(p1), Math.cos(dl) - Math.sin(p1) * Math.sin(p2));
+    return [p2 * 180 / Math.PI, l2 * 180 / Math.PI];
+  }
+  function cone(lat, lon, [a, b]) {
+    let span = ((b - a) % 360 + 360) % 360; if (!span) span = 360;
+    const steps = Math.max(4, Math.ceil(span / 8)), pts = [[lat, lon]];
+    for (let i = 0; i <= steps; i++) pts.push(dest(lat, lon, a + span * i / steps, CONE_LEN_M));
+    return pts;
+  }
+
+  // ---------- data ----------
+  let cameras = [], markers = new Map();
+  const isFlock = c => c.flock ?? /flock/i.test(c.tags.manufacturer || '');
+  const isNew = c => c.ts && (Date.now() - new Date(c.ts)) / 864e5 <= NEW_DAYS;
+  const visible = () => cameras.filter(c => (!$('flockOnly').checked || isFlock(c)) && (!$('newOnly').checked || isNew(c)));
+  const inView = () => { const b = map.getBounds(); return visible().filter(c => b.contains([c.lat, c.lon])); };
+
+  async function load() {
+    $('dot').className = 'dot busy';
+    try {
+      let stamp;
+      try {
+        const gj = await (await fetch(DATA_URL + '?t=' + Date.now())).json();
+        cameras = gj.features.map(f => ({ id: f.properties.id, lon: f.geometry.coordinates[0], lat: f.geometry.coordinates[1], tags: f.properties.tags || {}, ts: f.properties.ts, flock: f.properties.flock, state: f.properties.state }));
+        stamp = gj.generated ? new Date(gj.generated) : new Date();
+      } catch {
+        const q = `[out:json][timeout:90];(node["man_made"="surveillance"]["surveillance:type"="ALPR"];node["man_made"="surveillance"]["manufacturer"~"flock",i];);out meta;`;
+        const res = await fetch(OVERPASS, { method: 'POST', body: 'data=' + encodeURIComponent(q) });
+        if (!res.ok) throw new Error(`Overpass ${res.status}`);
+        cameras = (await res.json()).elements.filter(e => e.type === 'node').map(e => ({ id: e.id, lat: e.lat, lon: e.lon, tags: e.tags || {}, ts: e.timestamp }));
+        stamp = new Date();
+      }
+      refresh();
+      $('updated').textContent = stamp.toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+      $('dot').className = 'dot live';
+      if (hash.cam) focusCamera(hash.cam);
+    } catch (e) { $('dot').className = 'dot'; notice(`Couldn't load cameras (${e.message}). Try again in a minute.`, 5000); }
+  }
+
+  function refresh() {
+    const vis = visible();
+    $('count').textContent = vis.length.toLocaleString();
+    heat.setLatLngs(vis.map(c => [c.lat, c.lon, 1]));
+    clusters.clearLayers(); markers.clear();
+    const color = $('newOnly').checked ? '#8fd3ff' : '#ff5a36';
+    clusters.addLayers(vis.map(c => {
+      const m = L.circleMarker([c.lat, c.lon], { radius: 6, color: '#111', weight: 1.5, fillColor: color, fillOpacity: 1 });
+      m.bindPopup(() => popupHtml(c), { maxWidth: 320 });
+      m.on('popupopen', () => setHash(c.id)); m.on('popupclose', () => setHash(null));
+      markers.set(c.id, m); return m;
+    }));
+    renderLayers(); renderCones();
+  }
+
+  function renderLayers() {
+    const zoomedOut = map.getZoom() < HEAT_ZOOM;
+    if (zoomedOut) { map.removeLayer(clusters); if (!map.hasLayer(heat)) heat.addTo(map); }
+    else { map.removeLayer(heat); if (!map.hasLayer(clusters)) clusters.addTo(map); }
+  }
+  function renderCones() {
+    coneLayer.clearLayers(); if (map.getZoom() < CONE_ZOOM) return;
+    const b = map.getBounds().pad(.2), color = $('newOnly').checked ? '#8fd3ff' : '#ff5a36';
+    for (const c of visible()) {
+      if (!b.contains([c.lat, c.lon])) continue;
+      const d = parseDirection(c.tags);
+      if (d) L.polygon(cone(c.lat, c.lon, d), { color, weight: 1, opacity: .7, fillColor: color, fillOpacity: .2, interactive: false }).addTo(coneLayer);
+    }
+  }
+
+  function popupHtml(c) {
+    const t = c.tags, op = t.operator;
+    const rows = ['manufacturer','operator','direction','camera:direction','camera:mount','surveillance:zone','start_date','note']
+      .filter(k => t[k]).map(k => `<dt>${esc(k)}</dt><dd>${esc(t[k])}</dd>`).join('');
+    const added = c.ts ? `<dt>added</dt><dd>${new Date(c.ts).toLocaleDateString()}</dd>` : '';
+    const portal = op ? `<a href="https://duckduckgo.com/?q=${encodeURIComponent('site:transparency.flocksafety.com ' + op)}" target="_blank" rel="noopener">Transparency portal</a>` : '';
+    const site = t.website || t['contact:website'] || t['operator:website'];
+    return `<strong>${esc(t.manufacturer || 'ALPR camera')}</strong>${isNew(c) ? '<span class="new">New</span>' : ''}
+      <dl>${rows}${added}</dl>
+      <div class="actions">
+        <a class="copy" data-share="${c.id}">Copy link</a>
+        <a href="https://www.openstreetmap.org/node/${c.id}" target="_blank" rel="noopener">Edit on OSM</a>
+        ${portal}${site ? `<a href="${esc(site)}" target="_blank" rel="noopener">Operator site</a>` : ''}
+        <a href="https://www.google.com/maps?q=&layer=c&cbll=${c.lat},${c.lon}" target="_blank" rel="noopener">Street View</a>
+      </div>`;
+  }
+  document.addEventListener('click', e => {
+    const a = e.target.closest('[data-share]'); if (!a) return;
+    e.preventDefault();
+    navigator.clipboard.writeText(location.href).then(() => notice('Link copied'), () => notice('Copy failed; use the address bar'));
+  });
+
+  function focusCamera(id) {
+    const m = markers.get(+id), c = cameras.find(x => x.id === +id); if (!m || !c) return;
+    map.setView([c.lat, c.lon], Math.max(map.getZoom(), 17));
+    setTimeout(() => clusters.zoomToShowLayer(m, () => m.openPopup()), 300);
+  }
+
+  // ---------- URL hash ----------
+  function parseHash() {
+    const h = Object.fromEntries(location.hash.slice(1).split('&').map(kv => kv.split('=')));
+    const m = (h.map || '').split('/').map(Number), out = {};
+    if (m.length === 3 && m.every(isFinite)) { out.zoom = m[0]; out.center = [m[1], m[2]]; }
+    if (h.cam) out.cam = h.cam;
+    return out;
+  }
+  let camInHash = hash.cam || null;
+  function setHash(cam) {
+    if (cam !== undefined) camInHash = cam;
+    const c = map.getCenter();
+    history.replaceState(null, '', `#map=${map.getZoom()}/${c.lat.toFixed(5)}/${c.lng.toFixed(5)}${camInHash ? '&cam=' + camInHash : ''}`);
+  }
+
+  // ---------- search ----------
+  $('searchForm').addEventListener('submit', async e => {
+    e.preventDefault(); const q = $('q').value.trim(); if (!q) return;
+    notice('Searching…');
+    try {
+      const r = await (await fetch(`${NOMINATIM}?format=json&limit=1&q=${encodeURIComponent(q)}`)).json();
+      if (!r.length) return notice('No results for that search', 3000);
+      const { lat, lon, boundingbox: bb, display_name } = r[0];
+      if (bb) map.fitBounds([[+bb[0], +bb[2]], [+bb[1], +bb[3]]], { maxZoom: 16 }); else map.setView([+lat, +lon], 15);
+      notice(display_name.split(',').slice(0, 3).join(','), 3000);
+    } catch { notice('Search unavailable right now', 3000); }
+  });
+
+  // ---------- modals ----------
+  const open = id => $(id).classList.add('open'), close = () => document.querySelectorAll('.scrim').forEach(s => s.classList.remove('open'));
+  document.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', close));
+  document.querySelectorAll('.scrim').forEach(s => s.addEventListener('click', e => { if (e.target === s) close(); }));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  $('reportBtn').addEventListener('click', () => open('reportModal'));
+  $('aboutLink').addEventListener('click', e => { e.preventDefault(); open('reportModal'); });
+  $('copyTags').addEventListener('click', () => {
+    const txt = $('tagBlock').textContent.split('\n').map(l => l.replace(/\s+\(.*\)$/, '')).join('\n');
+    navigator.clipboard.writeText(txt).then(() => notice('Tags copied'));
+  });
+  $('openEditor').addEventListener('click', () => {
+    const c = map.getCenter();
+    window.open(`https://www.openstreetmap.org/edit?editor=id#map=${Math.max(map.getZoom(), 18)}/${c.lat.toFixed(6)}/${c.lng.toFixed(6)}`, '_blank', 'noopener');
+  });
+
+  // ---------- download ----------
+  $('downloadBtn').addEventListener('click', () => { $('dlCount').textContent = inView().length.toLocaleString(); open('dlModal'); });
+  $('dlModal').addEventListener('click', e => {
+    const fmt = e.target.dataset?.fmt; if (!fmt) return;
+    const list = inView(); if (!list.length) return notice('No cameras in view to download', 3000);
+    const name = c => (c.tags.manufacturer || 'ALPR') + ' camera';
+    const desc = c => Object.entries(c.tags).map(([k, v]) => `${k}=${v}`).join('; ');
+    let body, mime;
+    if (fmt === 'gpx') {
+      mime = 'application/gpx+xml';
+      body = `<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="Flock Hammer" xmlns="http://www.topografix.com/GPX/1/1">\n` +
+        list.map(c => `  <wpt lat="${c.lat}" lon="${c.lon}"><name>${esc(name(c))}</name><desc>${esc(desc(c))}</desc><sym>Camera</sym><type>ALPR</type></wpt>`).join('\n') + '\n</gpx>';
+    } else if (fmt === 'kml') {
+      mime = 'application/vnd.google-earth.kml+xml';
+      body = `<?xml version="1.0" encoding="UTF-8"?>\n<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>ALPR cameras</name>\n` +
+        list.map(c => `  <Placemark><name>${esc(name(c))}</name><description>${esc(desc(c))}</description><Point><coordinates>${c.lon},${c.lat},0</coordinates></Point></Placemark>`).join('\n') + '\n</Document></kml>';
+    } else {
+      mime = 'application/geo+json';
+      body = JSON.stringify({ type: 'FeatureCollection', features: list.map(c => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [c.lon, c.lat] }, properties: { id: c.id, ...c.tags } })) });
+    }
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([body], { type: mime }));
+    a.download = `alpr-cameras-${new Date().toISOString().slice(0, 10)}.${fmt}`;
+    a.click(); URL.revokeObjectURL(a.href); close();
+  });
+
+  // ---------- wiring ----------
+  map.on('moveend', () => { renderCones(); setHash(); });
+  map.on('zoomend', renderLayers);
+  $('flockOnly').addEventListener('change', refresh);
+  $('newOnly').addEventListener('change', refresh);
+  $('refresh').addEventListener('click', load);
+  setInterval(load, REFRESH_MS);
+  load();
+  if (!hash.center && navigator.geolocation) navigator.geolocation.getCurrentPosition(p => map.setView([p.coords.latitude, p.coords.longitude], 12), () => {});
+})();
+</script>
+</body>
+</html>
