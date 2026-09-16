@@ -68,6 +68,7 @@
   .attrib a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--glass-line); }
 
   .leaflet-container { font-family: inherit; }
+  .leaflet-tile-pane { filter: invert(1) hue-rotate(190deg) brightness(.72) contrast(.95) saturate(.55); }
   .leaflet-control-zoom { border: 0 !important; box-shadow: var(--shadow) !important; border-radius: 12px !important; overflow: hidden; }
   .leaflet-control-zoom a { background: var(--glass) !important; backdrop-filter: blur(18px); color: var(--ink) !important; border: 0 !important; width: 36px !important; height: 36px !important; line-height: 36px !important; }
   .leaflet-control-zoom a:hover { background: rgba(255,255,255,.1) !important; }
@@ -150,7 +151,7 @@
     </div>
   </div>
 
-  <div class="glass attrib">Data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors · tiles © <a href="https://carto.com/" target="_blank" rel="noopener">CARTO</a></div>
+  <div class="glass attrib">Data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</div>
 </div>
 <div id="notice" class="notice"></div>
 
@@ -221,7 +222,10 @@ operator=  (police dept or HOA, if known)</pre>
   // ---------- map ----------
   const hash = parseHash();
   const map = L.map('map', { preferCanvas: true, zoomControl: false }).setView(hash.center || [39.5, -98.35], hash.zoom || 5);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 20 }).addTo(map);
+  // OSM tiles, darkened via CSS (.leaflet-tile-pane filter). Free, no key.
+  // For higher traffic, sign up at stadiamaps.com (free tier) and use:
+  // 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
   L.control.zoom({ position: 'bottomright' }).addTo(map);
 
   const coneLayer = L.layerGroup().addTo(map);
