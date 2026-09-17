@@ -15,7 +15,11 @@
 
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 
-const OVERPASS   = process.env.OVERPASS_URL || 'https://overpass-api.de/api/interpreter';
+const MIRRORS = process.env.OVERPASS_URL ? [process.env.OVERPASS_URL] : [
+  'https://overpass-api.de/api/interpreter',
+  'https://overpass.kumi.systems/api/interpreter',
+  'https://maps.mail.ru/osm/tools/overpass/api/interpreter',
+];
 const STATES_URL = 'https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json';
 const SITE_URL   = (process.env.SITE_URL || '').replace(/\/$/, '');
 const WEBHOOK    = process.env.DISCORD_WEBHOOK;
@@ -34,9 +38,25 @@ const query = `[out:json][timeout:180];
   node["man_made"="surveillance"]["manufacturer"~"flock",i];
 );
 out meta;`;
-const res = await fetch(OVERPASS, { method: 'POST', headers: UA, body: 'data=' + encodeURIComponent(query) });
-if (!res.ok) throw new Error(`Overpass responded ${res.status}: ${await res.text()}`);
-const nodes = (await res.json()).elements.filter(e => e.type === 'node');
+async function fetchOverpass() {
+  const errors = [];
+  for (let attempt = 0; attempt < 2; attempt++) {
+    for (const url of MIRRORS) {
+      try {
+        console.log(`Querying ${url} (attempt ${attempt + 1})`);
+        const res = await fetch(url, { method: 'POST', headers: UA, body: 'data=' + encodeURIComponent(query), signal: AbortSignal.timeout(240_000) });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const json = await res.json();
+        if (!Array.isArray(json.elements)) throw new Error('unexpected response');
+        return json.elements.filter(e => e.type === 'node');
+      } catch (e) { errors.push(`${url}: ${e.message}`); console.warn('  failed:', e.message); }
+    }
+    await new Promise(r => setTimeout(r, 30_000));
+  }
+  throw new Error('All Overpass servers failed:\n' + errors.join('\n'));
+}
+const nodes = await fetchOverpass();
+console.log(`Got ${nodes.length} cameras from Overpass`);
 
 // ---- 2. state lookup ----
 let states = [];
