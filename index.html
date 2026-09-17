@@ -38,10 +38,10 @@
   .search input:focus-visible { outline: 2px solid var(--ice); outline-offset: 1px; }
 
   .tools { top: 74px; right: 16px; display: flex; flex-direction: column; gap: 6px; padding: 8px; width: 340px; max-width: calc(100vw - 32px); }
-  .tools .row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-  .tools .row.buttons { grid-template-columns: 1.35fr 1fr 1fr; }
-  .tools .row > * { min-width: 0; }
-  .tools button { padding: 9px 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tools .row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 6px; }
+  .tools .row.buttons { display: flex; flex-wrap: wrap; }
+  .tools .row.buttons button { flex: 1 1 auto; min-width: 0; padding: 9px 12px; white-space: nowrap; }
+  .tools .switch { min-width: 0; }
 
   .switch { display: flex; align-items: center; gap: 10px; padding: 8px 12px; font-size: 13px; font-weight: 600; cursor: pointer; user-select: none; border-radius: 12px; }
   .switch:hover { background: rgba(255,255,255,.04); }
@@ -127,8 +127,6 @@
     .leaflet-bottom.leaflet-right .leaflet-control { margin-bottom: 0; }
   }
   @media (max-width: 400px) {
-    .tools .row.buttons { grid-template-columns: 1fr 1fr; }
-    .tools .row.buttons button:first-child { grid-column: 1 / -1; }
     .search { bottom: 192px; }
     .leaflet-bottom.leaflet-right { bottom: 254px; }
   }
