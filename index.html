@@ -204,6 +204,7 @@ operator=  (police dept or HOA, if known)</pre>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
 <script>
+window.addEventListener('error', e => { const n = document.getElementById('notice'); if (n) { n.textContent = 'Page error: ' + e.message; n.classList.add('show'); } });
 (() => {
   // ---------- config ----------
   const DATA_URL   = 'data/cameras.geojson';
@@ -229,7 +230,9 @@ operator=  (police dept or HOA, if known)</pre>
   L.control.zoom({ position: 'bottomright' }).addTo(map);
 
   const coneLayer = L.layerGroup().addTo(map);
-  const heat = L.heatLayer([], { radius: 22, blur: 18, minOpacity: .35, gradient: { .2: '#3b2a26', .5: '#ff5a36', 1: '#ffd6c8' } });
+  // Heatmap is optional: if the plugin failed to load, fall back to a no-op layer so the map still works
+  const heat = L.heatLayer ? L.heatLayer([], { radius: 22, blur: 18, minOpacity: .35, gradient: { .2: '#3b2a26', .5: '#ff5a36', 1: '#ffd6c8' } })
+                           : Object.assign(L.layerGroup(), { setLatLngs() {} });
   const clusters = L.markerClusterGroup({
     maxClusterRadius: 50, disableClusteringAtZoom: 15, spiderfyOnMaxZoom: false, showCoverageOnHover: false, chunkedLoading: true,
     iconCreateFunction: c => {
@@ -286,7 +289,7 @@ operator=  (police dept or HOA, if known)</pre>
       $('updated').textContent = stamp.toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
       $('dot').className = 'dot live';
       if (hash.cam) focusCamera(hash.cam);
-    } catch (e) { $('dot').className = 'dot'; notice(`Couldn't load cameras (${e.message}). Try again in a minute.`, 5000); }
+    } catch (e) { $('dot').className = 'dot'; console.error(e); notice(`Couldn't load cameras (${e.message}). Try again in a minute.`, 8000); }
   }
 
   function refresh() {
