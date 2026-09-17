@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Flock Hammer — Stats</title>
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icon-180.png">
+<meta name="theme-color" content="#0d1526">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -20,6 +24,7 @@
   main { max-width: 1080px; margin: 0 auto; padding: 24px 16px 60px; }
   nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
   nav .brand { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  nav .ver { margin-left: 10px; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0; text-transform: none; padding: 2px 8px; border-radius: 999px; background: rgba(255,255,255,.06); }
   nav a { color: var(--ice); font-weight: 700; font-size: 13px; text-decoration: none; padding: 8px 14px; border-radius: 999px; background: var(--glass); box-shadow: var(--shadow); }
   .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
   .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
@@ -53,7 +58,7 @@
 </head>
 <body>
 <main>
-  <nav><span class="brand">Flock Hammer · Stats</span><a href="index.html">Open the map</a></nav>
+  <nav><span class="brand">Flock Hammer · Stats <span class="ver" id="ver"></span></span><a href="index.html">Open the map</a></nav>
 
   <div class="grid">
     <section class="card kpi"><h2>Cameras mapped</h2><div class="big mono" id="kTotal">—</div><div class="delta" id="dTotal"></div></section>
@@ -76,7 +81,9 @@
 
 <script>
 (async () => {
+  const APP_VERSION = '4.2';   // keep in sync with index.html
   const $ = id => document.getElementById(id);
+  $('ver').textContent = 'v' + APP_VERSION;
   const fmt = n => n.toLocaleString();
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
   const PALETTE = ['#ff5a36', '#8fd3ff', '#c4b5fd', '#4ade80', '#fbbf24', '#7d8899'];

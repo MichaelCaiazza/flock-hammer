@@ -36,15 +36,17 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>
 // ---- 1. cameras (out meta = includes the timestamp each node was last edited) ----
 // The continent is queried in slices so each request stays small and fast; a failed slice is retried on
 // the next server. Boxes are south,west,north,east. Set OVERPASS_BBOX (one box) to override, e.g. for one state.
-const SLICES = process.env.OVERPASS_BBOX ? [process.env.OVERPASS_BBOX] : [
-  '14,-170,72,-125',   // Alaska, Pacific coast, Mexico west
-  '14,-125,72,-110',   // Mountain west
-  '14,-110,72,-95',    // Plains, Texas
-  '14,-95,72,-85',     // Midwest, Gulf
-  '14,-85,72,-77',     // Great Lakes, Southeast
-  '14,-77,72,-50',     // Northeast, Atlantic Canada
-];
-const queryFor = bbox => `[out:json][timeout:120];
+// 12 slices: the continent split into 4 latitude bands x 3 longitude bands over the populated part of
+// North America, plus one wide slice for Alaska/Hawaii/far north where cameras are sparse.
+const SLICES = process.env.OVERPASS_BBOX ? [process.env.OVERPASS_BBOX] : (() => {
+  const out = ['14,-170,72,-125', '50,-125,72,-50'];             // Alaska, Hawaii, Pacific; northern Canada
+  const lats = [14, 32, 38, 43, 50], lons = [-125, -105, -88, -50]; // dense US/southern Canada/Mexico
+  for (let i = 0; i < lats.length - 1; i++)
+    for (let j = 0; j < lons.length - 1; j++)
+      out.push(`${lats[i]},${lons[j]},${lats[i + 1]},${lons[j + 1]}`);
+  return out;
+})();
+const queryFor = bbox => `[out:json][timeout:90];
 (
   node["man_made"="surveillance"]["surveillance:type"="ALPR"](${bbox});
   node["man_made"="surveillance"]["manufacturer"~"flock",i](${bbox});
@@ -56,7 +58,7 @@ async function fetchSlice(bbox) {
   for (let attempt = 0; attempt < 3; attempt++) {
     for (const url of MIRRORS) {
       try {
-        const res = await fetch(url, { method: 'POST', headers: UA, body: 'data=' + encodeURIComponent(queryFor(bbox)), signal: AbortSignal.timeout(150_000) });
+        const res = await fetch(url, { method: 'POST', headers: UA, body: 'data=' + encodeURIComponent(queryFor(bbox)), signal: AbortSignal.timeout(110_000) });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const json = await res.json();
         if (json.remark) throw new Error(`server remark: ${json.remark}`);   // timeout / memory, sent as HTTP 200

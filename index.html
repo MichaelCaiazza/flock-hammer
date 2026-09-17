@@ -7,6 +7,10 @@
 <meta name="description" content="Community map of Flock Safety and other license-plate-reader cameras, from OpenStreetMap.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icon-180.png">
+<meta name="theme-color" content="#0d1526">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -24,7 +28,8 @@
     -webkit-backdrop-filter: blur(18px) saturate(140%); border-radius: var(--radius); box-shadow: var(--shadow); }
 
   .brand { top: 16px; left: 16px; padding: 18px 22px 16px; min-width: 210px; }
-  .brand h1 { margin: 0 0 10px; font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .brand h1 { margin: 0 0 10px; font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+  .brand .ver { margin-left: auto; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 11px; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--muted); padding: 2px 8px; border-radius: 999px; background: rgba(255,255,255,.06); }
   .brand .big { font-size: 44px; font-weight: 800; letter-spacing: -.04em; line-height: 1; font-variant-numeric: tabular-nums; }
   .brand .sub { margin-top: 6px; font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
   .brand .sub b { color: var(--ink); font-weight: 600; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; }
@@ -137,7 +142,7 @@
   <div id="map"></div>
 
   <section class="glass brand">
-    <h1>Flock Hammer</h1>
+    <h1>Flock Hammer <span class="ver" id="ver"></span></h1>
     <div class="big" id="count">0</div>
     <div class="sub"><span id="dot" class="dot"></span>cameras mapped · <b id="updated">—</b></div>
     <div class="links"><a href="stats.html">Stats</a><a href="#" id="aboutLink">How to spot one</a><a href="data/feed.xml">New-camera feed</a></div>
@@ -216,6 +221,8 @@ operator=  (police dept or HOA, if known)</pre>
 window.addEventListener('error', e => { const n = document.getElementById('notice'); if (n) { n.textContent = 'Page error: ' + e.message; n.classList.add('show'); } });
 (() => {
   // ---------- config ----------
+  const APP_VERSION = '4.2';   // bump this when you ship changes
+  document.getElementById('ver').textContent = 'v' + APP_VERSION;
   const DATA_URL   = 'data/cameras.json';
   const OVERPASS   = 'https://overpass-api.de/api/interpreter';
   const NOMINATIM  = 'https://nominatim.openstreetmap.org/search';
