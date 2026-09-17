@@ -2,7 +2,7 @@
 //
 // 1. Pulls every ALPR camera (Flock and other vendors) from OpenStreetMap via Overpass
 // 2. Tags each with its US state (point-in-polygon, state outlines fetched at run time)
-// 3. Writes data/cameras.geojson for the map
+// 3. Writes data/cameras.json (compact) for the map
 // 4. Appends today's totals to data/history.json for the stats page
 // 5. Diffs against yesterday's file -> data/new.json (recent additions) + data/feed.xml (RSS)
 // 6. Optionally posts new cameras to a Discord webhook
@@ -13,7 +13,7 @@
 //   DISCORD_WEBHOOK  Discord webhook URL; if set, new cameras are posted there
 //   ALERT_STATES     comma-separated state names to alert on (default: all), e.g. "Texas,Colorado"
 
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, unlink } from 'node:fs/promises';
 
 const MIRRORS = process.env.OVERPASS_URL ? [process.env.OVERPASS_URL] : [
   'https://overpass-api.de/api/interpreter',
@@ -25,7 +25,9 @@ const SITE_URL   = (process.env.SITE_URL || '').replace(/\/$/, '');
 const WEBHOOK    = process.env.DISCORD_WEBHOOK;
 const ALERT_STATES = (process.env.ALERT_STATES || '').split(',').map(s => s.trim()).filter(Boolean);
 const UA = { 'User-Agent': 'flock-hammer-export (github actions)' };
-const P = { out: 'data/cameras.geojson', history: 'data/history.json', recent: 'data/new.json', feed: 'data/feed.xml' };
+const P = { out: 'data/cameras.json', legacy: 'data/cameras.geojson', history: 'data/history.json', recent: 'data/new.json', feed: 'data/feed.xml' };
+// Only these tags are kept, to keep the file small. Everything else is on OSM behind the "Edit on OSM" link.
+const KEEP_TAGS = ['manufacturer','operator','direction','camera:direction','camera:mount','surveillance:zone','start_date','note','website','contact:website','operator:website'];
 const NEW_KEEP_DAYS = 90;
 
 const readJson = async (p, fallback) => { try { return JSON.parse(await readFile(p, 'utf8')); } catch { return fallback; } };
@@ -83,33 +85,46 @@ const inGeom = (pt, g) => (g.type === 'Polygon' ? [g.coordinates] : g.coordinate
   .some(rings => inRing(pt, rings[0]) && !rings.slice(1).some(h => inRing(pt, h)));
 const stateOf = pt => states.find(s => inGeom(pt, s.geom))?.name || null;
 
-// ---- 3. GeoJSON ----
+// ---- 3. compact camera file ----
+// Format: { generated, source, strings: [...], cameras: [[id, lat, lon, tsDays, stateIdx, [kIdx, vIdx, ...]], ...] }
+// Indexes point into `strings`; -1 = none. tsDays = days since epoch the node was last edited (0 = unknown).
 const previous = await readJson(P.out, null);
-const prevIds = new Set(previous?.features.map(f => f.properties.id) || []);
+const prevIds = new Set(previous?.cameras?.length ? previous.cameras.map(c => c[0]) : []);
+const hadPrevious = prevIds.size > 0;   // an empty earlier file (failed run) must not make everything "new"
+
+const strings = []; const sidx = new Map();
+const S = v => { if (v == null) return -1; if (!sidx.has(v)) { sidx.set(v, strings.length); strings.push(v); } return sidx.get(v); };
 const isFlock = t => /flock/i.test(t.manufacturer || '');
-const features = nodes.map(e => {
+const r5 = n => Math.round(n * 1e5) / 1e5;
+
+const cams = nodes.map(e => {
   const tags = e.tags || {};
-  return { type: 'Feature', geometry: { type: 'Point', coordinates: [e.lon, e.lat] },
-    properties: { id: e.id, tags, state: stateOf([e.lon, e.lat]), flock: isFlock(tags), ts: e.timestamp || null } };
+  const kept = [];
+  for (const k of KEEP_TAGS) if (tags[k]) kept.push(S(k), S(String(tags[k]).slice(0, 200)));
+  const tsDays = e.timestamp ? Math.floor(new Date(e.timestamp) / 864e5) : 0;
+  return { id: e.id, lat: r5(e.lat), lon: r5(e.lon), tsDays, state: stateOf([e.lon, e.lat]), tags, flock: isFlock(tags), kept };
 });
 await mkdir('data', { recursive: true });
-await writeFile(P.out, JSON.stringify({ type: 'FeatureCollection', generated: new Date().toISOString(),
-  source: 'OpenStreetMap contributors, via Overpass API', features }));
+await writeFile(P.out, JSON.stringify({
+  generated: new Date().toISOString(), source: 'OpenStreetMap contributors, via Overpass API', strings,
+  cameras: cams.map(c => [c.id, c.lat, c.lon, c.tsDays, S(c.state), c.kept]),
+}));
+try { await unlink(P.legacy); } catch {}   // remove the old 57 MB GeoJSON if it is still there
 
 // ---- 4. history ----
 const today = new Date().toISOString().slice(0, 10);
 const history = (await readJson(P.history, [])).filter(h => h.date !== today)
-  .concat({ date: today, total: features.length, flock: features.filter(f => f.properties.flock).length });
+  .concat({ date: today, total: cams.length, flock: cams.filter(c => c.flock).length });
 await writeFile(P.history, JSON.stringify(history));
 
 // ---- 5. new cameras (only meaningful once a previous file exists) ----
-const added = previous ? features.filter(f => !prevIds.has(f.properties.id)) : [];
+const added = hadPrevious ? cams.filter(c => !prevIds.has(c.id)) : [];
 const recent = (await readJson(P.recent, []))
   .filter(r => (Date.now() - new Date(r.seen)) / 864e5 <= NEW_KEEP_DAYS)
-  .concat(added.map(f => ({ id: f.properties.id, lat: f.geometry.coordinates[1], lon: f.geometry.coordinates[0],
-    state: f.properties.state, flock: f.properties.flock, operator: f.properties.tags.operator || null,
-    manufacturer: f.properties.tags.manufacturer || null, seen: new Date().toISOString() })))
-  .sort((a, b) => b.seen.localeCompare(a.seen));
+  .concat(added.map(c => ({ id: c.id, lat: c.lat, lon: c.lon, state: c.state, flock: c.flock, operator: c.tags.operator || null,
+    manufacturer: c.tags.manufacturer || null, seen: new Date().toISOString() })))
+  .sort((a, b) => b.seen.localeCompare(a.seen))
+  .slice(0, 2000);
 await writeFile(P.recent, JSON.stringify(recent));
 
 const camUrl = r => `${SITE_URL}/#map=17/${r.lat.toFixed(5)}/${r.lon.toFixed(5)}&cam=${r.id}`;
@@ -131,16 +146,12 @@ ${recent.slice(0, 200).map(r => `<item>
 await writeFile(P.feed, rss);
 
 // ---- 6. Discord ----
-const alerts = added.filter(f => !ALERT_STATES.length || ALERT_STATES.includes(f.properties.state));
+const alerts = added.filter(c => !ALERT_STATES.length || ALERT_STATES.includes(c.state));
 if (WEBHOOK && alerts.length) {
-  const lines = alerts.slice(0, 20).map(f => {
-    const r = { id: f.properties.id, lat: f.geometry.coordinates[1], lon: f.geometry.coordinates[0], state: f.properties.state,
-      operator: f.properties.tags.operator, manufacturer: f.properties.tags.manufacturer };
-    return `• [${title(r)}](${camUrl(r)})`;
-  });
+  const lines = alerts.slice(0, 20).map(c => `• [${title({ ...c, operator: c.tags.operator, manufacturer: c.tags.manufacturer })}](${camUrl(c)})`);
   const content = `**${alerts.length} new camera${alerts.length > 1 ? 's' : ''} mapped since yesterday**\n${lines.join('\n')}${alerts.length > 20 ? `\n…and ${alerts.length - 20} more` : ''}`;
   const r = await fetch(WEBHOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content }) });
   console.log('Discord webhook:', r.status);
 }
 
-console.log(`Wrote ${features.length} cameras (${history.at(-1).flock} Flock), ${added.length} new since last run, history ${history.length} days`);
+console.log(`Wrote ${cams.length} cameras (${history.at(-1).flock} Flock), ${added.length} new since last run, history ${history.length} days`);
