@@ -34,37 +34,49 @@ const readJson = async (p, fallback) => { try { return JSON.parse(await readFile
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
 
 // ---- 1. cameras (out meta = includes the timestamp each node was last edited) ----
-// Bounding box keeps the query cheap. Default covers the US, Canada and Mexico
-// (south,west,north,east). Set OVERPASS_BBOX="" in the workflow env for worldwide.
-const BBOX = process.env.OVERPASS_BBOX === undefined ? '14,-170,72,-50' : process.env.OVERPASS_BBOX;
-const area = BBOX ? `(${BBOX})` : '';
-const query = `[out:json][timeout:600][maxsize:1073741824];
+// The continent is queried in slices so each request stays small and fast; a failed slice is retried on
+// the next server. Boxes are south,west,north,east. Set OVERPASS_BBOX (one box) to override, e.g. for one state.
+const SLICES = process.env.OVERPASS_BBOX ? [process.env.OVERPASS_BBOX] : [
+  '14,-170,72,-125',   // Alaska, Pacific coast, Mexico west
+  '14,-125,72,-110',   // Mountain west
+  '14,-110,72,-95',    // Plains, Texas
+  '14,-95,72,-85',     // Midwest, Gulf
+  '14,-85,72,-77',     // Great Lakes, Southeast
+  '14,-77,72,-50',     // Northeast, Atlantic Canada
+];
+const queryFor = bbox => `[out:json][timeout:120];
 (
-  node["man_made"="surveillance"]["surveillance:type"="ALPR"]${area};
-  node["man_made"="surveillance"]["manufacturer"~"flock",i]${area};
+  node["man_made"="surveillance"]["surveillance:type"="ALPR"](${bbox});
+  node["man_made"="surveillance"]["manufacturer"~"flock",i](${bbox});
 );
 out meta;`;
-async function fetchOverpass() {
+
+async function fetchSlice(bbox) {
   const errors = [];
-  for (let attempt = 0; attempt < 2; attempt++) {
+  for (let attempt = 0; attempt < 3; attempt++) {
     for (const url of MIRRORS) {
       try {
-        console.log(`Querying ${url} (attempt ${attempt + 1})`);
-        const res = await fetch(url, { method: 'POST', headers: UA, body: 'data=' + encodeURIComponent(query), signal: AbortSignal.timeout(660_000) });
+        const res = await fetch(url, { method: 'POST', headers: UA, body: 'data=' + encodeURIComponent(queryFor(bbox)), signal: AbortSignal.timeout(150_000) });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const json = await res.json();
-        if (json.remark) throw new Error(`server remark: ${json.remark}`);   // timeout / out of memory, sent as HTTP 200
+        if (json.remark) throw new Error(`server remark: ${json.remark}`);   // timeout / memory, sent as HTTP 200
         if (!Array.isArray(json.elements)) throw new Error('unexpected response');
-        const found = json.elements.filter(e => e.type === 'node');
-        if (found.length < 100) throw new Error(`only ${found.length} cameras returned, treating as failure`);
-        return found;
-      } catch (e) { errors.push(`${url}: ${e.message}`); console.warn('  failed:', e.message); }
+        return json.elements.filter(e => e.type === 'node');
+      } catch (e) { errors.push(`${url}: ${e.message}`); console.warn(`  slice ${bbox} failed on ${url}: ${e.message}`); }
     }
-    await new Promise(r => setTimeout(r, 30_000));
+    await new Promise(r => setTimeout(r, 20_000));
   }
-  throw new Error('All Overpass servers failed:\n' + errors.join('\n'));
+  throw new Error(`Slice ${bbox} failed on every server:\n` + errors.join('\n'));
 }
-const nodes = await fetchOverpass();
+
+const byId = new Map();
+for (const bbox of SLICES) {
+  const got = await fetchSlice(bbox);
+  for (const n of got) byId.set(n.id, n);
+  console.log(`Slice ${bbox}: ${got.length} cameras (running total ${byId.size})`);
+}
+const nodes = [...byId.values()];
+if (nodes.length < 100) throw new Error(`Only ${nodes.length} cameras returned in total, refusing to write`);
 console.log(`Got ${nodes.length} cameras from Overpass`);
 
 // ---- 2. state lookup ----
