@@ -81,14 +81,18 @@
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
   const PALETTE = ['#ff5a36', '#8fd3ff', '#c4b5fd', '#4ade80', '#fbbf24', '#7d8899'];
 
-  let gj, history = [];
-  try { gj = await (await fetch('data/cameras.geojson?t=' + Date.now())).json(); }
+  let d, history = [];
+  try { d = await (await fetch('data/cameras.json?t=' + Date.now())).json(); }
   catch { $('growth').innerHTML = '<p class="empty">No data yet. Run the nightly export once (Actions tab → Nightly camera export) and this page fills in.</p>'; return; }
   try { history = await (await fetch('data/history.json?t=' + Date.now())).json(); } catch {}
 
-  const cams = gj.features.map(f => f.properties);
+  const S = d.strings;
+  const cams = d.cameras.map(([id, lat, lon, tsDays, st, kv]) => {
+    const tags = {}; for (let i = 0; i < kv.length; i += 2) tags[S[kv[i]]] = S[kv[i + 1]];
+    return { id, tags, state: st >= 0 ? S[st] : null, flock: /flock/i.test(tags.manufacturer || '') };
+  });
   const total = cams.length;
-  const flock = cams.filter(c => c.flock ?? /flock/i.test(c.tags.manufacturer || '')).length;
+  const flock = cams.filter(c => c.flock).length;
   const withDir = cams.filter(c => c.tags.direction || c.tags['camera:direction']).length;
   const byState = count(cams.map(c => c.state).filter(Boolean));
 
@@ -148,7 +152,7 @@
       : '<p class="empty">Appears after the second nightly export, once there is a previous snapshot to compare against.</p>';
   } catch { $('recent').innerHTML = '<p class="empty">Appears after the second nightly export.</p>'; }
 
-  $('foot').innerHTML += ` Snapshot ${new Date(gj.generated).toLocaleString()}.`;
+  $('foot').innerHTML += ` Snapshot ${new Date(d.generated).toLocaleString()}.`;
 
   // ---- helpers ----
   function count(arr) { return arr.reduce((m, k) => (m[k] = (m[k] || 0) + 1, m), {}); }

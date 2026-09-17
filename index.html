@@ -207,7 +207,7 @@ operator=  (police dept or HOA, if known)</pre>
 window.addEventListener('error', e => { const n = document.getElementById('notice'); if (n) { n.textContent = 'Page error: ' + e.message; n.classList.add('show'); } });
 (() => {
   // ---------- config ----------
-  const DATA_URL   = 'data/cameras.geojson';
+  const DATA_URL   = 'data/cameras.json';
   const OVERPASS   = 'https://overpass-api.de/api/interpreter';
   const NOMINATIM  = 'https://nominatim.openstreetmap.org/search';
   const REFRESH_MS = 30 * 60 * 1000;
@@ -265,7 +265,7 @@ window.addEventListener('error', e => { const n = document.getElementById('notic
 
   // ---------- data ----------
   let cameras = [], markers = new Map();
-  const isFlock = c => c.flock ?? /flock/i.test(c.tags.manufacturer || '');
+  const isFlock = c => c.flock ??= /flock/i.test(c.tags.manufacturer || '');
   const isNew = c => c.ts && (Date.now() - new Date(c.ts)) / 864e5 <= NEW_DAYS;
   const visible = () => cameras.filter(c => (!$('flockOnly').checked || isFlock(c)) && (!$('newOnly').checked || isNew(c)));
   const inView = () => { const b = map.getBounds(); return visible().filter(c => b.contains([c.lat, c.lon])); };
@@ -275,9 +275,13 @@ window.addEventListener('error', e => { const n = document.getElementById('notic
     try {
       let stamp;
       try {
-        const gj = await (await fetch(DATA_URL + '?t=' + Date.now())).json();
-        cameras = gj.features.map(f => ({ id: f.properties.id, lon: f.geometry.coordinates[0], lat: f.geometry.coordinates[1], tags: f.properties.tags || {}, ts: f.properties.ts, flock: f.properties.flock, state: f.properties.state }));
-        stamp = gj.generated ? new Date(gj.generated) : new Date();
+        const d = await (await fetch(DATA_URL + '?t=' + Date.now())).json();
+        const S = d.strings;
+        cameras = d.cameras.map(([id, lat, lon, tsDays, st, kv]) => {
+          const tags = {}; for (let i = 0; i < kv.length; i += 2) tags[S[kv[i]]] = S[kv[i + 1]];
+          return { id, lat, lon, tags, ts: tsDays ? tsDays * 864e5 : null, state: st >= 0 ? S[st] : null };
+        });
+        stamp = d.generated ? new Date(d.generated) : new Date();
       } catch {
         const q = `[out:json][timeout:90];(node["man_made"="surveillance"]["surveillance:type"="ALPR"];node["man_made"="surveillance"]["manufacturer"~"flock",i];);out meta;`;
         const res = await fetch(OVERPASS, { method: 'POST', body: 'data=' + encodeURIComponent(q) });
