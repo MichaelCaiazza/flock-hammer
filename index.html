@@ -37,9 +37,11 @@
   .search input::placeholder { color: var(--muted); }
   .search input:focus-visible { outline: 2px solid var(--ice); outline-offset: 1px; }
 
-  .tools { top: 74px; right: 16px; display: flex; flex-direction: column; gap: 4px; padding: 8px; width: 340px; max-width: calc(100vw - 32px); }
-  .tools .row { display: flex; gap: 6px; }
-  .tools .row > * { flex: 1; }
+  .tools { top: 74px; right: 16px; display: flex; flex-direction: column; gap: 6px; padding: 8px; width: 340px; max-width: calc(100vw - 32px); }
+  .tools .row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .tools .row.buttons { grid-template-columns: 1.35fr 1fr 1fr; }
+  .tools .row > * { min-width: 0; }
+  .tools button { padding: 9px 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
   .switch { display: flex; align-items: center; gap: 10px; padding: 8px 12px; font-size: 13px; font-weight: 600; cursor: pointer; user-select: none; border-radius: 12px; }
   .switch:hover { background: rgba(255,255,255,.04); }
@@ -52,7 +54,7 @@
   .switch input:focus-visible + .track { outline: 2px solid var(--ice); outline-offset: 3px; }
 
   button { font: inherit; font-size: 13px; font-weight: 700; padding: 9px 16px; cursor: pointer; border: 0; border-radius: 999px;
-    background: var(--ice); color: #06121c; transition: transform .12s, filter .12s; white-space: nowrap; }
+    background: var(--ice); color: #06121c; transition: transform .12s, filter .12s; }
   button.ghost { background: rgba(255,255,255,.07); color: var(--ink); }
   button.hot { background: var(--signal); color: #1a0600; }
   button:hover { filter: brightness(1.08); }
@@ -111,15 +113,24 @@
 
   @media (prefers-reduced-motion: reduce) { .dot.busy { animation: none; } * { transition: none !important; } }
   @media (max-width: 720px) {
-    .brand { left: 12px; top: 12px; right: 12px; min-width: 0; padding: 14px 16px; }
-    .brand .big { font-size: 34px; }
-    .search { top: auto; bottom: 118px; left: 12px; right: 12px; width: auto; }
-    .tools { top: auto; bottom: 48px; left: 12px; right: 12px; width: auto; flex-direction: row; overflow-x: auto; padding: 6px; }
-    .tools .row { flex: none; }
-    .tools .switch { white-space: nowrap; }
-    .attrib { bottom: 12px; }
-    .leaflet-bottom.leaflet-right { bottom: 232px; }
+    .brand { left: 12px; top: 12px; right: 12px; min-width: 0; padding: 12px 16px; }
+    .brand h1 { margin-bottom: 6px; }
+    .brand .big { font-size: 30px; }
+    .brand .links { margin-top: 8px; }
+    /* bottom stack: attribution, tools, search */
+    .attrib { bottom: 10px; left: 12px; right: 12px; text-align: center; border-radius: 12px; }
+    .tools { top: auto; bottom: 42px; left: 12px; right: 12px; width: auto; flex-direction: column; gap: 6px; padding: 8px; }
+    .tools .switch { padding: 8px 10px; font-size: 12px; }
+    .tools button { padding: 9px 8px; font-size: 12px; }
+    .search { top: auto; bottom: 150px; left: 12px; right: 12px; width: auto; }
+    .leaflet-bottom.leaflet-right { bottom: 212px; }
     .leaflet-bottom.leaflet-right .leaflet-control { margin-bottom: 0; }
+  }
+  @media (max-width: 400px) {
+    .tools .row.buttons { grid-template-columns: 1fr 1fr; }
+    .tools .row.buttons button:first-child { grid-column: 1 / -1; }
+    .search { bottom: 192px; }
+    .leaflet-bottom.leaflet-right { bottom: 254px; }
   }
 </style>
 </head>
@@ -144,7 +155,7 @@
       <label class="switch"><input type="checkbox" id="flockOnly" checked><span class="track"></span>Flock only</label>
       <label class="switch ice"><input type="checkbox" id="newOnly"><span class="track"></span>New (30 days)</label>
     </div>
-    <div class="row">
+    <div class="row buttons">
       <button class="hot" id="reportBtn">Report a camera</button>
       <button class="ghost" id="downloadBtn">Download area</button>
       <button class="ghost" id="refresh">Refresh</button>
