@@ -32,10 +32,14 @@ const readJson = async (p, fallback) => { try { return JSON.parse(await readFile
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
 
 // ---- 1. cameras (out meta = includes the timestamp each node was last edited) ----
-const query = `[out:json][timeout:180];
+// Bounding box keeps the query cheap. Default covers the US, Canada and Mexico
+// (south,west,north,east). Set OVERPASS_BBOX="" in the workflow env for worldwide.
+const BBOX = process.env.OVERPASS_BBOX === undefined ? '14,-170,72,-50' : process.env.OVERPASS_BBOX;
+const area = BBOX ? `(${BBOX})` : '';
+const query = `[out:json][timeout:600][maxsize:1073741824];
 (
-  node["man_made"="surveillance"]["surveillance:type"="ALPR"];
-  node["man_made"="surveillance"]["manufacturer"~"flock",i];
+  node["man_made"="surveillance"]["surveillance:type"="ALPR"]${area};
+  node["man_made"="surveillance"]["manufacturer"~"flock",i]${area};
 );
 out meta;`;
 async function fetchOverpass() {
@@ -44,11 +48,14 @@ async function fetchOverpass() {
     for (const url of MIRRORS) {
       try {
         console.log(`Querying ${url} (attempt ${attempt + 1})`);
-        const res = await fetch(url, { method: 'POST', headers: UA, body: 'data=' + encodeURIComponent(query), signal: AbortSignal.timeout(240_000) });
+        const res = await fetch(url, { method: 'POST', headers: UA, body: 'data=' + encodeURIComponent(query), signal: AbortSignal.timeout(660_000) });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const json = await res.json();
+        if (json.remark) throw new Error(`server remark: ${json.remark}`);   // timeout / out of memory, sent as HTTP 200
         if (!Array.isArray(json.elements)) throw new Error('unexpected response');
-        return json.elements.filter(e => e.type === 'node');
+        const found = json.elements.filter(e => e.type === 'node');
+        if (found.length < 100) throw new Error(`only ${found.length} cameras returned, treating as failure`);
+        return found;
       } catch (e) { errors.push(`${url}: ${e.message}`); console.warn('  failed:', e.message); }
     }
     await new Promise(r => setTimeout(r, 30_000));
