@@ -22,7 +22,7 @@
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink);
-    font-family: Manrope, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    font-family: Manrope, system-ui, -apple-system, "Segoe UI", sans-serif; overscroll-behavior: none; }
   #app { position: relative; height: 100%; }
   #map { position: absolute; inset: 0; background: var(--bg); }
   .glass { position: absolute; z-index: 1000; background: var(--glass); backdrop-filter: blur(18px) saturate(140%);
@@ -237,6 +237,25 @@ window.addEventListener('error', e => { const n = document.getElementById('notic
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
   const notice = (msg, ms = 2500) => { const el = $('notice'); el.textContent = msg; el.classList.add('show'); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove('show'), ms); };
 
+  // ---------- native back-gesture handling for popups & modals ----------
+  // While a camera popup or a modal is open, it holds one history entry, so the
+  // phone's back gesture (or the browser Back button) closes it instead of
+  // exiting the app. When nothing is open, back leaves the app as usual.
+  let sentinel = false, popupIsOpen = false, disarmTimer = null;
+  const anyModalOpen = () => !!document.querySelector('.scrim.open');
+  function armBack() { if (!sentinel) { sentinel = true; history.pushState({ ovl: true }, '', location.href); } }
+  function disarmBack() { if (sentinel) { sentinel = false; history.back(); } }
+  // A close immediately followed by an open (switching markers/modals) cancels the disarm,
+  // so we never churn the history stack mid-switch.
+  function scheduleDisarm() { clearTimeout(disarmTimer); disarmTimer = setTimeout(() => { if (!popupIsOpen && !anyModalOpen()) disarmBack(); }, 0); }
+  function cancelDisarm() { clearTimeout(disarmTimer); disarmTimer = null; }
+  window.addEventListener('popstate', () => {
+    if (!sentinel) return;                              // not our entry: allow normal navigation / app exit
+    sentinel = false;
+    if (anyModalOpen()) closeModals(); else map.closePopup();
+    if (anyModalOpen() || popupIsOpen) armBack();       // another overlay still open underneath
+  });
+
   // ---------- map ----------
   const hash = parseHash();
   const map = L.map('map', { preferCanvas: true, zoomControl: false }).setView(hash.center || [39.5, -98.35], hash.zoom || 5);
@@ -322,7 +341,8 @@ window.addEventListener('error', e => { const n = document.getElementById('notic
     clusters.addLayers(vis.map(c => {
       const m = L.circleMarker([c.lat, c.lon], { radius: 6, color: '#111', weight: 1.5, fillColor: color, fillOpacity: 1 });
       m.bindPopup(() => popupHtml(c), { maxWidth: 320 });
-      m.on('popupopen', () => setHash(c.id)); m.on('popupclose', () => setHash(null));
+      m.on('popupopen', () => { setHash(c.id); popupIsOpen = true; cancelDisarm(); armBack(); });
+      m.on('popupclose', () => { setHash(null); popupIsOpen = false; scheduleDisarm(); });
       markers.set(c.id, m); return m;
     }));
     renderLayers(); renderCones();
@@ -400,7 +420,9 @@ window.addEventListener('error', e => { const n = document.getElementById('notic
   });
 
   // ---------- modals ----------
-  const open = id => $(id).classList.add('open'), close = () => document.querySelectorAll('.scrim').forEach(s => s.classList.remove('open'));
+  function closeModals() { document.querySelectorAll('.scrim').forEach(s => s.classList.remove('open')); }
+  const open = id => { $(id).classList.add('open'); cancelDisarm(); armBack(); };
+  const close = () => { closeModals(); scheduleDisarm(); };
   document.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', close));
   document.querySelectorAll('.scrim').forEach(s => s.addEventListener('click', e => { if (e.target === s) close(); }));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
