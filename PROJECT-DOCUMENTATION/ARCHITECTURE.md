@@ -47,7 +47,9 @@ Overpass API live from the browser. It renders cameras as clustered circle
 markers, switches to a heatmap when zoomed out past zoom 8, and draws view-angle
 "cones" at zoom 13 and closer. It reads and writes the URL hash to make map
 position and a selected camera shareable, and it calls the Nominatim API for
-location search.
+location search. Open camera popups and modals register a history entry so the
+phone's back gesture (or the browser Back button) dismisses them rather than
+exiting the app; pull-to-refresh is disabled via `overscroll-behavior: none`.
 
 `stats.html` loads `data/cameras.json`, `data/history.json`, and `data/new.json`
 and renders totals, deltas, a growth line chart (inline SVG), ranked bar lists,
@@ -68,7 +70,8 @@ state via point-in-polygon against downloaded state outlines, writes the four
 - **Map/session state:** held in JavaScript variables in `index.html` (the
   `cameras` array, a `markers` Map) plus the URL hash (`#map=zoom/lat/lon&cam=id`)
   for position and selected camera. Filter toggles are read from the checkbox
-  elements directly.
+  elements directly. A single "sentinel" history entry is pushed while any popup
+  or modal is open, so a back gesture closes the overlay instead of the app.
 - **Offline/PWA cache:** the Cache Storage entry `flock-hammer-v1`, managed by
   `sw.js`.
 - **Upstream source of truth:** OpenStreetMap. All camera facts originate there;

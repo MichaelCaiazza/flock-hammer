@@ -65,6 +65,12 @@ On a phone or desktop with a supporting browser, you can install Flock Hammer as
 a standalone app (its own icon and window) via the browser's "Install app" /
 "Add to Home screen" option. This uses the app manifest and service worker.
 
+When a camera popup or a dialog (Report a camera, Download area) is open, the
+phone's back gesture — or a browser's Back button — closes it instead of leaving
+the app; if a dialog is open over a camera popup, the first back closes the
+dialog and the next closes the popup. Back only exits the app when nothing is
+open. Pull-to-refresh is disabled so a downward swipe does not reload the app.
+
 ## The stats dashboard (stats.html)
 
 A read-only overview, reachable from the **Stats** link. It shows:

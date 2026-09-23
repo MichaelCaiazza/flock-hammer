@@ -207,6 +207,9 @@ Logo SVG (shapes; the file also carries content-credential metadata):
   animation and sets `transition: none` on everything.
 - **Does not animate:** page/route transitions, map marker entrance, chart
   drawing, modal open/close (they toggle via `display`).
+- **Native behavior:** `overscroll-behavior: none` on `html, body` disables
+  pull-to-refresh; open popups/modals are dismissed by the back gesture via the
+  History API rather than exiting the app.
 
 ---
 

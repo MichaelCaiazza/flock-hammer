@@ -29,6 +29,10 @@ Patterns the code already follows, for consistency when extending it.
   `visible()`), not mirrored into a separate state object.
 - Shareable state (map position and selected camera) is encoded in the URL hash
   as `#map=<zoom>/<lat>/<lon>&cam=<id>` and written with `history.replaceState`.
+- Open overlays (camera popup, modals) are backed by a single pushed history
+  entry and a `popstate` listener, so the phone back gesture / Back button
+  dismisses the overlay; a close-then-open switch cancels the pending disarm to
+  avoid churning the history stack.
 - Persistent data is entirely the committed `data/` files; the browser does not
   write application data (only the service worker's Cache Storage).
 
