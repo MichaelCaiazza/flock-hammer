@@ -7,6 +7,9 @@
   exiting the app; pull-to-refresh is disabled (`overscroll-behavior: none`).
 - Live current-location beacon with an accuracy ring (Geolocation `watchPosition`)
   and a locate button above the zoom control to recenter on the user.
+- Replaced Leaflet's zoom/locate controls with a custom glass button stack that
+  stays right-aligned with the side panels; fixed a mobile width cap that pushed
+  the search bar and filter panel left; locate icon is a sized-up beacon.
 - Fixed a startup crash (`locateBtn` referenced before initialization) that could
   leave the map showing zero cameras.
 

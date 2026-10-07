@@ -44,7 +44,7 @@ to the best match. Searches are answered by OpenStreetMap's Nominatim service.
 - Zoom in close (street level) and each camera with a known direction shows a
   **view cone** indicating which way it points.
 - Zoom controls are at the bottom-right.
-- A **locate button** (crosshair) sits just above the zoom controls. Your current
+- A **locate button** (a beacon icon: a dot inside a ring) sits just above the zoom controls. Your current
   location shows as a pulsing blue beacon with a translucent accuracy ring that
   follows you as you move; tap the locate button to recenter on yourself after
   panning away. The button tints when a location fix is available. Location

@@ -51,7 +51,9 @@ location search. Open camera popups and modals register a history entry so the
 phone's back gesture (or the browser Back button) dismisses them rather than
 exiting the app; pull-to-refresh is disabled via `overscroll-behavior: none`.
 The browser Geolocation API (`watchPosition`) drives a live location beacon and
-accuracy circle, with a custom locate control to recenter on the user.
+accuracy circle. The zoom and locate buttons are a custom HTML control stack
+(`.mapctrls`) positioned like the side panels, rather than Leaflet's built-in
+controls, so their right edges stay aligned with the panels.
 
 `stats.html` loads `data/cameras.json`, `data/history.json`, and `data/new.json`
 and renders totals, deltas, a growth line chart (inline SVG), ranked bar lists,

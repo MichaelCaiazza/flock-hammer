@@ -249,9 +249,10 @@ Logo SVG (shapes; the file also carries content-credential metadata):
   character, Leaflet's built-in `+`/`−` zoom glyphs). Status is a colored dot,
   not an icon.
 - **Color behavior:** the mark is single-color Signal orange; it is not
-  recolored per context. The one inline UI icon is the locate control's crosshair
-  (a 24x24 stroked SVG using `currentColor`, tinting to Ice when a location fix
-  exists).
+  recolored per context. The one inline UI icon is the locate button's beacon
+  (a filled center dot inside a stroked ring, 24x24 viewBox, `currentColor`,
+  tinting to Ice when a location fix exists), matched in size to the +/- zoom
+  glyphs. Zoom and locate are a custom HTML button stack, not Leaflet controls.
 
 ---
 
