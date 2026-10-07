@@ -231,7 +231,7 @@ operator=  (police dept or HOA, if known)</pre>
 window.addEventListener('error', e => { const n = document.getElementById('notice'); if (n) { n.textContent = 'Page error: ' + e.message; n.classList.add('show'); } });
 (() => {
   // ---------- config ----------
-  const APP_VERSION = '4.2';   // bump this when you ship changes
+  const APP_VERSION = '4.3';   // bump this when you ship changes
   document.getElementById('ver').textContent = 'v' + APP_VERSION;
   const DATA_URL   = 'data/cameras.json';
   const OVERPASS   = 'https://overpass-api.de/api/interpreter';
@@ -250,7 +250,7 @@ window.addEventListener('error', e => { const n = document.getElementById('notic
   // While a camera popup or a modal is open, it holds one history entry, so the
   // phone's back gesture (or the browser Back button) closes it instead of
   // exiting the app. When nothing is open, back leaves the app as usual.
-  let sentinel = false, popupIsOpen = false, disarmTimer = null;
+  let sentinel = false, popupIsOpen = false, disarmTimer = null, locateBtn = null;
   const anyModalOpen = () => !!document.querySelector('.scrim.open');
   function armBack() { if (!sentinel) { sentinel = true; history.pushState({ ovl: true }, '', location.href); } }
   function disarmBack() { if (sentinel) { sentinel = false; history.back(); } }
@@ -486,7 +486,7 @@ window.addEventListener('error', e => { const n = document.getElementById('notic
   });
 
   // ---------- my location ----------
-  let meMarker = null, meCircle = null, meLatLng = null, firstFix = true, geoWarned = false, locateBtn = null;
+  let meMarker = null, meCircle = null, meLatLng = null, firstFix = true, geoWarned = false;
   function showMe(p) {
     const { latitude: lat, longitude: lon, accuracy } = p.coords;
     meLatLng = [lat, lon];
