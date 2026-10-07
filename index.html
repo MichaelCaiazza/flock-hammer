@@ -77,10 +77,11 @@
 
   .leaflet-container { font-family: inherit; }
   .leaflet-tile-pane { filter: invert(1) hue-rotate(190deg) brightness(.72) contrast(.95) saturate(.55); }
+  .leaflet-right .leaflet-control { margin-right: 16px; }   /* align control column with the side panels */
   .leaflet-control-zoom { border: 0 !important; box-shadow: var(--shadow) !important; border-radius: 12px !important; overflow: hidden; }
   .leaflet-control-zoom a { background: var(--glass) !important; backdrop-filter: blur(18px); color: var(--ink) !important; border: 0 !important; width: 36px !important; height: 36px !important; line-height: 36px !important; }
   .leaflet-control-zoom a:hover { background: rgba(255,255,255,.1) !important; }
-  .locate-ctrl { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;
+  .locate-ctrl { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; margin: 0 16px 8px 0;
     border: 0; border-radius: 12px; background: var(--glass); backdrop-filter: blur(18px); color: var(--ink);
     box-shadow: var(--shadow); cursor: pointer; }
   .locate-ctrl:hover { background: rgba(255,255,255,.12); }
@@ -139,7 +140,9 @@
     .tools button { padding: 9px 8px; font-size: 12px; }
     .search { top: auto; bottom: 150px; left: 12px; right: 12px; width: auto; }
     .leaflet-bottom.leaflet-right { bottom: 212px; }
-    .leaflet-bottom.leaflet-right .leaflet-control { margin-bottom: 0; }
+    .leaflet-right .leaflet-control { margin-right: 12px; }
+    .leaflet-control-zoom { margin-bottom: 0 !important; }
+    .locate-ctrl { margin-right: 12px; }
   }
   @media (max-width: 400px) {
     .search { bottom: 192px; }
@@ -275,7 +278,7 @@ window.addEventListener('error', e => { const n = document.getElementById('notic
   const LocateControl = L.Control.extend({
     options: { position: 'bottomright' },
     onAdd() {
-      const b = L.DomUtil.create('button', 'locate-ctrl');
+      const b = L.DomUtil.create('button', 'locate-ctrl leaflet-control');
       b.type = 'button'; b.title = 'Show my location'; b.setAttribute('aria-label', 'Show my location');
       b.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>';
       L.DomEvent.disableClickPropagation(b);
@@ -284,8 +287,8 @@ window.addEventListener('error', e => { const n = document.getElementById('notic
       return b;
     }
   });
-  map.addControl(new LocateControl());               // stacks above the zoom control
   L.control.zoom({ position: 'bottomright' }).addTo(map);
+  map.addControl(new LocateControl());               // added last → sits above zoom in the bottom-right
 
   const coneLayer = L.layerGroup().addTo(map);
   // Heatmap is optional: if the plugin failed to load, fall back to a no-op layer so the map still works
