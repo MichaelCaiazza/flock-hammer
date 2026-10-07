@@ -210,6 +210,10 @@ Logo SVG (shapes; the file also carries content-credential metadata):
 - **Native behavior:** `overscroll-behavior: none` on `html, body` disables
   pull-to-refresh; open popups/modals are dismissed by the back gesture via the
   History API rather than exiting the app.
+- **Location beacon:** a 14px Ice (`#8fd3ff`) dot with a 2px white border and a
+  pulsing halo (`@keyframes beacon`, 2s), plus a translucent Ice accuracy circle
+  (stroke `opacity .4`, `fillOpacity .1`). The pulse is disabled under
+  `prefers-reduced-motion`.
 
 ---
 
@@ -245,7 +249,9 @@ Logo SVG (shapes; the file also carries content-credential metadata):
   character, Leaflet's built-in `+`/`−` zoom glyphs). Status is a colored dot,
   not an icon.
 - **Color behavior:** the mark is single-color Signal orange; it is not
-  recolored per context. No stroke-based icon grid is defined.
+  recolored per context. The one inline UI icon is the locate control's crosshair
+  (a 24x24 stroked SVG using `currentColor`, tinting to Ice when a location fix
+  exists).
 
 ---
 

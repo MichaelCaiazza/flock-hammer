@@ -13,3 +13,10 @@ open camera popups and the Report / Download modals now hold a history entry so
 the phone's back gesture (and the browser Back button) closes them instead of
 exiting the app, and pull-to-refresh is disabled (`overscroll-behavior: none`).
 No data-format, dependency, or deployment changes.
+
+## v4.2 — location beacon and locate control
+
+Later change at the same reported version (`APP_VERSION` unchanged at 4.2): the
+map now shows a live current-location beacon with an accuracy ring (via the
+Geolocation `watchPosition` API) and a locate button above the zoom control to
+recenter on the user. No data-format, dependency, or deployment changes.

@@ -50,6 +50,8 @@ position and a selected camera shareable, and it calls the Nominatim API for
 location search. Open camera popups and modals register a history entry so the
 phone's back gesture (or the browser Back button) dismisses them rather than
 exiting the app; pull-to-refresh is disabled via `overscroll-behavior: none`.
+The browser Geolocation API (`watchPosition`) drives a live location beacon and
+accuracy circle, with a custom locate control to recenter on the user.
 
 `stats.html` loads `data/cameras.json`, `data/history.json`, and `data/new.json`
 and renders totals, deltas, a growth line chart (inline SVG), ranked bar lists,
