@@ -77,17 +77,15 @@
 
   .leaflet-container { font-family: inherit; }
   .leaflet-tile-pane { filter: invert(1) hue-rotate(190deg) brightness(.72) contrast(.95) saturate(.55); }
-  .leaflet-bottom.leaflet-right { right: 16px; }            /* align control column with the side panels */
-  .leaflet-right .leaflet-control { margin-right: 0; }
-  .leaflet-control-zoom { border: 0 !important; box-shadow: var(--shadow) !important; border-radius: 12px !important; overflow: hidden; }
-  .leaflet-control-zoom a { background: var(--glass) !important; backdrop-filter: blur(18px); color: var(--ink) !important; border: 0 !important; width: 36px !important; height: 36px !important; line-height: 36px !important; }
-  .leaflet-control-zoom a:hover { background: rgba(255,255,255,.1) !important; }
-  .locate-ctrl { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; margin: 0 0 8px 0;
-    border: 0; border-radius: 12px; background: var(--glass); backdrop-filter: blur(18px); color: var(--ink);
-    box-shadow: var(--shadow); cursor: pointer; }
-  .locate-ctrl:hover { background: rgba(255,255,255,.12); }
-  .locate-ctrl:active { transform: scale(.95); }
-  .locate-ctrl.on { color: var(--ice); }
+  .leaflet-container { font-family: inherit; }
+  /* custom map control stack — positioned exactly like the side panels so the right edges always match */
+  .mapctrls { position: absolute; z-index: 1000; right: 16px; bottom: 44px; display: flex; flex-direction: column; gap: 8px; }
+  .mapbtn { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+    border: 0; border-radius: 12px; background: var(--glass); backdrop-filter: blur(18px) saturate(140%); color: var(--ink);
+    box-shadow: var(--shadow); cursor: pointer; font-size: 22px; font-weight: 500; line-height: 1; }
+  .mapbtn:hover { background: rgba(255,255,255,.12); }
+  .mapbtn:active { transform: scale(.95); }
+  .mapbtn.on { color: var(--ice); }
   .beacon { width: 14px; height: 14px; border-radius: 50%; background: var(--ice); border: 2px solid #fff;
     box-shadow: 0 0 0 0 rgba(143,211,255,.5); animation: beacon 2s infinite; }
   @keyframes beacon { 0% { box-shadow: 0 0 0 0 rgba(143,211,255,.5); } 70% { box-shadow: 0 0 0 14px rgba(143,211,255,0); } 100% { box-shadow: 0 0 0 0 rgba(143,211,255,0); } }
@@ -136,16 +134,15 @@
     .brand .links { margin-top: 8px; }
     /* bottom stack: attribution, tools, search */
     .attrib { bottom: 10px; left: 12px; right: 12px; text-align: center; border-radius: 12px; }
-    .tools { top: auto; bottom: 42px; left: 12px; right: 12px; width: auto; flex-direction: column; gap: 6px; padding: 8px; }
+    .tools { top: auto; bottom: 42px; left: 12px; right: 12px; width: auto; max-width: none; flex-direction: column; gap: 6px; padding: 8px; }
     .tools .switch { padding: 8px 10px; font-size: 12px; }
     .tools button { padding: 9px 8px; font-size: 12px; }
-    .search { top: auto; bottom: 150px; left: 12px; right: 12px; width: auto; }
-    .leaflet-bottom.leaflet-right { bottom: 212px; right: 12px; }
-    .leaflet-control-zoom { margin-bottom: 0 !important; }
+    .search { top: auto; bottom: 150px; left: 12px; right: 12px; width: auto; max-width: none; }
+    .mapctrls { right: 12px; bottom: 212px; }
   }
   @media (max-width: 400px) {
     .search { bottom: 192px; }
-    .leaflet-bottom.leaflet-right { bottom: 254px; }
+    .mapctrls { bottom: 254px; }
   }
 </style>
 </head>
@@ -178,6 +175,12 @@
   </div>
 
   <div class="glass attrib">Data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</div>
+
+  <div class="mapctrls">
+    <button class="mapbtn" id="locate" type="button" title="Show my location" aria-label="Show my location"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg></button>
+    <button class="mapbtn" id="zoomIn" type="button" aria-label="Zoom in">+</button>
+    <button class="mapbtn" id="zoomOut" type="button" aria-label="Zoom out">&minus;</button>
+  </div>
 </div>
 <div id="notice" class="notice"></div>
 
@@ -274,20 +277,11 @@ window.addEventListener('error', e => { const n = document.getElementById('notic
   // For higher traffic, sign up at stadiamaps.com (free tier) and use:
   // 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
-  const LocateControl = L.Control.extend({
-    options: { position: 'bottomright' },
-    onAdd() {
-      const b = L.DomUtil.create('button', 'locate-ctrl leaflet-control');
-      b.type = 'button'; b.title = 'Show my location'; b.setAttribute('aria-label', 'Show my location');
-      b.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>';
-      L.DomEvent.disableClickPropagation(b);
-      L.DomEvent.on(b, 'click', goToMe);
-      locateBtn = b;
-      return b;
-    }
-  });
-  L.control.zoom({ position: 'bottomright' }).addTo(map);
-  map.addControl(new LocateControl());               // added last → sits above zoom in the bottom-right
+  // custom control stack (markup in the page) — keeps right edges aligned with the panels
+  $('zoomIn').addEventListener('click', () => map.zoomIn());
+  $('zoomOut').addEventListener('click', () => map.zoomOut());
+  $('locate').addEventListener('click', goToMe);
+  locateBtn = $('locate');
 
   const coneLayer = L.layerGroup().addTo(map);
   // Heatmap is optional: if the plugin failed to load, fall back to a no-op layer so the map still works
