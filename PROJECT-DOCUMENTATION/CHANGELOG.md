@@ -10,6 +10,10 @@
 - Replaced Leaflet's zoom/locate controls with a custom glass button stack that
   stays right-aligned with the side panels; fixed a mobile width cap that pushed
   the search bar and filter panel left; locate icon is a sized-up beacon.
+- Nightly export made fault-tolerant: a failed Overpass slice no longer aborts
+  the whole run; the oversized Pacific/north slice was split; added a guard that
+  refuses to overwrite data when more than two slices fail or the total looks
+  partial (< 75% of the previous run). Per-slice timeout raised to 150s.
 - Fixed a startup crash (`locateBtn` referenced before initialization) that could
   leave the map showing zero cameras.
 

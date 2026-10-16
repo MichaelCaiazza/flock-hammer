@@ -28,7 +28,10 @@ that exist today are:
   node scripts/export.mjs
   ```
   This writes `data/cameras.json`, `data/history.json`, `data/new.json`, and
-  `data/feed.xml`, and removes the legacy `data/cameras.geojson` if present.
+  `data/feed.xml`, and removes the legacy `data/cameras.geojson` if present. The
+  continent is fetched in regional slices; a few failed slices are tolerated, but
+  the run aborts without overwriting if more than two fail or the total looks
+  partial (below 75% of the previous run).
 
 ## Environment variables and secrets
 

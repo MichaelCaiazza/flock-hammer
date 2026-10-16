@@ -39,7 +39,7 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>
 // 12 slices: the continent split into 4 latitude bands x 3 longitude bands over the populated part of
 // North America, plus one wide slice for Alaska/Hawaii/far north where cameras are sparse.
 const SLICES = process.env.OVERPASS_BBOX ? [process.env.OVERPASS_BBOX] : (() => {
-  const out = ['14,-170,72,-125', '50,-125,72,-50'];             // Alaska, Hawaii, Pacific; northern Canada
+  const out = ['14,-170,50,-125', '50,-170,72,-125', '50,-125,72,-50']; // Hawaii/Pacific; Alaska/far NW; northern Canada
   const lats = [14, 32, 38, 43, 50], lons = [-125, -105, -88, -50]; // dense US/southern Canada/Mexico
   for (let i = 0; i < lats.length - 1; i++)
     for (let j = 0; j < lons.length - 1; j++)
@@ -58,7 +58,7 @@ async function fetchSlice(bbox) {
   for (let attempt = 0; attempt < 3; attempt++) {
     for (const url of MIRRORS) {
       try {
-        const res = await fetch(url, { method: 'POST', headers: UA, body: 'data=' + encodeURIComponent(queryFor(bbox)), signal: AbortSignal.timeout(110_000) });
+        const res = await fetch(url, { method: 'POST', headers: UA, body: 'data=' + encodeURIComponent(queryFor(bbox)), signal: AbortSignal.timeout(150_000) });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const json = await res.json();
         if (json.remark) throw new Error(`server remark: ${json.remark}`);   // timeout / memory, sent as HTTP 200
@@ -66,20 +66,31 @@ async function fetchSlice(bbox) {
         return json.elements.filter(e => e.type === 'node');
       } catch (e) { errors.push(`${url}: ${e.message}`); console.warn(`  slice ${bbox} failed on ${url}: ${e.message}`); }
     }
-    await new Promise(r => setTimeout(r, 20_000));
+    await new Promise(r => setTimeout(r, 30_000));
   }
-  throw new Error(`Slice ${bbox} failed on every server:\n` + errors.join('\n'));
+  console.warn(`  slice ${bbox} failed on every server this run:\n    ` + errors.join('\n    '));
+  return null;   // signal failure without aborting the whole run
 }
 
 const byId = new Map();
+let failed = 0;
 for (const bbox of SLICES) {
   const got = await fetchSlice(bbox);
+  if (got === null) { failed++; continue; }        // a flaky slice doesn't kill the run
   for (const n of got) byId.set(n.id, n);
   console.log(`Slice ${bbox}: ${got.length} cameras (running total ${byId.size})`);
+  await new Promise(r => setTimeout(r, 2000));      // be gentle between slices
 }
 const nodes = [...byId.values()];
-if (nodes.length < 100) throw new Error(`Only ${nodes.length} cameras returned in total, refusing to write`);
-console.log(`Got ${nodes.length} cameras from Overpass`);
+
+// Guard against writing a partial dataset. Compare to the last good run's count.
+const prevCount = (await readJson(P.out, null))?.cameras?.length ?? 0;
+const floor = Math.max(100, Math.floor(prevCount * 0.75));
+if (failed > 2)
+  throw new Error(`${failed} slices failed this run; too many to trust the result, refusing to overwrite`);
+if (nodes.length < floor)
+  throw new Error(`Only ${nodes.length} cameras returned (previous run had ${prevCount}); refusing to overwrite with a likely-partial result`);
+console.log(`Got ${nodes.length} cameras from Overpass across ${SLICES.length - failed}/${SLICES.length} slices`);
 
 // ---- 2. state lookup ----
 let states = [];
