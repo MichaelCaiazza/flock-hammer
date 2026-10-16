@@ -20,7 +20,7 @@ that exist today are:
   python3 -m http.server 8000
   ```
   then open `http://localhost:8000/index.html`. Before the first data export the
-  map falls back to a live Overpass query; `stats.html` shows "run the export"
+  map falls back to a live Overpass query; the stats overlay shows "run the export"
   placeholders until `data/` files exist.
 
 - **Generate the data files locally:**
@@ -64,11 +64,10 @@ not set by the workflow.
 - **Show another tag in camera popups:** add the tag key to the array built in
   `popupHtml()` in `index.html`, and add it to `KEEP_TAGS` in
   `scripts/export.mjs` so the tag is included in `data/cameras.json`.
-- **Add a stats panel:** add a `.card` section to the grid in `stats.html` and
-  populate it in the inline script, following the existing `bars()` and
-  `count()` helpers.
+- **Add a stats panel:** add a `.statcard` section to the stats overlay grid in
+  `index.html` and populate it inside `renderStats()`, following the existing
+  `bars()` and `countBy()` helpers.
 - **Change how much data is exported:** edit the `SLICES` list or the query in
   `queryFor()` in `scripts/export.mjs`. Keep the compact output format described
   in `DATA-MODEL.md` in sync with the decoders in both HTML pages.
-- **Bump the version:** change `APP_VERSION` in both `index.html` and
-  `stats.html`, and add a `CHANGELOG.md` entry.
+- **Bump the version:** change `APP_VERSION` in `index.html`, and add a `CHANGELOG.md` entry.

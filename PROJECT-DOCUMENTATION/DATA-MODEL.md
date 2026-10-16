@@ -24,7 +24,7 @@ A camera is treated as a Flock camera when its `manufacturer` tag matches
 state it falls in, computed by point-in-polygon against downloaded state
 outlines; cameras outside those outlines get a null state.
 
-## `data/cameras.json` — full snapshot (read by both pages)
+## `data/cameras.json` — full snapshot (read by the map and the stats overlay)
 
 A compact, de-duplicated encoding designed to keep the file small. Shape:
 
@@ -47,7 +47,7 @@ A compact, de-duplicated encoding designed to keep the file small. Shape:
   (`0` = unknown); `stateIdx` = index into `strings` for the state name, or `-1`;
   and a flat list of alternating key/value indices into `strings` for the kept
   tags.
-- Both `index.html` and `stats.html` decode this by rebuilding each camera's
+- `index.html` decodes this by rebuilding each camera's
   `tags` object from the string table. `index.html` converts `tsDays` back to a
   millisecond timestamp for the "new" test.
 
@@ -60,7 +60,7 @@ current date:
 [ { "date": "YYYY-MM-DD", "total": <number>, "flock": <number> }, ... ]
 ```
 
-`stats.html` uses the last entry for current totals and looks back 7 and 30 days
+The stats overlay uses the last entry for current totals and looks back 7 and 30 days
 to compute deltas and to draw the growth line.
 
 ## `data/new.json` — recently added (new layer / recently-added list)

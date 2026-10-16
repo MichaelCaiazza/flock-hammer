@@ -12,8 +12,8 @@ CDNs and the export script uses only Node built-ins.
 | Leaflet.markercluster (CSS + JS) | 1.5.3 | cdnjs.cloudflare.com | Grouping nearby camera markers into clusters |
 | Leaflet.heat | 0.2.0 | cdnjs.cloudflare.com | Density heatmap at low zoom |
 
-`stats.html` loads no third-party libraries; its charts are hand-built inline
-SVG.
+The stats overlay loads no third-party libraries of its own; its charts are
+hand-built inline SVG.
 
 ## Runtime — fonts (CDN, both pages)
 

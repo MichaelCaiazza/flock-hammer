@@ -22,7 +22,7 @@ only through files committed in the `data/` folder.
                               |
         ┌─────────────────────┴─────────────────────┐
         |                                            |
-   index.html (map)                           stats.html (dashboard)
+   index.html (map + stats overlay)
         |                                            |
   Leaflet + markercluster + heat        fetch data/cameras.json,
   fetch data/cameras.json                 data/history.json, data/new.json
@@ -35,10 +35,10 @@ only through files committed in the `data/` folder.
 
 ## Front end
 
-Two standalone HTML files, each containing its own CSS in a `<style>` block and
-its own JavaScript in an inline IIFE. There is no shared script file, no bundler,
-and no framework. `index.html` is the interactive map; `stats.html` is a
-read-only dashboard. A web app manifest (`manifest.webmanifest`) and a service
+A single standalone HTML file (`index.html`) containing its own CSS in a `<style>`
+block and its JavaScript in an inline IIFE. There is no shared script file, no bundler,
+and no framework. `index.html` is the interactive map; the stats dashboard is an
+in-app overlay (modal) within it, not a separate page. A web app manifest (`manifest.webmanifest`) and a service
 worker (`sw.js`) make the site installable as a Progressive Web App.
 
 `index.html` loads camera data from `data/cameras.json`. If that file is missing
@@ -55,9 +55,10 @@ accuracy circle. The zoom and locate buttons are a custom HTML control stack
 (`.mapctrls`) positioned like the side panels, rather than Leaflet's built-in
 controls, so their right edges stay aligned with the panels.
 
-`stats.html` loads `data/cameras.json`, `data/history.json`, and `data/new.json`
-and renders totals, deltas, a growth line chart (inline SVG), ranked bar lists,
-a vendor breakdown, and a recently-added list. It never queries Overpass.
+The stats overlay reuses the already-loaded `cameras` array and fetches
+`data/history.json` and `data/new.json` on first open, rendering totals, deltas,
+a growth line chart (inline SVG), ranked bar lists, a vendor breakdown, and a
+recently-added list. It never queries Overpass.
 
 ## Back end
 
@@ -86,7 +87,6 @@ state via point-in-polygon against downloaded state outlines, writes the four
 ```
 /
 ├── index.html                     Map page: UI, styles, and map logic inline
-├── stats.html                     Stats dashboard: UI, styles, and logic inline
 ├── README.md                      Short repo overview and deploy steps (pre-existing)
 ├── manifest.webmanifest           PWA manifest (name, icons, standalone display)
 ├── sw.js                          Service worker: core-file cache, PWA install support

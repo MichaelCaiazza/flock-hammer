@@ -35,7 +35,7 @@ services the code calls, since there is no in-house API to describe.
 - OSM iD editor (from the Report flow):
   `https://www.openstreetmap.org/edit?editor=id#map=<z>/<lat>/<lon>`
 
-## Called from `stats.html`
+## Called from the stats overlay (in `index.html`)
 
 - `GET data/cameras.json`, `GET data/history.json`, `GET data/new.json` — the
   generated data files, served as static files by the host. No auth.

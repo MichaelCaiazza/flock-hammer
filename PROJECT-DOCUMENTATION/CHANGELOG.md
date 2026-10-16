@@ -1,5 +1,13 @@
 # Changelog
 
+## v4.4
+
+- The stats dashboard is now an in-app overlay opened from the Stats link,
+  instead of a separate `stats.html` page; `stats.html` was removed and the app
+  is a single page. The overlay reuses the already-loaded camera data and
+  participates in the back-gesture dismissal. Service worker cache bumped to v2
+  so clients drop the old cached stats page.
+
 ## v4.3
 
 - Open camera popups and the Report / Download modals hold a history entry, so the

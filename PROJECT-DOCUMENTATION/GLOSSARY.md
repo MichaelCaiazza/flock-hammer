@@ -34,6 +34,6 @@ Terms as the app and its code use them, alphabetical.
   the OSM tags, and opens the OSM editor.
 - **Slice** — one regional bounding box the export queries separately, to keep
   each Overpass request small.
-- **Stats** — the dashboard page (`stats.html`).
+- **Stats** — the dashboard overlay, opened from the Stats link on the map (no separate page).
 - **Transparency portal** — Flock's public per-agency page; the popup offers a
   web search for it based on the operator name.

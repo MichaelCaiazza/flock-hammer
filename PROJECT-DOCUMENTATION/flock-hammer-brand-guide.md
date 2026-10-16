@@ -4,7 +4,7 @@ Flock Hammer is a community map of Flock Safety and other license-plate-reader
 (ALPR) cameras, for people who want to see where these cameras are. This document
 is the "for example" source of truth for generating UI, graphics, documents, or
 copy that should match the app. Every value here is taken from the app's actual
-source (`index.html`, `stats.html`, `manifest.webmanifest`, and the icon files);
+source (`index.html`, `manifest.webmanifest`, and the icon files);
 where the source does not define something, it is marked "not yet defined."
 
 ---
@@ -24,7 +24,7 @@ where the source does not define something, it is marked "not yet defined."
 ## 2. Color palette
 
 Colors are defined as CSS custom properties on `:root`, identically in
-`index.html` and `stats.html`. The app is dark-theme only; there is no light
+`index.html`. The app is dark-theme only; there is no light
 theme.
 
 ### Core
@@ -234,7 +234,8 @@ Logo SVG (shapes; the file also carries content-credential metadata):
   used for Report a camera and Download area.
 - **Map symbology:** circle markers (Signal, or Ice in new mode), numbered
   clusters, translucent view cones at close zoom, density heatmap at far zoom.
-- **Stats dashboard:** a 12-column responsive grid of glass cards — KPI tiles,
+- **Stats overlay:** opened from the Stats link as a modal over the map, a
+  responsive grid of glass cards — KPI tiles,
   an inline-SVG growth line chart, ranked bar lists, a segmented vendor bar with
   legend, and a recently-added link list.
 

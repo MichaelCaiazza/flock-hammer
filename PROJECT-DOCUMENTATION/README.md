@@ -26,8 +26,8 @@ assets) served from GitHub Pages, with a scheduled GitHub Actions job that pulls
 camera locations from OpenStreetMap each night and commits them back to the repo
 as data files the pages read. There is no application server and no database.
 
-The app reports version **v4.3** (constant `APP_VERSION` in both `index.html` and
-`stats.html`).
+The app reports version **v4.4** (constant `APP_VERSION` in both `index.html` and
+the stats overlay).
 
 ## Run, build, deploy in a few lines
 

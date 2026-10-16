@@ -1,7 +1,7 @@
 // Minimal service worker: required for Chrome's "install app" (adds to home screen as a real app).
 // Network-first so the map and data always try for the freshest version, falling back to cache offline.
-const CACHE = 'flock-hammer-v1';
-const CORE = ['./', './index.html', './stats.html', './manifest.webmanifest',
+const CACHE = 'flock-hammer-v2';
+const CORE = ['./', './index.html', './manifest.webmanifest',
   './assets/icon-192.png', './assets/icon-512.png'];
 
 self.addEventListener('install', e => {

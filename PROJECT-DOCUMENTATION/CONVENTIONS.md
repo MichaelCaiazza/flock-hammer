@@ -3,9 +3,9 @@
 Patterns the code already follows, for consistency when extending it.
 
 ## File organization
-- Two self-contained pages: `index.html` (map) and `stats.html` (dashboard).
-  Each holds its own CSS in a single `<style>` block and its own JavaScript in
-  one inline IIFE at the end of `<body>`. There is no shared JS/CSS file, no
+- One self-contained page: `index.html` (map, with the stats dashboard as an
+  in-app overlay). It holds its own CSS in a single `<style>` block and its
+  JavaScript in one inline IIFE at the end of `<body>`. There is no shared JS/CSS file, no
   build step, and no module system in the browser code.
 - Server-side logic lives only in `scripts/export.mjs`, an ES module using
   Node built-ins.

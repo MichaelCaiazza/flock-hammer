@@ -76,9 +76,11 @@ the app; if a dialog is open over a camera popup, the first back closes the
 dialog and the next closes the popup. Back only exits the app when nothing is
 open. Pull-to-refresh is disabled so a downward swipe does not reload the app.
 
-## The stats dashboard (stats.html)
+## The stats overlay
 
-A read-only overview, reachable from the **Stats** link. It shows:
+A read-only overview that opens as an overlay over the map from the **Stats**
+link in the top-left card (it does not leave the page; close it with the × or the
+back gesture). It shows:
 - **Headline numbers:** total cameras mapped, how many are Flock, how many have a
   known view angle, and how many states are covered. Total and Flock show
   "+this week / +this month" once enough history exists.
@@ -90,5 +92,5 @@ A read-only overview, reachable from the **Stats** link. It shows:
 - **Recently added:** the latest newly mapped cameras, each linking into the map,
   with a link to subscribe to the RSS feed.
 
-Use **Open the map** in the header to return to the map. Some panels are empty
+Some panels are empty
 until the nightly job has run once (totals) or twice (growth, recently added).
