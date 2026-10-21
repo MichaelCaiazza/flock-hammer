@@ -3,1405 +3,1405 @@
 <title>Flock Hammer: newly mapped cameras</title>
 <link>https://openstreetmap.org</link>
 <description>ALPR cameras added to OpenStreetMap, detected by the nightly export.</description>
-<lastBuildDate>Tue, 20 Oct 2026 12:14:33 GMT</lastBuildDate>
+<lastBuildDate>Wed, 21 Oct 2026 12:41:10 GMT</lastBuildDate>
 <item>
-<title>Flock Safety camera</title>
-<link>/#map=17/44.24826/-76.95851&amp;cam=13452788301</link>
-<guid isPermaLink="false">osm-node-13452788301</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.24826, -76.95851 — https://www.openstreetmap.org/node/13452788301</description>
+<title>ALPR camera</title>
+<link>/#map=17/45.31767/-74.02302&amp;cam=14195713501</link>
+<guid isPermaLink="false">osm-node-14195713501</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31767, -74.02302 — https://www.openstreetmap.org/node/14195713501</description>
 </item>
 <item>
-<title>Flock Safety camera</title>
-<link>/#map=17/44.24882/-76.96189&amp;cam=13452789101</link>
-<guid isPermaLink="false">osm-node-13452789101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.24882, -76.96189 — https://www.openstreetmap.org/node/13452789101</description>
+<title>ALPR camera</title>
+<link>/#map=17/45.31751/-74.02313&amp;cam=14195713502</link>
+<guid isPermaLink="false">osm-node-14195713502</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31751, -74.02313 — https://www.openstreetmap.org/node/14195713502</description>
 </item>
 <item>
-<title>Flock Safety camera</title>
-<link>/#map=17/44.25100/-76.94288&amp;cam=13453363301</link>
-<guid isPermaLink="false">osm-node-13453363301</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.25100, -76.94288 — https://www.openstreetmap.org/node/13453363301</description>
+<title>ALPR camera</title>
+<link>/#map=17/45.31769/-74.02297&amp;cam=14195713601</link>
+<guid isPermaLink="false">osm-node-14195713601</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31769, -74.02297 — https://www.openstreetmap.org/node/14195713601</description>
 </item>
 <item>
-<title>Flock Safety camera in Maine</title>
-<link>/#map=17/44.34960/-69.79634&amp;cam=13463479401</link>
-<guid isPermaLink="false">osm-node-13463479401</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.34960, -69.79634 — https://www.openstreetmap.org/node/13463479401</description>
+<title>ALPR camera</title>
+<link>/#map=17/45.31780/-74.02284&amp;cam=14195716201</link>
+<guid isPermaLink="false">osm-node-14195716201</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31780, -74.02284 — https://www.openstreetmap.org/node/14195716201</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.31783/-74.02278&amp;cam=14195716301</link>
+<guid isPermaLink="false">osm-node-14195716301</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31783, -74.02278 — https://www.openstreetmap.org/node/14195716301</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.31785/-74.02273&amp;cam=14195716302</link>
+<guid isPermaLink="false">osm-node-14195716302</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31785, -74.02273 — https://www.openstreetmap.org/node/14195716302</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.31787/-74.02267&amp;cam=14195717201</link>
+<guid isPermaLink="false">osm-node-14195717201</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31787, -74.02267 — https://www.openstreetmap.org/node/14195717201</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.31789/-74.02261&amp;cam=14195717202</link>
+<guid isPermaLink="false">osm-node-14195717202</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31789, -74.02261 — https://www.openstreetmap.org/node/14195717202</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.31788/-74.02290&amp;cam=14195717203</link>
+<guid isPermaLink="false">osm-node-14195717203</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31788, -74.02290 — https://www.openstreetmap.org/node/14195717203</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.31784/-74.02302&amp;cam=14195717701</link>
+<guid isPermaLink="false">osm-node-14195717701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31784, -74.02302 — https://www.openstreetmap.org/node/14195717701</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.31786/-74.02296&amp;cam=14195717703</link>
+<guid isPermaLink="false">osm-node-14195717703</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31786, -74.02296 — https://www.openstreetmap.org/node/14195717703</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.31793/-74.02278&amp;cam=14195718102</link>
+<guid isPermaLink="false">osm-node-14195718102</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31793, -74.02278 — https://www.openstreetmap.org/node/14195718102</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.31791/-74.02284&amp;cam=14195718301</link>
+<guid isPermaLink="false">osm-node-14195718301</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31791, -74.02284 — https://www.openstreetmap.org/node/14195718301</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.31795/-74.02272&amp;cam=14195718401</link>
+<guid isPermaLink="false">osm-node-14195718401</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31795, -74.02272 — https://www.openstreetmap.org/node/14195718401</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.31797/-74.02266&amp;cam=14195718402</link>
+<guid isPermaLink="false">osm-node-14195718402</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31797, -74.02266 — https://www.openstreetmap.org/node/14195718402</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.55773/-73.75310&amp;cam=14195719701</link>
+<guid isPermaLink="false">osm-node-14195719701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.55773, -73.75310 — https://www.openstreetmap.org/node/14195719701</description>
+</item>
+<item>
+<title>Flock Safety camera in Wisconsin</title>
+<link>/#map=17/43.04117/-87.90942&amp;cam=14197471201</link>
+<guid isPermaLink="false">osm-node-14197471201</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.04117, -87.90942 — https://www.openstreetmap.org/node/14197471201</description>
 </item>
 <item>
 <title>Flock Safety camera in Michigan</title>
-<link>/#map=17/44.66822/-85.55680&amp;cam=13475418901</link>
-<guid isPermaLink="false">osm-node-13475418901</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.66822, -85.55680 — https://www.openstreetmap.org/node/13475418901</description>
+<link>/#map=17/43.24903/-85.07363&amp;cam=14197847101</link>
+<guid isPermaLink="false">osm-node-14197847101</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.24903, -85.07363 — https://www.openstreetmap.org/node/14197847101</description>
 </item>
 <item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.08503/-73.80360&amp;cam=13477145301</link>
-<guid isPermaLink="false">osm-node-13477145301</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.08503, -73.80360 — https://www.openstreetmap.org/node/13477145301</description>
+<title>Flock Safety camera in Michigan</title>
+<link>/#map=17/43.24911/-85.07343&amp;cam=14197848201</link>
+<guid isPermaLink="false">osm-node-14197848201</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.24911, -85.07343 — https://www.openstreetmap.org/node/14197848201</description>
 </item>
 <item>
-<title>Flock Safety camera in Maine (Auburn Police)</title>
-<link>/#map=17/44.03619/-70.26555&amp;cam=13479653901</link>
-<guid isPermaLink="false">osm-node-13479653901</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.03619, -70.26555 — https://www.openstreetmap.org/node/13479653901</description>
+<title>Genetec camera in Michigan</title>
+<link>/#map=17/44.07040/-83.84725&amp;cam=14199058701</link>
+<guid isPermaLink="false">osm-node-14199058701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>44.07040, -83.84725 — https://www.openstreetmap.org/node/14199058701</description>
 </item>
 <item>
-<title>Flock Safety camera in Maine (Auburn Police)</title>
-<link>/#map=17/44.03616/-70.26514&amp;cam=13483896501</link>
-<guid isPermaLink="false">osm-node-13483896501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.03616, -70.26514 — https://www.openstreetmap.org/node/13483896501</description>
+<title>ALPR camera</title>
+<link>/#map=17/45.55754/-73.75291&amp;cam=14200106001</link>
+<guid isPermaLink="false">osm-node-14200106001</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.55754, -73.75291 — https://www.openstreetmap.org/node/14200106001</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.50808/-73.98332&amp;cam=14200110602</link>
+<guid isPermaLink="false">osm-node-14200110602</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.50808, -73.98332 — https://www.openstreetmap.org/node/14200110602</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.68399/-73.78888&amp;cam=14200136701</link>
+<guid isPermaLink="false">osm-node-14200136701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.68399, -73.78888 — https://www.openstreetmap.org/node/14200136701</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.68393/-73.78896&amp;cam=14200136801</link>
+<guid isPermaLink="false">osm-node-14200136801</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.68393, -73.78896 — https://www.openstreetmap.org/node/14200136801</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.51602/-73.64332&amp;cam=14202532202</link>
+<guid isPermaLink="false">osm-node-14202532202</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.51602, -73.64332 — https://www.openstreetmap.org/node/14202532202</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.51675/-73.64301&amp;cam=14202532301</link>
+<guid isPermaLink="false">osm-node-14202532301</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.51675, -73.64301 — https://www.openstreetmap.org/node/14202532301</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.51670/-73.64280&amp;cam=14202533001</link>
+<guid isPermaLink="false">osm-node-14202533001</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.51670, -73.64280 — https://www.openstreetmap.org/node/14202533001</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.51665/-73.64303&amp;cam=14202533002</link>
+<guid isPermaLink="false">osm-node-14202533002</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.51665, -73.64303 — https://www.openstreetmap.org/node/14202533002</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.51653/-73.64218&amp;cam=14202535001</link>
+<guid isPermaLink="false">osm-node-14202535001</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.51653, -73.64218 — https://www.openstreetmap.org/node/14202535001</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.51646/-73.64237&amp;cam=14202535003</link>
+<guid isPermaLink="false">osm-node-14202535003</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.51646, -73.64237 — https://www.openstreetmap.org/node/14202535003</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.51607/-73.64318&amp;cam=14202535901</link>
+<guid isPermaLink="false">osm-node-14202535901</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.51607, -73.64318 — https://www.openstreetmap.org/node/14202535901</description>
+</item>
+<item>
+<title>ALPR camera (City of Kingston)</title>
+<link>/#map=17/44.24150/-76.49479&amp;cam=14203552701</link>
+<guid isPermaLink="false">osm-node-14203552701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>44.24150, -76.49479 — https://www.openstreetmap.org/node/14203552701</description>
 </item>
 <item>
 <title>Motorola Solutions camera in New York</title>
-<link>/#map=17/43.08621/-75.31522&amp;cam=13500914001</link>
-<guid isPermaLink="false">osm-node-13500914001</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.08621, -75.31522 — https://www.openstreetmap.org/node/13500914001</description>
+<link>/#map=17/43.08124/-77.62476&amp;cam=14206999982</link>
+<guid isPermaLink="false">osm-node-14206999982</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.08124, -77.62476 — https://www.openstreetmap.org/node/14206999982</description>
+</item>
+<item>
+<title>Flock Safety camera in Michigan</title>
+<link>/#map=17/43.20089/-86.24317&amp;cam=14209593102</link>
+<guid isPermaLink="false">osm-node-14209593102</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.20089, -86.24317 — https://www.openstreetmap.org/node/14209593102</description>
+</item>
+<item>
+<title>Flock Safety camera in Michigan</title>
+<link>/#map=17/43.20492/-86.24003&amp;cam=14209647522</link>
+<guid isPermaLink="false">osm-node-14209647522</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.20492, -86.24003 — https://www.openstreetmap.org/node/14209647522</description>
+</item>
+<item>
+<title>Flock Safety camera in Michigan</title>
+<link>/#map=17/43.43737/-84.01459&amp;cam=14212374601</link>
+<guid isPermaLink="false">osm-node-14212374601</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.43737, -84.01459 — https://www.openstreetmap.org/node/14212374601</description>
 </item>
 <item>
 <title>Flock Safety camera in New York</title>
-<link>/#map=17/43.09237/-77.65355&amp;cam=13503384501</link>
-<guid isPermaLink="false">osm-node-13503384501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.09237, -77.65355 — https://www.openstreetmap.org/node/13503384501</description>
-</item>
-<item>
-<title>Flock Safety camera in Maine (Mt Desert Police)</title>
-<link>/#map=17/44.36881/-68.33067&amp;cam=13515636102</link>
-<guid isPermaLink="false">osm-node-13515636102</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.36881, -68.33067 — https://www.openstreetmap.org/node/13515636102</description>
+<link>/#map=17/43.00025/-76.14288&amp;cam=14213156101</link>
+<guid isPermaLink="false">osm-node-14213156101</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.00025, -76.14288 — https://www.openstreetmap.org/node/14213156101</description>
 </item>
 <item>
 <title>ALPR camera</title>
-<link>/#map=17/44.22775/-76.97284&amp;cam=13521498801</link>
-<guid isPermaLink="false">osm-node-13521498801</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.22775, -76.97284 — https://www.openstreetmap.org/node/13521498801</description>
+<link>/#map=17/46.83881/-71.28573&amp;cam=14216457701</link>
+<guid isPermaLink="false">osm-node-14216457701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.83881, -71.28573 — https://www.openstreetmap.org/node/14216457701</description>
+</item>
+<item>
+<title>Flock Safety camera in Michigan</title>
+<link>/#map=17/43.04580/-86.21555&amp;cam=14216477801</link>
+<guid isPermaLink="false">osm-node-14216477801</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.04580, -86.21555 — https://www.openstreetmap.org/node/14216477801</description>
+</item>
+<item>
+<title>Flock Safety camera in Michigan</title>
+<link>/#map=17/43.04777/-86.21557&amp;cam=14216477802</link>
+<guid isPermaLink="false">osm-node-14216477802</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.04777, -86.21557 — https://www.openstreetmap.org/node/14216477802</description>
+</item>
+<item>
+<title>Genetec camera (Service de Police de la Ville de Québec)</title>
+<link>/#map=17/46.81366/-71.21704&amp;cam=14216499001</link>
+<guid isPermaLink="false">osm-node-14216499001</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.81366, -71.21704 — https://www.openstreetmap.org/node/14216499001</description>
+</item>
+<item>
+<title>Genetec camera (Service de Police de la Ville de Québec)</title>
+<link>/#map=17/46.81333/-71.21729&amp;cam=14216499002</link>
+<guid isPermaLink="false">osm-node-14216499002</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.81333, -71.21729 — https://www.openstreetmap.org/node/14216499002</description>
+</item>
+<item>
+<title>Genetec camera (Service de Police de la Ville de Québec)</title>
+<link>/#map=17/46.81366/-71.21702&amp;cam=14216499101</link>
+<guid isPermaLink="false">osm-node-14216499101</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.81366, -71.21702 — https://www.openstreetmap.org/node/14216499101</description>
+</item>
+<item>
+<title>Genetec camera (Service de Police de la Ville de Québec)</title>
+<link>/#map=17/46.81333/-71.21730&amp;cam=14216500801</link>
+<guid isPermaLink="false">osm-node-14216500801</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.81333, -71.21730 — https://www.openstreetmap.org/node/14216500801</description>
+</item>
+<item>
+<title>Genetec camera (Service de Police de la Ville de Québec)</title>
+<link>/#map=17/46.81282/-71.22019&amp;cam=14216507702</link>
+<guid isPermaLink="false">osm-node-14216507702</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.81282, -71.22019 — https://www.openstreetmap.org/node/14216507702</description>
+</item>
+<item>
+<title>Genetec camera (Service de Police de la Ville de Québec)</title>
+<link>/#map=17/46.81268/-71.22073&amp;cam=14216508302</link>
+<guid isPermaLink="false">osm-node-14216508302</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.81268, -71.22073 — https://www.openstreetmap.org/node/14216508302</description>
+</item>
+<item>
+<title>Genetec camera (Service de Police de la Ville de Québec)</title>
+<link>/#map=17/46.81283/-71.22020&amp;cam=14216510101</link>
+<guid isPermaLink="false">osm-node-14216510101</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.81283, -71.22020 — https://www.openstreetmap.org/node/14216510101</description>
+</item>
+<item>
+<title>Verkada Inc. camera (Service de Police de la Ville de Québec)</title>
+<link>/#map=17/46.81539/-71.20182&amp;cam=14216545102</link>
+<guid isPermaLink="false">osm-node-14216545102</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.81539, -71.20182 — https://www.openstreetmap.org/node/14216545102</description>
+</item>
+<item>
+<title>Motorola Solutions camera in Maine</title>
+<link>/#map=17/44.48364/-68.86724&amp;cam=14219523102</link>
+<guid isPermaLink="false">osm-node-14219523102</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>44.48364, -68.86724 — https://www.openstreetmap.org/node/14219523102</description>
+</item>
+<item>
+<title>Motorola Solutions camera in Maine</title>
+<link>/#map=17/44.48364/-68.86724&amp;cam=14219524601</link>
+<guid isPermaLink="false">osm-node-14219524601</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>44.48364, -68.86724 — https://www.openstreetmap.org/node/14219524601</description>
 </item>
 <item>
 <title>ALPR camera</title>
-<link>/#map=17/44.24111/-76.96639&amp;cam=13521501401</link>
-<guid isPermaLink="false">osm-node-13521501401</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.24111, -76.96639 — https://www.openstreetmap.org/node/13521501401</description>
+<link>/#map=17/45.58598/-73.50801&amp;cam=14219874802</link>
+<guid isPermaLink="false">osm-node-14219874802</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.58598, -73.50801 — https://www.openstreetmap.org/node/14219874802</description>
 </item>
 <item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.77927/-75.48635&amp;cam=13550928801</link>
-<guid isPermaLink="false">osm-node-13550928801</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.77927, -75.48635 — https://www.openstreetmap.org/node/13550928801</description>
-</item>
-<item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.19676/-77.58609&amp;cam=13568443601</link>
-<guid isPermaLink="false">osm-node-13568443601</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.19676, -77.58609 — https://www.openstreetmap.org/node/13568443601</description>
-</item>
-<item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.19623/-77.58811&amp;cam=13568458901</link>
-<guid isPermaLink="false">osm-node-13568458901</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.19623, -77.58811 — https://www.openstreetmap.org/node/13568458901</description>
-</item>
-<item>
-<title>Flock Safety camera in Wisconsin</title>
-<link>/#map=17/43.75861/-87.71696&amp;cam=13582335102</link>
-<guid isPermaLink="false">osm-node-13582335102</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.75861, -87.71696 — https://www.openstreetmap.org/node/13582335102</description>
-</item>
-<item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/45.10704/-85.35204&amp;cam=13609460301</link>
-<guid isPermaLink="false">osm-node-13609460301</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.10704, -85.35204 — https://www.openstreetmap.org/node/13609460301</description>
-</item>
-<item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/45.02315/-84.69380&amp;cam=13663754602</link>
-<guid isPermaLink="false">osm-node-13663754602</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.02315, -84.69380 — https://www.openstreetmap.org/node/13663754602</description>
-</item>
-<item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/45.02382/-84.69454&amp;cam=13663761101</link>
-<guid isPermaLink="false">osm-node-13663761101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.02382, -84.69454 — https://www.openstreetmap.org/node/13663761101</description>
-</item>
-<item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.23212/-76.13968&amp;cam=13665198715</link>
-<guid isPermaLink="false">osm-node-13665198715</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.23212, -76.13968 — https://www.openstreetmap.org/node/13665198715</description>
-</item>
-<item>
-<title>Flock Safety camera in Wisconsin</title>
-<link>/#map=17/43.78015/-87.74491&amp;cam=13665630701</link>
-<guid isPermaLink="false">osm-node-13665630701</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.78015, -87.74491 — https://www.openstreetmap.org/node/13665630701</description>
-</item>
-<item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.03602/-78.82213&amp;cam=13674943901</link>
-<guid isPermaLink="false">osm-node-13674943901</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.03602, -78.82213 — https://www.openstreetmap.org/node/13674943901</description>
-</item>
-<item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.31893/-77.99941&amp;cam=13686404401</link>
-<guid isPermaLink="false">osm-node-13686404401</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.31893, -77.99941 — https://www.openstreetmap.org/node/13686404401</description>
-</item>
-<item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.23039/-78.68068&amp;cam=13722798501</link>
-<guid isPermaLink="false">osm-node-13722798501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.23039, -78.68068 — https://www.openstreetmap.org/node/13722798501</description>
-</item>
-<item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.10540/-75.26015&amp;cam=13733935201</link>
-<guid isPermaLink="false">osm-node-13733935201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.10540, -75.26015 — https://www.openstreetmap.org/node/13733935201</description>
-</item>
-<item>
-<title>ALPR camera in New York</title>
-<link>/#map=17/44.60035/-75.18534&amp;cam=13745233748</link>
-<guid isPermaLink="false">osm-node-13745233748</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.60035, -75.18534 — https://www.openstreetmap.org/node/13745233748</description>
-</item>
-<item>
-<title>ALPR camera in Michigan</title>
-<link>/#map=17/43.59660/-83.94529&amp;cam=13746265517</link>
-<guid isPermaLink="false">osm-node-13746265517</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.59660, -83.94529 — https://www.openstreetmap.org/node/13746265517</description>
-</item>
-<item>
-<title>Flock Safety camera</title>
-<link>/#map=17/43.65630/-79.84227&amp;cam=13761411301</link>
-<guid isPermaLink="false">osm-node-13761411301</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.65630, -79.84227 — https://www.openstreetmap.org/node/13761411301</description>
-</item>
-<item>
-<title>Flock Safety camera in Wisconsin</title>
-<link>/#map=17/43.74311/-87.72307&amp;cam=13766829201</link>
-<guid isPermaLink="false">osm-node-13766829201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.74311, -87.72307 — https://www.openstreetmap.org/node/13766829201</description>
-</item>
-<item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.04730/-77.94771&amp;cam=13784104301</link>
-<guid isPermaLink="false">osm-node-13784104301</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.04730, -77.94771 — https://www.openstreetmap.org/node/13784104301</description>
-</item>
-<item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.04794/-77.94896&amp;cam=13784104401</link>
-<guid isPermaLink="false">osm-node-13784104401</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.04794, -77.94896 — https://www.openstreetmap.org/node/13784104401</description>
-</item>
-<item>
-<title>Flock Safety camera in Wisconsin (Sheboygan Police Department)</title>
-<link>/#map=17/43.77398/-87.74198&amp;cam=13788295419</link>
-<guid isPermaLink="false">osm-node-13788295419</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.77398, -87.74198 — https://www.openstreetmap.org/node/13788295419</description>
+<title>Genetec camera</title>
+<link>/#map=17/45.58448/-73.50872&amp;cam=14219875603</link>
+<guid isPermaLink="false">osm-node-14219875603</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.58448, -73.50872 — https://www.openstreetmap.org/node/14219875603</description>
 </item>
 <item>
 <title>ALPR camera</title>
-<link>/#map=17/44.90517/-85.50212&amp;cam=13790875709</link>
-<guid isPermaLink="false">osm-node-13790875709</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.90517, -85.50212 — https://www.openstreetmap.org/node/13790875709</description>
+<link>/#map=17/45.58576/-73.50804&amp;cam=14219875701</link>
+<guid isPermaLink="false">osm-node-14219875701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.58576, -73.50804 — https://www.openstreetmap.org/node/14219875701</description>
 </item>
 <item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.09744/-75.23452&amp;cam=13797162101</link>
-<guid isPermaLink="false">osm-node-13797162101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.09744, -75.23452 — https://www.openstreetmap.org/node/13797162101</description>
+<title>ALPR camera</title>
+<link>/#map=17/45.58590/-73.50828&amp;cam=14219876301</link>
+<guid isPermaLink="false">osm-node-14219876301</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.58590, -73.50828 — https://www.openstreetmap.org/node/14219876301</description>
 </item>
 <item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/43.62373/-83.94278&amp;cam=13801993801</link>
-<guid isPermaLink="false">osm-node-13801993801</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.62373, -83.94278 — https://www.openstreetmap.org/node/13801993801</description>
+<title>ALPR camera</title>
+<link>/#map=17/45.58449/-73.50871&amp;cam=14219880602</link>
+<guid isPermaLink="false">osm-node-14219880602</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.58449, -73.50871 — https://www.openstreetmap.org/node/14219880602</description>
 </item>
 <item>
-<title>Leonardo camera in New York</title>
-<link>/#map=17/43.10416/-77.62720&amp;cam=13816208070</link>
-<guid isPermaLink="false">osm-node-13816208070</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.10416, -77.62720 — https://www.openstreetmap.org/node/13816208070</description>
+<title>Genetec camera</title>
+<link>/#map=17/45.58450/-73.50873&amp;cam=14219880603</link>
+<guid isPermaLink="false">osm-node-14219880603</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.58450, -73.50873 — https://www.openstreetmap.org/node/14219880603</description>
 </item>
 <item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/45.15754/-85.12720&amp;cam=13823286101</link>
-<guid isPermaLink="false">osm-node-13823286101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.15754, -85.12720 — https://www.openstreetmap.org/node/13823286101</description>
+<title>ALPR camera</title>
+<link>/#map=17/45.58451/-73.50851&amp;cam=14219885701</link>
+<guid isPermaLink="false">osm-node-14219885701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.58451, -73.50851 — https://www.openstreetmap.org/node/14219885701</description>
 </item>
 <item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/45.15546/-85.12779&amp;cam=13823289501</link>
-<guid isPermaLink="false">osm-node-13823289501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.15546, -85.12779 — https://www.openstreetmap.org/node/13823289501</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45660/-73.74728&amp;cam=14219936502</link>
+<guid isPermaLink="false">osm-node-14219936502</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45660, -73.74728 — https://www.openstreetmap.org/node/14219936502</description>
 </item>
 <item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/45.15545/-85.12810&amp;cam=13823289801</link>
-<guid isPermaLink="false">osm-node-13823289801</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.15545, -85.12810 — https://www.openstreetmap.org/node/13823289801</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45287/-73.74487&amp;cam=14219941203</link>
+<guid isPermaLink="false">osm-node-14219941203</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45287, -73.74487 — https://www.openstreetmap.org/node/14219941203</description>
 </item>
 <item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/45.15444/-85.12863&amp;cam=13823290301</link>
-<guid isPermaLink="false">osm-node-13823290301</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.15444, -85.12863 — https://www.openstreetmap.org/node/13823290301</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45284/-73.74488&amp;cam=14219941204</link>
+<guid isPermaLink="false">osm-node-14219941204</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45284, -73.74488 — https://www.openstreetmap.org/node/14219941204</description>
 </item>
 <item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/45.15379/-85.12992&amp;cam=13823290302</link>
-<guid isPermaLink="false">osm-node-13823290302</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.15379, -85.12992 — https://www.openstreetmap.org/node/13823290302</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45660/-73.74734&amp;cam=14219948001</link>
+<guid isPermaLink="false">osm-node-14219948001</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45660, -73.74734 — https://www.openstreetmap.org/node/14219948001</description>
 </item>
 <item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/45.15548/-85.12776&amp;cam=13823323501</link>
-<guid isPermaLink="false">osm-node-13823323501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.15548, -85.12776 — https://www.openstreetmap.org/node/13823323501</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45660/-73.74739&amp;cam=14219952401</link>
+<guid isPermaLink="false">osm-node-14219952401</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45660, -73.74739 — https://www.openstreetmap.org/node/14219952401</description>
 </item>
 <item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/45.15559/-85.12776&amp;cam=13823324801</link>
-<guid isPermaLink="false">osm-node-13823324801</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.15559, -85.12776 — https://www.openstreetmap.org/node/13823324801</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45660/-73.74744&amp;cam=14219952801</link>
+<guid isPermaLink="false">osm-node-14219952801</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45660, -73.74744 — https://www.openstreetmap.org/node/14219952801</description>
 </item>
 <item>
-<title>ALPR camera in New York</title>
-<link>/#map=17/43.19629/-77.55900&amp;cam=13835134220</link>
-<guid isPermaLink="false">osm-node-13835134220</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.19629, -77.55900 — https://www.openstreetmap.org/node/13835134220</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45557/-73.75162&amp;cam=14219958001</link>
+<guid isPermaLink="false">osm-node-14219958001</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45557, -73.75162 — https://www.openstreetmap.org/node/14219958001</description>
 </item>
 <item>
-<title>ALPR camera in New York</title>
-<link>/#map=17/43.19627/-77.56158&amp;cam=13835134221</link>
-<guid isPermaLink="false">osm-node-13835134221</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.19627, -77.56158 — https://www.openstreetmap.org/node/13835134221</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45557/-73.75161&amp;cam=14219960501</link>
+<guid isPermaLink="false">osm-node-14219960501</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45557, -73.75161 — https://www.openstreetmap.org/node/14219960501</description>
 </item>
 <item>
-<title>ALPR camera in New York</title>
-<link>/#map=17/43.21403/-77.47613&amp;cam=13835435217</link>
-<guid isPermaLink="false">osm-node-13835435217</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.21403, -77.47613 — https://www.openstreetmap.org/node/13835435217</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45281/-73.74489&amp;cam=14219971401</link>
+<guid isPermaLink="false">osm-node-14219971401</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45281, -73.74489 — https://www.openstreetmap.org/node/14219971401</description>
 </item>
 <item>
-<title>ALPR camera in New York</title>
-<link>/#map=17/43.21411/-77.47631&amp;cam=13835435220</link>
-<guid isPermaLink="false">osm-node-13835435220</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.21411, -77.47631 — https://www.openstreetmap.org/node/13835435220</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45223/-73.75258&amp;cam=14219976901</link>
+<guid isPermaLink="false">osm-node-14219976901</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45223, -73.75258 — https://www.openstreetmap.org/node/14219976901</description>
 </item>
 <item>
-<title>ALPR camera in New York</title>
-<link>/#map=17/43.16742/-77.53882&amp;cam=13835435226</link>
-<guid isPermaLink="false">osm-node-13835435226</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.16742, -77.53882 — https://www.openstreetmap.org/node/13835435226</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45178/-73.75218&amp;cam=14219990601</link>
+<guid isPermaLink="false">osm-node-14219990601</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45178, -73.75218 — https://www.openstreetmap.org/node/14219990601</description>
 </item>
 <item>
-<title>ALPR camera in New York</title>
-<link>/#map=17/43.16361/-77.53863&amp;cam=13835435227</link>
-<guid isPermaLink="false">osm-node-13835435227</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.16361, -77.53863 — https://www.openstreetmap.org/node/13835435227</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45873/-73.73158&amp;cam=14219991603</link>
+<guid isPermaLink="false">osm-node-14219991603</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45873, -73.73158 — https://www.openstreetmap.org/node/14219991603</description>
 </item>
 <item>
-<title>ALPR camera in New York</title>
-<link>/#map=17/43.15074/-77.53888&amp;cam=13835435229</link>
-<guid isPermaLink="false">osm-node-13835435229</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.15074, -77.53888 — https://www.openstreetmap.org/node/13835435229</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45610/-73.73497&amp;cam=14219994402</link>
+<guid isPermaLink="false">osm-node-14219994402</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45610, -73.73497 — https://www.openstreetmap.org/node/14219994402</description>
 </item>
 <item>
-<title>ALPR camera in New York</title>
-<link>/#map=17/43.14125/-77.54287&amp;cam=13835435232</link>
-<guid isPermaLink="false">osm-node-13835435232</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.14125, -77.54287 — https://www.openstreetmap.org/node/13835435232</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45633/-73.73527&amp;cam=14219999001</link>
+<guid isPermaLink="false">osm-node-14219999001</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45633, -73.73527 — https://www.openstreetmap.org/node/14219999001</description>
 </item>
 <item>
-<title>Flock Safety camera in Wisconsin</title>
-<link>/#map=17/45.10668/-87.63534&amp;cam=13845058501</link>
-<guid isPermaLink="false">osm-node-13845058501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.10668, -87.63534 — https://www.openstreetmap.org/node/13845058501</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45674/-73.73516&amp;cam=14219999202</link>
+<guid isPermaLink="false">osm-node-14219999202</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45674, -73.73516 — https://www.openstreetmap.org/node/14219999202</description>
 </item>
 <item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/44.44590/-85.69840&amp;cam=13858015801</link>
-<guid isPermaLink="false">osm-node-13858015801</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.44590, -85.69840 — https://www.openstreetmap.org/node/13858015801</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45716/-73.73312&amp;cam=14219999203</link>
+<guid isPermaLink="false">osm-node-14219999203</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45716, -73.73312 — https://www.openstreetmap.org/node/14219999203</description>
 </item>
 <item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/43.07143/-85.58671&amp;cam=13874703501</link>
-<guid isPermaLink="false">osm-node-13874703501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.07143, -85.58671 — https://www.openstreetmap.org/node/13874703501</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45708/-73.73298&amp;cam=14220001701</link>
+<guid isPermaLink="false">osm-node-14220001701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45708, -73.73298 — https://www.openstreetmap.org/node/14220001701</description>
 </item>
 <item>
-<title>Flock Safety camera in Maine (Auburn Police)</title>
-<link>/#map=17/44.12773/-70.22472&amp;cam=13884151987</link>
-<guid isPermaLink="false">osm-node-13884151987</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.12773, -70.22472 — https://www.openstreetmap.org/node/13884151987</description>
+<title>ALPR camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45558/-73.73691&amp;cam=14220011701</link>
+<guid isPermaLink="false">osm-node-14220011701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45558, -73.73691 — https://www.openstreetmap.org/node/14220011701</description>
 </item>
 <item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/43.15404/-86.17799&amp;cam=13889958302</link>
-<guid isPermaLink="false">osm-node-13889958302</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.15404, -86.17799 — https://www.openstreetmap.org/node/13889958302</description>
+<title>ALPR camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45551/-73.73679&amp;cam=14220011901</link>
+<guid isPermaLink="false">osm-node-14220011901</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45551, -73.73679 — https://www.openstreetmap.org/node/14220011901</description>
 </item>
 <item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.31513/-76.42180&amp;cam=13895729901</link>
-<guid isPermaLink="false">osm-node-13895729901</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.31513, -76.42180 — https://www.openstreetmap.org/node/13895729901</description>
+<title>ALPR camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45575/-73.73732&amp;cam=14220016001</link>
+<guid isPermaLink="false">osm-node-14220016001</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45575, -73.73732 — https://www.openstreetmap.org/node/14220016001</description>
 </item>
 <item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/44.97488/-84.97042&amp;cam=13897114901</link>
-<guid isPermaLink="false">osm-node-13897114901</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.97488, -84.97042 — https://www.openstreetmap.org/node/13897114901</description>
+<title>ALPR camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45140/-73.73803&amp;cam=14220027801</link>
+<guid isPermaLink="false">osm-node-14220027801</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45140, -73.73803 — https://www.openstreetmap.org/node/14220027801</description>
 </item>
 <item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/45.02386/-84.69400&amp;cam=13905765201</link>
-<guid isPermaLink="false">osm-node-13905765201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.02386, -84.69400 — https://www.openstreetmap.org/node/13905765201</description>
+<title>ALPR camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45133/-73.73766&amp;cam=14220028101</link>
+<guid isPermaLink="false">osm-node-14220028101</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45133, -73.73766 — https://www.openstreetmap.org/node/14220028101</description>
 </item>
 <item>
-<title>Genetec camera in New York</title>
-<link>/#map=17/43.09024/-75.25845&amp;cam=13927786001</link>
-<guid isPermaLink="false">osm-node-13927786001</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.09024, -75.25845 — https://www.openstreetmap.org/node/13927786001</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45303/-73.76164&amp;cam=14220273201</link>
+<guid isPermaLink="false">osm-node-14220273201</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45303, -73.76164 — https://www.openstreetmap.org/node/14220273201</description>
 </item>
 <item>
-<title>Genetec camera in New York</title>
-<link>/#map=17/43.12446/-75.22881&amp;cam=13927807201</link>
-<guid isPermaLink="false">osm-node-13927807201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.12446, -75.22881 — https://www.openstreetmap.org/node/13927807201</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45236/-73.76157&amp;cam=14220274301</link>
+<guid isPermaLink="false">osm-node-14220274301</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45236, -73.76157 — https://www.openstreetmap.org/node/14220274301</description>
 </item>
 <item>
-<title>Genetec camera in New York</title>
-<link>/#map=17/43.11233/-75.20728&amp;cam=13927808201</link>
-<guid isPermaLink="false">osm-node-13927808201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.11233, -75.20728 — https://www.openstreetmap.org/node/13927808201</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.69443/-74.01393&amp;cam=14220306601</link>
+<guid isPermaLink="false">osm-node-14220306601</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.69443, -74.01393 — https://www.openstreetmap.org/node/14220306601</description>
 </item>
 <item>
-<title>Genetec camera in New York</title>
-<link>/#map=17/43.10240/-75.25480&amp;cam=13928529901</link>
-<guid isPermaLink="false">osm-node-13928529901</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.10240, -75.25480 — https://www.openstreetmap.org/node/13928529901</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.69481/-74.01337&amp;cam=14220307901</link>
+<guid isPermaLink="false">osm-node-14220307901</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.69481, -74.01337 — https://www.openstreetmap.org/node/14220307901</description>
 </item>
 <item>
-<title>Genetec camera in New York</title>
-<link>/#map=17/43.09563/-75.24267&amp;cam=13928537001</link>
-<guid isPermaLink="false">osm-node-13928537001</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.09563, -75.24267 — https://www.openstreetmap.org/node/13928537001</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.68201/-74.03688&amp;cam=14220316703</link>
+<guid isPermaLink="false">osm-node-14220316703</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.68201, -74.03688 — https://www.openstreetmap.org/node/14220316703</description>
+</item>
+<item>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.68220/-74.03668&amp;cam=14220320801</link>
+<guid isPermaLink="false">osm-node-14220320801</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.68220, -74.03668 — https://www.openstreetmap.org/node/14220320801</description>
+</item>
+<item>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.68389/-74.03752&amp;cam=14220321101</link>
+<guid isPermaLink="false">osm-node-14220321101</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.68389, -74.03752 — https://www.openstreetmap.org/node/14220321101</description>
+</item>
+<item>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.68192/-74.03587&amp;cam=14220327403</link>
+<guid isPermaLink="false">osm-node-14220327403</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.68192, -74.03587 — https://www.openstreetmap.org/node/14220327403</description>
+</item>
+<item>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.68210/-74.05251&amp;cam=14220333801</link>
+<guid isPermaLink="false">osm-node-14220333801</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.68210, -74.05251 — https://www.openstreetmap.org/node/14220333801</description>
+</item>
+<item>
+<title>Verkada camera in Vermont (Barre city police dept)</title>
+<link>/#map=17/44.20258/-72.50778&amp;cam=14220550392</link>
+<guid isPermaLink="false">osm-node-14220550392</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>44.20258, -72.50778 — https://www.openstreetmap.org/node/14220550392</description>
+</item>
+<item>
+<title>Verkada camera in Vermont (Barre city police dept)</title>
+<link>/#map=17/44.19738/-72.50133&amp;cam=14220632883</link>
+<guid isPermaLink="false">osm-node-14220632883</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>44.19738, -72.50133 — https://www.openstreetmap.org/node/14220632883</description>
+</item>
+<item>
+<title>Verkada camera in Vermont (Barre City Police Department)</title>
+<link>/#map=17/44.19684/-72.50165&amp;cam=14220650901</link>
+<guid isPermaLink="false">osm-node-14220650901</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>44.19684, -72.50165 — https://www.openstreetmap.org/node/14220650901</description>
+</item>
+<item>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45322/-73.74287&amp;cam=14220722501</link>
+<guid isPermaLink="false">osm-node-14220722501</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45322, -73.74287 — https://www.openstreetmap.org/node/14220722501</description>
+</item>
+<item>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45312/-73.74315&amp;cam=14220722701</link>
+<guid isPermaLink="false">osm-node-14220722701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45312, -73.74315 — https://www.openstreetmap.org/node/14220722701</description>
 </item>
 <item>
 <title>Flock Safety camera in New Hampshire</title>
-<link>/#map=17/43.21279/-70.87319&amp;cam=13928955001</link>
-<guid isPermaLink="false">osm-node-13928955001</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.21279, -70.87319 — https://www.openstreetmap.org/node/13928955001</description>
+<link>/#map=17/44.08770/-71.20619&amp;cam=14220734001</link>
+<guid isPermaLink="false">osm-node-14220734001</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>44.08770, -71.20619 — https://www.openstreetmap.org/node/14220734001</description>
 </item>
 <item>
-<title>Flock Safety camera</title>
-<link>/#map=17/43.34643/-79.83106&amp;cam=13929214401</link>
-<guid isPermaLink="false">osm-node-13929214401</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.34643, -79.83106 — https://www.openstreetmap.org/node/13929214401</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45210/-73.74645&amp;cam=14220734202</link>
+<guid isPermaLink="false">osm-node-14220734202</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45210, -73.74645 — https://www.openstreetmap.org/node/14220734202</description>
 </item>
 <item>
-<title>Flock Safety camera</title>
-<link>/#map=17/45.01848/-85.60603&amp;cam=13935592901</link>
-<guid isPermaLink="false">osm-node-13935592901</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.01848, -85.60603 — https://www.openstreetmap.org/node/13935592901</description>
+<title>Genetec camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45229/-73.74573&amp;cam=14220736201</link>
+<guid isPermaLink="false">osm-node-14220736201</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45229, -73.74573 — https://www.openstreetmap.org/node/14220736201</description>
 </item>
 <item>
-<title>ALPR camera in Michigan</title>
-<link>/#map=17/43.45716/-83.44506&amp;cam=13940726320</link>
-<guid isPermaLink="false">osm-node-13940726320</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.45716, -83.44506 — https://www.openstreetmap.org/node/13940726320</description>
+<title>Genetec camera (Loto-Québec)</title>
+<link>/#map=17/45.50757/-73.52595&amp;cam=14220768501</link>
+<guid isPermaLink="false">osm-node-14220768501</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.50757, -73.52595 — https://www.openstreetmap.org/node/14220768501</description>
 </item>
 <item>
-<title>ALPR camera in Michigan</title>
-<link>/#map=17/43.45731/-83.44301&amp;cam=13940729990</link>
-<guid isPermaLink="false">osm-node-13940729990</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.45731, -83.44301 — https://www.openstreetmap.org/node/13940729990</description>
+<title>Genetec camera (Loto-Québec)</title>
+<link>/#map=17/45.50746/-73.52596&amp;cam=14220772601</link>
+<guid isPermaLink="false">osm-node-14220772601</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.50746, -73.52596 — https://www.openstreetmap.org/node/14220772601</description>
 </item>
 <item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/45.34653/-84.97119&amp;cam=13944135801</link>
-<guid isPermaLink="false">osm-node-13944135801</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.34653, -84.97119 — https://www.openstreetmap.org/node/13944135801</description>
+<title>Motorola Solutions camera (Loto-Québec)</title>
+<link>/#map=17/45.50736/-73.52480&amp;cam=14220805301</link>
+<guid isPermaLink="false">osm-node-14220805301</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.50736, -73.52480 — https://www.openstreetmap.org/node/14220805301</description>
 </item>
 <item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/45.34835/-84.97210&amp;cam=13944135902</link>
-<guid isPermaLink="false">osm-node-13944135902</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.34835, -84.97210 — https://www.openstreetmap.org/node/13944135902</description>
+<title>Genetec camera (Loto-Québec)</title>
+<link>/#map=17/45.50794/-73.52564&amp;cam=14220806101</link>
+<guid isPermaLink="false">osm-node-14220806101</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.50794, -73.52564 — https://www.openstreetmap.org/node/14220806101</description>
 </item>
 <item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/44.86817/-85.09180&amp;cam=13946140601</link>
-<guid isPermaLink="false">osm-node-13946140601</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.86817, -85.09180 — https://www.openstreetmap.org/node/13946140601</description>
-</item>
-<item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/45.03202/-84.67373&amp;cam=13948805701</link>
-<guid isPermaLink="false">osm-node-13948805701</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.03202, -84.67373 — https://www.openstreetmap.org/node/13948805701</description>
-</item>
-<item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/43.48118/-85.81968&amp;cam=13951252501</link>
-<guid isPermaLink="false">osm-node-13951252501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.48118, -85.81968 — https://www.openstreetmap.org/node/13951252501</description>
-</item>
-<item>
-<title>Flock Safety camera in Wisconsin</title>
-<link>/#map=17/43.71979/-87.73751&amp;cam=13953786901</link>
-<guid isPermaLink="false">osm-node-13953786901</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.71979, -87.73751 — https://www.openstreetmap.org/node/13953786901</description>
-</item>
-<item>
-<title>Flock Safety camera in Vermont (Milton Police)</title>
-<link>/#map=17/44.60942/-73.20887&amp;cam=13956686201</link>
-<guid isPermaLink="false">osm-node-13956686201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.60942, -73.20887 — https://www.openstreetmap.org/node/13956686201</description>
-</item>
-<item>
-<title>Flock Safety camera in Vermont (Milton Police)</title>
-<link>/#map=17/44.60958/-73.20889&amp;cam=13956687101</link>
-<guid isPermaLink="false">osm-node-13956687101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.60958, -73.20889 — https://www.openstreetmap.org/node/13956687101</description>
-</item>
-<item>
-<title>Flock Safety camera</title>
-<link>/#map=17/43.87980/-79.02702&amp;cam=13961283401</link>
-<guid isPermaLink="false">osm-node-13961283401</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.87980, -79.02702 — https://www.openstreetmap.org/node/13961283401</description>
-</item>
-<item>
-<title>Leonardo camera in Maine (Brewer Police)</title>
-<link>/#map=17/44.76828/-68.71404&amp;cam=13962883307</link>
-<guid isPermaLink="false">osm-node-13962883307</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.76828, -68.71404 — https://www.openstreetmap.org/node/13962883307</description>
-</item>
-<item>
-<title>Flock Safety camera in Wisconsin</title>
-<link>/#map=17/45.23298/-87.99728&amp;cam=13969675101</link>
-<guid isPermaLink="false">osm-node-13969675101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.23298, -87.99728 — https://www.openstreetmap.org/node/13969675101</description>
-</item>
-<item>
-<title>Flock Safety camera in Wisconsin</title>
-<link>/#map=17/45.23298/-87.99728&amp;cam=13969675901</link>
-<guid isPermaLink="false">osm-node-13969675901</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.23298, -87.99728 — https://www.openstreetmap.org/node/13969675901</description>
-</item>
-<item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/43.51214/-85.96013&amp;cam=13973485205</link>
-<guid isPermaLink="false">osm-node-13973485205</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.51214, -85.96013 — https://www.openstreetmap.org/node/13973485205</description>
+<title>Axis Communications camera (Loto-Québec)</title>
+<link>/#map=17/45.50767/-73.52798&amp;cam=14220812701</link>
+<guid isPermaLink="false">osm-node-14220812701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.50767, -73.52798 — https://www.openstreetmap.org/node/14220812701</description>
 </item>
 <item>
 <title>Flock Safety camera in New York</title>
-<link>/#map=17/43.09537/-75.24594&amp;cam=13975355701</link>
-<guid isPermaLink="false">osm-node-13975355701</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.09537, -75.24594 — https://www.openstreetmap.org/node/13975355701</description>
+<link>/#map=17/43.16909/-76.11699&amp;cam=14220819188</link>
+<guid isPermaLink="false">osm-node-14220819188</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.16909, -76.11699 — https://www.openstreetmap.org/node/14220819188</description>
 </item>
 <item>
-<title>Flock Safety camera in Maine (Bangor Police)</title>
-<link>/#map=17/44.79141/-68.77622&amp;cam=13976401202</link>
-<guid isPermaLink="false">osm-node-13976401202</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.79141, -68.77622 — https://www.openstreetmap.org/node/13976401202</description>
+<title>Genetec camera (Genetec)</title>
+<link>/#map=17/45.47924/-73.76097&amp;cam=14221279201</link>
+<guid isPermaLink="false">osm-node-14221279201</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.47924, -73.76097 — https://www.openstreetmap.org/node/14221279201</description>
+</item>
+<item>
+<title>Genetec camera (Genetec)</title>
+<link>/#map=17/45.47852/-73.76167&amp;cam=14221281201</link>
+<guid isPermaLink="false">osm-node-14221281201</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.47852, -73.76167 — https://www.openstreetmap.org/node/14221281201</description>
+</item>
+<item>
+<title>Genetec camera (Genetec)</title>
+<link>/#map=17/45.47847/-73.76191&amp;cam=14221281202</link>
+<guid isPermaLink="false">osm-node-14221281202</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.47847, -73.76191 — https://www.openstreetmap.org/node/14221281202</description>
+</item>
+<item>
+<title>Genetec camera (Genetec)</title>
+<link>/#map=17/45.47875/-73.76199&amp;cam=14221283501</link>
+<guid isPermaLink="false">osm-node-14221283501</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.47875, -73.76199 — https://www.openstreetmap.org/node/14221283501</description>
+</item>
+<item>
+<title>Genetec camera (Genetec)</title>
+<link>/#map=17/45.47906/-73.76208&amp;cam=14221285601</link>
+<guid isPermaLink="false">osm-node-14221285601</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.47906, -73.76208 — https://www.openstreetmap.org/node/14221285601</description>
+</item>
+<item>
+<title>Genetec camera (Genetec)</title>
+<link>/#map=17/45.47929/-73.76275&amp;cam=14221287201</link>
+<guid isPermaLink="false">osm-node-14221287201</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.47929, -73.76275 — https://www.openstreetmap.org/node/14221287201</description>
+</item>
+<item>
+<title>Genetec camera (Genetec)</title>
+<link>/#map=17/45.47862/-73.76287&amp;cam=14221288901</link>
+<guid isPermaLink="false">osm-node-14221288901</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.47862, -73.76287 — https://www.openstreetmap.org/node/14221288901</description>
+</item>
+<item>
+<title>Genetec camera (Genetec)</title>
+<link>/#map=17/45.47835/-73.76280&amp;cam=14221288902</link>
+<guid isPermaLink="false">osm-node-14221288902</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.47835, -73.76280 — https://www.openstreetmap.org/node/14221288902</description>
+</item>
+<item>
+<title>Genetec camera (Genetec)</title>
+<link>/#map=17/45.47961/-73.76299&amp;cam=14221293301</link>
+<guid isPermaLink="false">osm-node-14221293301</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.47961, -73.76299 — https://www.openstreetmap.org/node/14221293301</description>
+</item>
+<item>
+<title>Genetec camera (Genetec)</title>
+<link>/#map=17/45.47950/-73.76294&amp;cam=14221297501</link>
+<guid isPermaLink="false">osm-node-14221297501</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.47950, -73.76294 — https://www.openstreetmap.org/node/14221297501</description>
+</item>
+<item>
+<title>Genetec camera (Genetec)</title>
+<link>/#map=17/45.48003/-73.76312&amp;cam=14221297502</link>
+<guid isPermaLink="false">osm-node-14221297502</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.48003, -73.76312 — https://www.openstreetmap.org/node/14221297502</description>
+</item>
+<item>
+<title>Axis Communications camera (Genetec)</title>
+<link>/#map=17/45.47950/-73.76294&amp;cam=14221298201</link>
+<guid isPermaLink="false">osm-node-14221298201</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.47950, -73.76294 — https://www.openstreetmap.org/node/14221298201</description>
+</item>
+<item>
+<title>Genetec camera (Genetec)</title>
+<link>/#map=17/45.48017/-73.76316&amp;cam=14221298901</link>
+<guid isPermaLink="false">osm-node-14221298901</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.48017, -73.76316 — https://www.openstreetmap.org/node/14221298901</description>
+</item>
+<item>
+<title>Genetec camera (Genetec)</title>
+<link>/#map=17/45.48011/-73.76334&amp;cam=14221298902</link>
+<guid isPermaLink="false">osm-node-14221298902</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.48011, -73.76334 — https://www.openstreetmap.org/node/14221298902</description>
+</item>
+<item>
+<title>Genetec camera (Genetec)</title>
+<link>/#map=17/45.47923/-73.76098&amp;cam=14221493501</link>
+<guid isPermaLink="false">osm-node-14221493501</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.47923, -73.76098 — https://www.openstreetmap.org/node/14221493501</description>
+</item>
+<item>
+<title>ALPR camera in New Hampshire</title>
+<link>/#map=17/43.26128/-72.42760&amp;cam=14222317388</link>
+<guid isPermaLink="false">osm-node-14222317388</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.26128, -72.42760 — https://www.openstreetmap.org/node/14222317388</description>
+</item>
+<item>
+<title>Flock Safety camera in Maine (Lewiston Police Department)</title>
+<link>/#map=17/44.09895/-70.20466&amp;cam=14224957244</link>
+<guid isPermaLink="false">osm-node-14224957244</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>44.09895, -70.20466 — https://www.openstreetmap.org/node/14224957244</description>
+</item>
+<item>
+<title>Verkada camera in Vermont (Barre City Poilce Dept)</title>
+<link>/#map=17/44.19807/-72.50308&amp;cam=14224961979</link>
+<guid isPermaLink="false">osm-node-14224961979</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>44.19807, -72.50308 — https://www.openstreetmap.org/node/14224961979</description>
+</item>
+<item>
+<title>Avigilon camera (Ville de Sainte-Agathe-Des-Monts)</title>
+<link>/#map=17/46.04564/-74.27862&amp;cam=14225021101</link>
+<guid isPermaLink="false">osm-node-14225021101</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.04564, -74.27862 — https://www.openstreetmap.org/node/14225021101</description>
+</item>
+<item>
+<title>Motorola Solutions camera</title>
+<link>/#map=17/45.94366/-74.12548&amp;cam=14225140201</link>
+<guid isPermaLink="false">osm-node-14225140201</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.94366, -74.12548 — https://www.openstreetmap.org/node/14225140201</description>
+</item>
+<item>
+<title>Genetec camera (Loto-Québec)</title>
+<link>/#map=17/47.62357/-70.14379&amp;cam=14225261302</link>
+<guid isPermaLink="false">osm-node-14225261302</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>47.62357, -70.14379 — https://www.openstreetmap.org/node/14225261302</description>
+</item>
+<item>
+<title>Axis Communications camera in Wisconsin</title>
+<link>/#map=17/43.03178/-87.90953&amp;cam=14225555501</link>
+<guid isPermaLink="false">osm-node-14225555501</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.03178, -87.90953 — https://www.openstreetmap.org/node/14225555501</description>
+</item>
+<item>
+<title>Axis Communications camera in Wisconsin</title>
+<link>/#map=17/43.03178/-87.90953&amp;cam=14225557501</link>
+<guid isPermaLink="false">osm-node-14225557501</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.03178, -87.90953 — https://www.openstreetmap.org/node/14225557501</description>
+</item>
+<item>
+<title>Axis Communications camera in Wisconsin</title>
+<link>/#map=17/43.03070/-87.91021&amp;cam=14225559001</link>
+<guid isPermaLink="false">osm-node-14225559001</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.03070, -87.91021 — https://www.openstreetmap.org/node/14225559001</description>
 </item>
 <item>
 <title>Flock Safety camera in New York</title>
-<link>/#map=17/43.09078/-75.25427&amp;cam=13983957501</link>
-<guid isPermaLink="false">osm-node-13983957501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.09078, -75.25427 — https://www.openstreetmap.org/node/13983957501</description>
+<link>/#map=17/43.18915/-76.02665&amp;cam=14225601801</link>
+<guid isPermaLink="false">osm-node-14225601801</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.18915, -76.02665 — https://www.openstreetmap.org/node/14225601801</description>
 </item>
 <item>
-<title>Flock Safety camera in Wisconsin</title>
-<link>/#map=17/43.75638/-87.72345&amp;cam=13986052801</link>
-<guid isPermaLink="false">osm-node-13986052801</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.75638, -87.72345 — https://www.openstreetmap.org/node/13986052801</description>
+<title>Flock Safety camera in New York</title>
+<link>/#map=17/43.18936/-76.02829&amp;cam=14225602301</link>
+<guid isPermaLink="false">osm-node-14225602301</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.18936, -76.02829 — https://www.openstreetmap.org/node/14225602301</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.51253/-73.97689&amp;cam=14225619601</link>
+<guid isPermaLink="false">osm-node-14225619601</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.51253, -73.97689 — https://www.openstreetmap.org/node/14225619601</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/46.03323/-73.13131&amp;cam=14225625201</link>
+<guid isPermaLink="false">osm-node-14225625201</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.03323, -73.13131 — https://www.openstreetmap.org/node/14225625201</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/46.02443/-73.10079&amp;cam=14225628501</link>
+<guid isPermaLink="false">osm-node-14225628501</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.02443, -73.10079 — https://www.openstreetmap.org/node/14225628501</description>
+</item>
+<item>
+<title>Flock Safety camera in New Hampshire</title>
+<link>/#map=17/44.05284/-71.12798&amp;cam=14228217701</link>
+<guid isPermaLink="false">osm-node-14228217701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>44.05284, -71.12798 — https://www.openstreetmap.org/node/14228217701</description>
+</item>
+<item>
+<title>Flock Safety camera in Michigan</title>
+<link>/#map=17/43.07267/-85.68166&amp;cam=14232483701</link>
+<guid isPermaLink="false">osm-node-14232483701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.07267, -85.68166 — https://www.openstreetmap.org/node/14232483701</description>
+</item>
+<item>
+<title>Flock Safety camera in New York</title>
+<link>/#map=17/43.16543/-77.69032&amp;cam=14235910101</link>
+<guid isPermaLink="false">osm-node-14235910101</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.16543, -77.69032 — https://www.openstreetmap.org/node/14235910101</description>
+</item>
+<item>
+<title>Flock Safety camera in New York</title>
+<link>/#map=17/43.16581/-77.69096&amp;cam=14235910701</link>
+<guid isPermaLink="false">osm-node-14235910701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.16581, -77.69096 — https://www.openstreetmap.org/node/14235910701</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/46.81117/-71.21868&amp;cam=14235955301</link>
+<guid isPermaLink="false">osm-node-14235955301</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.81117, -71.21868 — https://www.openstreetmap.org/node/14235955301</description>
+</item>
+<item>
+<title>ALPR camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45580/-73.73715&amp;cam=14235965301</link>
+<guid isPermaLink="false">osm-node-14235965301</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45580, -73.73715 — https://www.openstreetmap.org/node/14235965301</description>
+</item>
+<item>
+<title>ALPR camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45585/-73.73731&amp;cam=14235966701</link>
+<guid isPermaLink="false">osm-node-14235966701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45585, -73.73731 — https://www.openstreetmap.org/node/14235966701</description>
 </item>
 <item>
 <title>Motorola Solutions camera in New York</title>
-<link>/#map=17/43.20720/-75.45591&amp;cam=13991206801</link>
-<guid isPermaLink="false">osm-node-13991206801</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.20720, -75.45591 — https://www.openstreetmap.org/node/13991206801</description>
+<link>/#map=17/43.09206/-75.27722&amp;cam=14235967901</link>
+<guid isPermaLink="false">osm-node-14235967901</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.09206, -75.27722 — https://www.openstreetmap.org/node/14235967901</description>
 </item>
 <item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/43.66112/-83.09842&amp;cam=13992612301</link>
-<guid isPermaLink="false">osm-node-13992612301</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.66112, -83.09842 — https://www.openstreetmap.org/node/13992612301</description>
+<title>ALPR camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45145/-73.73784&amp;cam=14235968901</link>
+<guid isPermaLink="false">osm-node-14235968901</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45145, -73.73784 — https://www.openstreetmap.org/node/14235968901</description>
 </item>
 <item>
-<title>Genetec camera in New York</title>
-<link>/#map=17/43.09326/-75.21378&amp;cam=14001628601</link>
-<guid isPermaLink="false">osm-node-14001628601</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.09326, -75.21378 — https://www.openstreetmap.org/node/14001628601</description>
-</item>
-<item>
-<title>Axis Communications camera</title>
-<link>/#map=17/44.58945/-80.78049&amp;cam=14002338101</link>
-<guid isPermaLink="false">osm-node-14002338101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.58945, -80.78049 — https://www.openstreetmap.org/node/14002338101</description>
-</item>
-<item>
-<title>Genetec camera in New York</title>
-<link>/#map=17/43.10065/-75.25163&amp;cam=14002850201</link>
-<guid isPermaLink="false">osm-node-14002850201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.10065, -75.25163 — https://www.openstreetmap.org/node/14002850201</description>
-</item>
-<item>
-<title>Axis Communications camera in New York</title>
-<link>/#map=17/43.10034/-75.24944&amp;cam=14002864501</link>
-<guid isPermaLink="false">osm-node-14002864501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.10034, -75.24944 — https://www.openstreetmap.org/node/14002864501</description>
-</item>
-<item>
-<title>Axis Communications camera in New York</title>
-<link>/#map=17/43.09894/-75.22449&amp;cam=14002867435</link>
-<guid isPermaLink="false">osm-node-14002867435</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.09894, -75.22449 — https://www.openstreetmap.org/node/14002867435</description>
-</item>
-<item>
-<title>Axis Communications camera in New York</title>
-<link>/#map=17/43.09732/-75.21481&amp;cam=14002912502</link>
-<guid isPermaLink="false">osm-node-14002912502</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.09732, -75.21481 — https://www.openstreetmap.org/node/14002912502</description>
-</item>
-<item>
-<title>Axis Communications camera in New York</title>
-<link>/#map=17/43.09845/-75.21783&amp;cam=14002913501</link>
-<guid isPermaLink="false">osm-node-14002913501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.09845, -75.21783 — https://www.openstreetmap.org/node/14002913501</description>
+<title>ALPR camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45132/-73.73791&amp;cam=14235968902</link>
+<guid isPermaLink="false">osm-node-14235968902</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45132, -73.73791 — https://www.openstreetmap.org/node/14235968902</description>
 </item>
 <item>
 <title>Motorola Solutions camera in New York</title>
-<link>/#map=17/43.09384/-75.27576&amp;cam=14003043703</link>
-<guid isPermaLink="false">osm-node-14003043703</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.09384, -75.27576 — https://www.openstreetmap.org/node/14003043703</description>
+<link>/#map=17/43.09419/-75.27930&amp;cam=14235969101</link>
+<guid isPermaLink="false">osm-node-14235969101</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.09419, -75.27930 — https://www.openstreetmap.org/node/14235969101</description>
 </item>
 <item>
 <title>Motorola Solutions camera in New York</title>
-<link>/#map=17/43.09404/-75.27504&amp;cam=14003049401</link>
-<guid isPermaLink="false">osm-node-14003049401</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.09404, -75.27504 — https://www.openstreetmap.org/node/14003049401</description>
+<link>/#map=17/43.09414/-75.27828&amp;cam=14235970401</link>
+<guid isPermaLink="false">osm-node-14235970401</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.09414, -75.27828 — https://www.openstreetmap.org/node/14235970401</description>
 </item>
 <item>
-<title>Axis Communications camera in New York</title>
-<link>/#map=17/43.09288/-75.21406&amp;cam=14005360202</link>
-<guid isPermaLink="false">osm-node-14005360202</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.09288, -75.21406 — https://www.openstreetmap.org/node/14005360202</description>
+<title>ALPR camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45133/-73.73775&amp;cam=14235974202</link>
+<guid isPermaLink="false">osm-node-14235974202</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45133, -73.73775 — https://www.openstreetmap.org/node/14235974202</description>
 </item>
 <item>
-<title>Axis Communications camera in New York</title>
-<link>/#map=17/43.10116/-75.24769&amp;cam=14005377101</link>
-<guid isPermaLink="false">osm-node-14005377101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.10116, -75.24769 — https://www.openstreetmap.org/node/14005377101</description>
+<title>Axis Communications camera (Service de Police de la Ville de Québec)</title>
+<link>/#map=17/46.81263/-71.20143&amp;cam=14235975002</link>
+<guid isPermaLink="false">osm-node-14235975002</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.81263, -71.20143 — https://www.openstreetmap.org/node/14235975002</description>
 </item>
 <item>
-<title>Genetec camera in New York</title>
-<link>/#map=17/43.10142/-75.23924&amp;cam=14005473801</link>
-<guid isPermaLink="false">osm-node-14005473801</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.10142, -75.23924 — https://www.openstreetmap.org/node/14005473801</description>
-</item>
-<item>
-<title>Flock Safety camera in Maine (Paris Police)</title>
-<link>/#map=17/44.25483/-70.53004&amp;cam=14005608201</link>
-<guid isPermaLink="false">osm-node-14005608201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.25483, -70.53004 — https://www.openstreetmap.org/node/14005608201</description>
-</item>
-<item>
-<title>Flock Safety camera in Maine (Paris Police)</title>
-<link>/#map=17/44.24019/-70.52248&amp;cam=14005608601</link>
-<guid isPermaLink="false">osm-node-14005608601</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.24019, -70.52248 — https://www.openstreetmap.org/node/14005608601</description>
-</item>
-<item>
-<title>Flock Safety camera in Maine (Paris Police)</title>
-<link>/#map=17/44.22260/-70.51036&amp;cam=14005612601</link>
-<guid isPermaLink="false">osm-node-14005612601</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.22260, -70.51036 — https://www.openstreetmap.org/node/14005612601</description>
-</item>
-<item>
-<title>Flock Safety camera in Michigan</title>
-<link>/#map=17/43.62111/-84.18665&amp;cam=14005666693</link>
-<guid isPermaLink="false">osm-node-14005666693</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.62111, -84.18665 — https://www.openstreetmap.org/node/14005666693</description>
-</item>
-<item>
-<title>Flock Safety camera in Maine (Norway Police)</title>
-<link>/#map=17/44.20954/-70.53032&amp;cam=14011005501</link>
-<guid isPermaLink="false">osm-node-14011005501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.20954, -70.53032 — https://www.openstreetmap.org/node/14011005501</description>
-</item>
-<item>
-<title>Flock Safety camera in Maine (Norway Police)</title>
-<link>/#map=17/44.21073/-70.52961&amp;cam=14011006101</link>
-<guid isPermaLink="false">osm-node-14011006101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.21073, -70.52961 — https://www.openstreetmap.org/node/14011006101</description>
-</item>
-<item>
-<title>Leonardo camera in New York</title>
-<link>/#map=17/43.14245/-77.57844&amp;cam=14011061201</link>
-<guid isPermaLink="false">osm-node-14011061201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.14245, -77.57844 — https://www.openstreetmap.org/node/14011061201</description>
-</item>
-<item>
-<title>Flock Safety camera</title>
-<link>/#map=17/46.59272/-64.99025&amp;cam=14015608501</link>
-<guid isPermaLink="false">osm-node-14015608501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>46.59272, -64.99025 — https://www.openstreetmap.org/node/14015608501</description>
-</item>
-<item>
-<title>Flock Safety camera</title>
-<link>/#map=17/43.64070/-79.37540&amp;cam=14015635301</link>
-<guid isPermaLink="false">osm-node-14015635301</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.64070, -79.37540 — https://www.openstreetmap.org/node/14015635301</description>
-</item>
-<item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.14301/-76.32115&amp;cam=14016099432</link>
-<guid isPermaLink="false">osm-node-14016099432</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.14301, -76.32115 — https://www.openstreetmap.org/node/14016099432</description>
-</item>
-<item>
-<title>Genetec camera in Vermont (Hanover Police)</title>
-<link>/#map=17/43.70098/-72.28975&amp;cam=14023314201</link>
-<guid isPermaLink="false">osm-node-14023314201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.70098, -72.28975 — https://www.openstreetmap.org/node/14023314201</description>
-</item>
-<item>
-<title>Genetec camera in Vermont (Darmouth College Police)</title>
-<link>/#map=17/43.70256/-72.28925&amp;cam=14023325601</link>
-<guid isPermaLink="false">osm-node-14023325601</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.70256, -72.28925 — https://www.openstreetmap.org/node/14023325601</description>
-</item>
-<item>
-<title>Genetec camera in Vermont (Dartmouth College Police)</title>
-<link>/#map=17/43.70358/-72.28993&amp;cam=14023399201</link>
-<guid isPermaLink="false">osm-node-14023399201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.70358, -72.28993 — https://www.openstreetmap.org/node/14023399201</description>
-</item>
-<item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.78383/-75.49014&amp;cam=14024331001</link>
-<guid isPermaLink="false">osm-node-14024331001</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.78383, -75.49014 — https://www.openstreetmap.org/node/14024331001</description>
-</item>
-<item>
-<title>Flock Safety camera</title>
-<link>/#map=17/46.26177/-63.16984&amp;cam=14026472802</link>
-<guid isPermaLink="false">osm-node-14026472802</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>46.26177, -63.16984 — https://www.openstreetmap.org/node/14026472802</description>
-</item>
-<item>
-<title>Flock Safety camera</title>
-<link>/#map=17/46.25865/-63.17901&amp;cam=14026479802</link>
-<guid isPermaLink="false">osm-node-14026479802</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>46.25865, -63.17901 — https://www.openstreetmap.org/node/14026479802</description>
-</item>
-<item>
-<title>Flock Safety camera</title>
-<link>/#map=17/46.27017/-63.17511&amp;cam=14026486902</link>
-<guid isPermaLink="false">osm-node-14026486902</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>46.27017, -63.17511 — https://www.openstreetmap.org/node/14026486902</description>
-</item>
-<item>
-<title>Flock Safety camera</title>
-<link>/#map=17/46.24146/-63.13342&amp;cam=14026843201</link>
-<guid isPermaLink="false">osm-node-14026843201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>46.24146, -63.13342 — https://www.openstreetmap.org/node/14026843201</description>
-</item>
-<item>
-<title>Flock Safety camera</title>
-<link>/#map=17/46.24279/-63.13387&amp;cam=14026846601</link>
-<guid isPermaLink="false">osm-node-14026846601</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>46.24279, -63.13387 — https://www.openstreetmap.org/node/14026846601</description>
-</item>
-<item>
-<title>Flock Safety camera</title>
-<link>/#map=17/46.24242/-63.13283&amp;cam=14026846701</link>
-<guid isPermaLink="false">osm-node-14026846701</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>46.24242, -63.13283 — https://www.openstreetmap.org/node/14026846701</description>
-</item>
-<item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.32859/-76.40846&amp;cam=14027372102</link>
-<guid isPermaLink="false">osm-node-14027372102</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.32859, -76.40846 — https://www.openstreetmap.org/node/14027372102</description>
-</item>
-<item>
-<title>ALPR camera (Transports Québec)</title>
-<link>/#map=17/45.64110/-73.62397&amp;cam=14027730584</link>
-<guid isPermaLink="false">osm-node-14027730584</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.64110, -73.62397 — https://www.openstreetmap.org/node/14027730584</description>
-</item>
-<item>
-<title>ALPR camera (Transports Québec)</title>
-<link>/#map=17/45.64101/-73.62386&amp;cam=14027730585</link>
-<guid isPermaLink="false">osm-node-14027730585</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.64101, -73.62386 — https://www.openstreetmap.org/node/14027730585</description>
-</item>
-<item>
-<title>ALPR camera (Transports Québec)</title>
-<link>/#map=17/45.64119/-73.62383&amp;cam=14027730586</link>
-<guid isPermaLink="false">osm-node-14027730586</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.64119, -73.62383 — https://www.openstreetmap.org/node/14027730586</description>
-</item>
-<item>
-<title>ALPR camera (Transports Québec)</title>
-<link>/#map=17/45.64109/-73.62371&amp;cam=14027730587</link>
-<guid isPermaLink="false">osm-node-14027730587</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>45.64109, -73.62371 — https://www.openstreetmap.org/node/14027730587</description>
-</item>
-<item>
-<title>Flock Safety camera in Maine</title>
-<link>/#map=17/44.09237/-70.20840&amp;cam=14029694981</link>
-<guid isPermaLink="false">osm-node-14029694981</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.09237, -70.20840 — https://www.openstreetmap.org/node/14029694981</description>
+<title>ALPR camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45140/-73.73765&amp;cam=14235975101</link>
+<guid isPermaLink="false">osm-node-14235975101</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45140, -73.73765 — https://www.openstreetmap.org/node/14235975101</description>
 </item>
 <item>
 <title>ALPR camera in New York</title>
-<link>/#map=17/43.13635/-77.57554&amp;cam=14031783801</link>
-<guid isPermaLink="false">osm-node-14031783801</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.13635, -77.57554 — https://www.openstreetmap.org/node/14031783801</description>
+<link>/#map=17/43.14543/-77.59187&amp;cam=14236078927</link>
+<guid isPermaLink="false">osm-node-14236078927</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.14543, -77.59187 — https://www.openstreetmap.org/node/14236078927</description>
 </item>
 <item>
-<title>ALPR camera in New York</title>
-<link>/#map=17/43.13164/-77.59009&amp;cam=14031783802</link>
-<guid isPermaLink="false">osm-node-14031783802</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.13164, -77.59009 — https://www.openstreetmap.org/node/14031783802</description>
+<title>Axis Communications camera (Réseau de Transport de la Capitale)</title>
+<link>/#map=17/46.88856/-71.30701&amp;cam=14236717201</link>
+<guid isPermaLink="false">osm-node-14236717201</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.88856, -71.30701 — https://www.openstreetmap.org/node/14236717201</description>
+</item>
+<item>
+<title>Axis Communications camera (Réseau de Transport de la Capitale)</title>
+<link>/#map=17/46.88930/-71.30553&amp;cam=14236718701</link>
+<guid isPermaLink="false">osm-node-14236718701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.88930, -71.30553 — https://www.openstreetmap.org/node/14236718701</description>
+</item>
+<item>
+<title>ALPR camera (Transports Québec)</title>
+<link>/#map=17/45.67767/-73.65026&amp;cam=14237786201</link>
+<guid isPermaLink="false">osm-node-14237786201</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.67767, -73.65026 — https://www.openstreetmap.org/node/14237786201</description>
+</item>
+<item>
+<title>ALPR camera in Michigan (Maximum Exposures Security)</title>
+<link>/#map=17/44.80884/-84.14560&amp;cam=14240486044</link>
+<guid isPermaLink="false">osm-node-14240486044</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>44.80884, -84.14560 — https://www.openstreetmap.org/node/14240486044</description>
+</item>
+<item>
+<title>ALPR camera in Michigan (Maximum Exposures Security)</title>
+<link>/#map=17/44.80882/-84.14566&amp;cam=14240527526</link>
+<guid isPermaLink="false">osm-node-14240527526</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>44.80882, -84.14566 — https://www.openstreetmap.org/node/14240527526</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.68400/-73.78888&amp;cam=14240979501</link>
+<guid isPermaLink="false">osm-node-14240979501</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.68400, -73.78888 — https://www.openstreetmap.org/node/14240979501</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.68393/-73.78897&amp;cam=14240980701</link>
+<guid isPermaLink="false">osm-node-14240980701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.68393, -73.78897 — https://www.openstreetmap.org/node/14240980701</description>
+</item>
+<item>
+<title>Flock Safety camera in Wisconsin</title>
+<link>/#map=17/44.49995/-87.98006&amp;cam=14242836001</link>
+<guid isPermaLink="false">osm-node-14242836001</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>44.49995, -87.98006 — https://www.openstreetmap.org/node/14242836001</description>
+</item>
+<item>
+<title>Avigilon camera (Ville de Mont-Laurier)</title>
+<link>/#map=17/46.55034/-75.49583&amp;cam=14245002501</link>
+<guid isPermaLink="false">osm-node-14245002501</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.55034, -75.49583 — https://www.openstreetmap.org/node/14245002501</description>
+</item>
+<item>
+<title>Avigilon camera (Ville de Mont-Laurier)</title>
+<link>/#map=17/46.55094/-75.49045&amp;cam=14245018601</link>
+<guid isPermaLink="false">osm-node-14245018601</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.55094, -75.49045 — https://www.openstreetmap.org/node/14245018601</description>
+</item>
+<item>
+<title>Avigilon camera (Ville de Mont-Laurier)</title>
+<link>/#map=17/46.54909/-75.49984&amp;cam=14245023701</link>
+<guid isPermaLink="false">osm-node-14245023701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.54909, -75.49984 — https://www.openstreetmap.org/node/14245023701</description>
+</item>
+<item>
+<title>Avigilon camera (Ville de Mont-Laurier)</title>
+<link>/#map=17/46.54869/-75.50853&amp;cam=14245025901</link>
+<guid isPermaLink="false">osm-node-14245025901</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.54869, -75.50853 — https://www.openstreetmap.org/node/14245025901</description>
+</item>
+<item>
+<title>Avigilon camera (Ville de Mont-Laurier)</title>
+<link>/#map=17/46.55089/-75.48778&amp;cam=14245028601</link>
+<guid isPermaLink="false">osm-node-14245028601</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.55089, -75.48778 — https://www.openstreetmap.org/node/14245028601</description>
+</item>
+<item>
+<title>ALPR camera in Wisconsin</title>
+<link>/#map=17/43.74703/-87.96146&amp;cam=14245315276</link>
+<guid isPermaLink="false">osm-node-14245315276</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.74703, -87.96146 — https://www.openstreetmap.org/node/14245315276</description>
+</item>
+<item>
+<title>ALPR camera in Wisconsin</title>
+<link>/#map=17/43.74703/-87.96108&amp;cam=14245315277</link>
+<guid isPermaLink="false">osm-node-14245315277</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.74703, -87.96108 — https://www.openstreetmap.org/node/14245315277</description>
+</item>
+<item>
+<title>ALPR camera</title>
+<link>/#map=17/45.63802/-72.96899&amp;cam=14246224901</link>
+<guid isPermaLink="false">osm-node-14246224901</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.63802, -72.96899 — https://www.openstreetmap.org/node/14246224901</description>
+</item>
+<item>
+<title>Pelco camera (Ville d&#39;Alma)</title>
+<link>/#map=17/48.56166/-71.64245&amp;cam=14246402801</link>
+<guid isPermaLink="false">osm-node-14246402801</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>48.56166, -71.64245 — https://www.openstreetmap.org/node/14246402801</description>
+</item>
+<item>
+<title>Pelco camera (Ville d&#39;Alma)</title>
+<link>/#map=17/48.52200/-71.65377&amp;cam=14246413401</link>
+<guid isPermaLink="false">osm-node-14246413401</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>48.52200, -71.65377 — https://www.openstreetmap.org/node/14246413401</description>
+</item>
+<item>
+<title>Avigilon camera (Zoo de Granby)</title>
+<link>/#map=17/45.42010/-72.72481&amp;cam=14249024001</link>
+<guid isPermaLink="false">osm-node-14249024001</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.42010, -72.72481 — https://www.openstreetmap.org/node/14249024001</description>
+</item>
+<item>
+<title>Avigilon camera (Zoo de Granby)</title>
+<link>/#map=17/45.41992/-72.72505&amp;cam=14249024102</link>
+<guid isPermaLink="false">osm-node-14249024102</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.41992, -72.72505 — https://www.openstreetmap.org/node/14249024102</description>
+</item>
+<item>
+<title>Avigilon camera (Zoo de Granby)</title>
+<link>/#map=17/45.41936/-72.72526&amp;cam=14249025801</link>
+<guid isPermaLink="false">osm-node-14249025801</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.41936, -72.72526 — https://www.openstreetmap.org/node/14249025801</description>
+</item>
+<item>
+<title>Avigilon camera (Zoo de Granby)</title>
+<link>/#map=17/45.41870/-72.72543&amp;cam=14249026201</link>
+<guid isPermaLink="false">osm-node-14249026201</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.41870, -72.72543 — https://www.openstreetmap.org/node/14249026201</description>
+</item>
+<item>
+<title>Rekor camera</title>
+<link>/#map=17/45.31797/-74.02266&amp;cam=14250611101</link>
+<guid isPermaLink="false">osm-node-14250611101</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31797, -74.02266 — https://www.openstreetmap.org/node/14250611101</description>
+</item>
+<item>
+<title>Rekor camera</title>
+<link>/#map=17/45.31760/-74.02291&amp;cam=14250611401</link>
+<guid isPermaLink="false">osm-node-14250611401</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31760, -74.02291 — https://www.openstreetmap.org/node/14250611401</description>
+</item>
+<item>
+<title>Leonardo camera (Transports Québec)</title>
+<link>/#map=17/45.84437/-74.07116&amp;cam=14253442801</link>
+<guid isPermaLink="false">osm-node-14253442801</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.84437, -74.07116 — https://www.openstreetmap.org/node/14253442801</description>
+</item>
+<item>
+<title>Leonardo camera (Transports Québec)</title>
+<link>/#map=17/45.83869/-74.06684&amp;cam=14253443901</link>
+<guid isPermaLink="false">osm-node-14253443901</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.83869, -74.06684 — https://www.openstreetmap.org/node/14253443901</description>
+</item>
+<item>
+<title>Leonardo camera (Transports Québec)</title>
+<link>/#map=17/45.29638/-74.00569&amp;cam=14253443902</link>
+<guid isPermaLink="false">osm-node-14253443902</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.29638, -74.00569 — https://www.openstreetmap.org/node/14253443902</description>
+</item>
+<item>
+<title>Leonardo camera (Transports Québec)</title>
+<link>/#map=17/45.61703/-73.66931&amp;cam=14253444901</link>
+<guid isPermaLink="false">osm-node-14253444901</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.61703, -73.66931 — https://www.openstreetmap.org/node/14253444901</description>
+</item>
+<item>
+<title>Leonardo camera (Transports Québec)</title>
+<link>/#map=17/45.61783/-73.67011&amp;cam=14253445401</link>
+<guid isPermaLink="false">osm-node-14253445401</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.61783, -73.67011 — https://www.openstreetmap.org/node/14253445401</description>
+</item>
+<item>
+<title>Leonardo camera (Transports Québec)</title>
+<link>/#map=17/45.31465/-74.02094&amp;cam=14253446101</link>
+<guid isPermaLink="false">osm-node-14253446101</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31465, -74.02094 — https://www.openstreetmap.org/node/14253446101</description>
+</item>
+<item>
+<title>Leonardo camera (Aéroports de Montréal)</title>
+<link>/#map=17/45.45718/-73.74725&amp;cam=14253462301</link>
+<guid isPermaLink="false">osm-node-14253462301</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.45718, -73.74725 — https://www.openstreetmap.org/node/14253462301</description>
+</item>
+<item>
+<title>Leonardo camera (Transports Québec)</title>
+<link>/#map=17/45.48689/-73.73079&amp;cam=14253585401</link>
+<guid isPermaLink="false">osm-node-14253585401</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.48689, -73.73079 — https://www.openstreetmap.org/node/14253585401</description>
+</item>
+<item>
+<title>Leonardo camera (Transports Québec)</title>
+<link>/#map=17/45.48664/-73.73135&amp;cam=14253585402</link>
+<guid isPermaLink="false">osm-node-14253585402</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.48664, -73.73135 — https://www.openstreetmap.org/node/14253585402</description>
 </item>
 <item>
 <title>Flock Safety camera in Michigan</title>
-<link>/#map=17/44.03046/-84.44717&amp;cam=14039166801</link>
-<guid isPermaLink="false">osm-node-14039166801</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.03046, -84.44717 — https://www.openstreetmap.org/node/14039166801</description>
+<link>/#map=17/43.65651/-84.25201&amp;cam=14256296402</link>
+<guid isPermaLink="false">osm-node-14256296402</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.65651, -84.25201 — https://www.openstreetmap.org/node/14256296402</description>
 </item>
 <item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.11767/-76.12181&amp;cam=14040337101</link>
-<guid isPermaLink="false">osm-node-14040337101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.11767, -76.12181 — https://www.openstreetmap.org/node/14040337101</description>
+<title>Neology, Inc. camera</title>
+<link>/#map=17/46.28591/-81.77667&amp;cam=14256387240</link>
+<guid isPermaLink="false">osm-node-14256387240</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>46.28591, -81.77667 — https://www.openstreetmap.org/node/14256387240</description>
 </item>
 <item>
-<title>Flock Safety camera in New York</title>
-<link>/#map=17/43.21551/-77.44635&amp;cam=14040342601</link>
-<guid isPermaLink="false">osm-node-14040342601</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.21551, -77.44635 — https://www.openstreetmap.org/node/14040342601</description>
+<title>Verkada Inc. camera</title>
+<link>/#map=17/45.57312/-82.01487&amp;cam=14256404842</link>
+<guid isPermaLink="false">osm-node-14256404842</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.57312, -82.01487 — https://www.openstreetmap.org/node/14256404842</description>
 </item>
 <item>
-<title>ALPR camera</title>
-<link>/#map=17/44.25899/-76.51906&amp;cam=14040809501</link>
-<guid isPermaLink="false">osm-node-14040809501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.25899, -76.51906 — https://www.openstreetmap.org/node/14040809501</description>
+<title>Leonardo camera (Transports Québec)</title>
+<link>/#map=17/45.61990/-73.66866&amp;cam=14256492101</link>
+<guid isPermaLink="false">osm-node-14256492101</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.61990, -73.66866 — https://www.openstreetmap.org/node/14256492101</description>
 </item>
 <item>
-<title>ALPR camera</title>
-<link>/#map=17/44.25898/-76.51933&amp;cam=14040809502</link>
-<guid isPermaLink="false">osm-node-14040809502</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.25898, -76.51933 — https://www.openstreetmap.org/node/14040809502</description>
+<title>Leonardo camera (Transports Québec)</title>
+<link>/#map=17/45.61824/-73.67182&amp;cam=14256496801</link>
+<guid isPermaLink="false">osm-node-14256496801</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.61824, -73.67182 — https://www.openstreetmap.org/node/14256496801</description>
 </item>
 <item>
-<title>ALPR camera</title>
-<link>/#map=17/44.25886/-76.51919&amp;cam=14040811101</link>
-<guid isPermaLink="false">osm-node-14040811101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.25886, -76.51919 — https://www.openstreetmap.org/node/14040811101</description>
+<title>Axis Communications camera (Transports Québec)</title>
+<link>/#map=17/45.65052/-73.64495&amp;cam=14256523201</link>
+<guid isPermaLink="false">osm-node-14256523201</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.65052, -73.64495 — https://www.openstreetmap.org/node/14256523201</description>
+</item>
+<item>
+<title>Axis Communications camera (Transports Québec)</title>
+<link>/#map=17/45.65979/-73.64772&amp;cam=14256523301</link>
+<guid isPermaLink="false">osm-node-14256523301</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.65979, -73.64772 — https://www.openstreetmap.org/node/14256523301</description>
+</item>
+<item>
+<title>Axis Communications camera (Transports Québec)</title>
+<link>/#map=17/45.65271/-73.63752&amp;cam=14256523501</link>
+<guid isPermaLink="false">osm-node-14256523501</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.65271, -73.63752 — https://www.openstreetmap.org/node/14256523501</description>
+</item>
+<item>
+<title>Axis Communications camera (Transports Québec)</title>
+<link>/#map=17/45.65550/-73.64346&amp;cam=14256523701</link>
+<guid isPermaLink="false">osm-node-14256523701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.65550, -73.64346 — https://www.openstreetmap.org/node/14256523701</description>
+</item>
+<item>
+<title>Genetec camera (City of Brampton)</title>
+<link>/#map=17/43.67596/-79.77057&amp;cam=14258546001</link>
+<guid isPermaLink="false">osm-node-14258546001</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.67596, -79.77057 — https://www.openstreetmap.org/node/14258546001</description>
+</item>
+<item>
+<title>Genetec camera (City of Brampton)</title>
+<link>/#map=17/43.67607/-79.77072&amp;cam=14258554401</link>
+<guid isPermaLink="false">osm-node-14258554401</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.67607, -79.77072 — https://www.openstreetmap.org/node/14258554401</description>
+</item>
+<item>
+<title>Genetec camera (City of Brampton)</title>
+<link>/#map=17/43.67615/-79.77041&amp;cam=14258595102</link>
+<guid isPermaLink="false">osm-node-14258595102</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.67615, -79.77041 — https://www.openstreetmap.org/node/14258595102</description>
+</item>
+<item>
+<title>Genetec camera (City of Brampton)</title>
+<link>/#map=17/43.67625/-79.77069&amp;cam=14258595301</link>
+<guid isPermaLink="false">osm-node-14258595301</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.67625, -79.77069 — https://www.openstreetmap.org/node/14258595301</description>
+</item>
+<item>
+<title>Rekor camera</title>
+<link>/#map=17/45.31762/-74.02286&amp;cam=14261693001</link>
+<guid isPermaLink="false">osm-node-14261693001</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.31762, -74.02286 — https://www.openstreetmap.org/node/14261693001</description>
 </item>
 <item>
 <title>Flock Safety camera in Michigan</title>
-<link>/#map=17/43.59619/-83.94684&amp;cam=14045008701</link>
-<guid isPermaLink="false">osm-node-14045008701</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>43.59619, -83.94684 — https://www.openstreetmap.org/node/14045008701</description>
+<link>/#map=17/43.20774/-86.22708&amp;cam=14261818801</link>
+<guid isPermaLink="false">osm-node-14261818801</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.20774, -86.22708 — https://www.openstreetmap.org/node/14261818801</description>
 </item>
 <item>
-<title>Flock Safety camera</title>
-<link>/#map=17/44.25155/-76.94486&amp;cam=13450502701</link>
-<guid isPermaLink="false">osm-node-13450502701</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.25155, -76.94486 — https://www.openstreetmap.org/node/13450502701</description>
+<title>Flock Safety camera in Michigan</title>
+<link>/#map=17/43.20940/-86.23095&amp;cam=14261824101</link>
+<guid isPermaLink="false">osm-node-14261824101</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.20940, -86.23095 — https://www.openstreetmap.org/node/14261824101</description>
 </item>
 <item>
-<title>Flock Safety camera</title>
-<link>/#map=17/44.25015/-76.93602&amp;cam=13451462802</link>
-<guid isPermaLink="false">osm-node-13451462802</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.25015, -76.93602 — https://www.openstreetmap.org/node/13451462802</description>
+<title>Flock Safety camera in Michigan</title>
+<link>/#map=17/43.21016/-86.22964&amp;cam=14261853201</link>
+<guid isPermaLink="false">osm-node-14261853201</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.21016, -86.22964 — https://www.openstreetmap.org/node/14261853201</description>
 </item>
 <item>
-<title>Flock Safety camera</title>
-<link>/#map=17/44.24892/-76.94735&amp;cam=13451467601</link>
-<guid isPermaLink="false">osm-node-13451467601</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.24892, -76.94735 — https://www.openstreetmap.org/node/13451467601</description>
+<title>ALPR camera</title>
+<link>/#map=17/43.34471/-80.36989&amp;cam=14264880601</link>
+<guid isPermaLink="false">osm-node-14264880601</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.34471, -80.36989 — https://www.openstreetmap.org/node/14264880601</description>
 </item>
 <item>
-<title>Flock Safety camera</title>
-<link>/#map=17/44.24875/-76.94808&amp;cam=13451468401</link>
-<guid isPermaLink="false">osm-node-13451468401</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.24875, -76.94808 — https://www.openstreetmap.org/node/13451468401</description>
+<title>Leonardo camera (Transports Québec)</title>
+<link>/#map=17/45.61743/-73.66801&amp;cam=14266098101</link>
+<guid isPermaLink="false">osm-node-14266098101</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>45.61743, -73.66801 — https://www.openstreetmap.org/node/14266098101</description>
 </item>
 <item>
-<title>Flock Safety camera</title>
-<link>/#map=17/44.24853/-76.94814&amp;cam=13451469501</link>
-<guid isPermaLink="false">osm-node-13451469501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.24853, -76.94814 — https://www.openstreetmap.org/node/13451469501</description>
-</item>
-<item>
-<title>Flock Safety camera</title>
-<link>/#map=17/44.24810/-76.94927&amp;cam=13451469901</link>
-<guid isPermaLink="false">osm-node-13451469901</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.24810, -76.94927 — https://www.openstreetmap.org/node/13451469901</description>
-</item>
-<item>
-<title>Flock Safety camera</title>
-<link>/#map=17/44.25113/-76.94680&amp;cam=13452782202</link>
-<guid isPermaLink="false">osm-node-13452782202</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.25113, -76.94680 — https://www.openstreetmap.org/node/13452782202</description>
-</item>
-<item>
-<title>Flock Safety camera</title>
-<link>/#map=17/44.24615/-76.94943&amp;cam=13452785301</link>
-<guid isPermaLink="false">osm-node-13452785301</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.24615, -76.94943 — https://www.openstreetmap.org/node/13452785301</description>
-</item>
-<item>
-<title>Flock Safety camera</title>
-<link>/#map=17/44.24460/-76.94844&amp;cam=13452785601</link>
-<guid isPermaLink="false">osm-node-13452785601</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>44.24460, -76.94844 — https://www.openstreetmap.org/node/13452785601</description>
-</item>
-<item>
-<title>Flock Safety camera in Virginia</title>
-<link>/#map=17/37.54902/-77.39564&amp;cam=14225584846</link>
-<guid isPermaLink="false">osm-node-14225584846</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>37.54902, -77.39564 — https://www.openstreetmap.org/node/14225584846</description>
-</item>
-<item>
-<title>Flock Safety camera in Virginia</title>
-<link>/#map=17/37.54851/-77.39650&amp;cam=14225584847</link>
-<guid isPermaLink="false">osm-node-14225584847</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>37.54851, -77.39650 — https://www.openstreetmap.org/node/14225584847</description>
-</item>
-<item>
-<title>Flock Safety camera in Virginia</title>
-<link>/#map=17/37.55612/-77.43792&amp;cam=14225597994</link>
-<guid isPermaLink="false">osm-node-14225597994</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>37.55612, -77.43792 — https://www.openstreetmap.org/node/14225597994</description>
-</item>
-<item>
-<title>Flock Safety camera in Virginia</title>
-<link>/#map=17/37.55826/-77.43931&amp;cam=14225597995</link>
-<guid isPermaLink="false">osm-node-14225597995</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>37.55826, -77.43931 — https://www.openstreetmap.org/node/14225597995</description>
-</item>
-<item>
-<title>Flock Safety camera in Virginia</title>
-<link>/#map=17/37.55852/-77.44217&amp;cam=14225597996</link>
-<guid isPermaLink="false">osm-node-14225597996</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>37.55852, -77.44217 — https://www.openstreetmap.org/node/14225597996</description>
-</item>
-<item>
-<title>Flock Safety camera in South Carolina</title>
-<link>/#map=17/34.07406/-80.96244&amp;cam=14225612001</link>
-<guid isPermaLink="false">osm-node-14225612001</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>34.07406, -80.96244 — https://www.openstreetmap.org/node/14225612001</description>
-</item>
-<item>
-<title>Flock Safety camera in Virginia</title>
-<link>/#map=17/37.54015/-77.44020&amp;cam=14225616776</link>
-<guid isPermaLink="false">osm-node-14225616776</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>37.54015, -77.44020 — https://www.openstreetmap.org/node/14225616776</description>
-</item>
-<item>
-<title>Flock Safety camera in North Carolina</title>
-<link>/#map=17/35.29808/-81.28045&amp;cam=14225627201</link>
-<guid isPermaLink="false">osm-node-14225627201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>35.29808, -81.28045 — https://www.openstreetmap.org/node/14225627201</description>
-</item>
-<item>
-<title>Flock Safety camera in Alabama</title>
-<link>/#map=17/32.66924/-85.34319&amp;cam=14225711501</link>
-<guid isPermaLink="false">osm-node-14225711501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>32.66924, -85.34319 — https://www.openstreetmap.org/node/14225711501</description>
-</item>
-<item>
-<title>Flock Safety camera in Virginia</title>
-<link>/#map=17/36.84314/-75.99639&amp;cam=14227201301</link>
-<guid isPermaLink="false">osm-node-14227201301</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>36.84314, -75.99639 — https://www.openstreetmap.org/node/14227201301</description>
-</item>
-<item>
-<title>Flock Safety camera in North Carolina</title>
-<link>/#map=17/35.92066/-80.58734&amp;cam=14227728401</link>
-<guid isPermaLink="false">osm-node-14227728401</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>35.92066, -80.58734 — https://www.openstreetmap.org/node/14227728401</description>
-</item>
-<item>
-<title>Flock Safety camera in South Carolina</title>
-<link>/#map=17/34.96158/-81.00354&amp;cam=14227741601</link>
-<guid isPermaLink="false">osm-node-14227741601</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>34.96158, -81.00354 — https://www.openstreetmap.org/node/14227741601</description>
-</item>
-<item>
-<title>Flock Safety camera in South Carolina</title>
-<link>/#map=17/33.88572/-80.34988&amp;cam=14227976703</link>
-<guid isPermaLink="false">osm-node-14227976703</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.88572, -80.34988 — https://www.openstreetmap.org/node/14227976703</description>
-</item>
-<item>
-<title>Flock Safety camera in Georgia</title>
-<link>/#map=17/33.66693/-84.02586&amp;cam=14227999701</link>
-<guid isPermaLink="false">osm-node-14227999701</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.66693, -84.02586 — https://www.openstreetmap.org/node/14227999701</description>
-</item>
-<item>
-<title>Flock Safety camera in Georgia</title>
-<link>/#map=17/33.65262/-84.00396&amp;cam=14228002003</link>
-<guid isPermaLink="false">osm-node-14228002003</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.65262, -84.00396 — https://www.openstreetmap.org/node/14228002003</description>
-</item>
-<item>
-<title>Flock Safety camera in Georgia</title>
-<link>/#map=17/33.65192/-84.00404&amp;cam=14228002901</link>
-<guid isPermaLink="false">osm-node-14228002901</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.65192, -84.00404 — https://www.openstreetmap.org/node/14228002901</description>
-</item>
-<item>
-<title>Flock Safety camera in Alabama</title>
-<link>/#map=17/33.18396/-86.27378&amp;cam=14228003801</link>
-<guid isPermaLink="false">osm-node-14228003801</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.18396, -86.27378 — https://www.openstreetmap.org/node/14228003801</description>
-</item>
-<item>
-<title>Flock Safety camera in West Virginia</title>
-<link>/#map=17/37.66993/-80.89175&amp;cam=14228012501</link>
-<guid isPermaLink="false">osm-node-14228012501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>37.66993, -80.89175 — https://www.openstreetmap.org/node/14228012501</description>
-</item>
-<item>
-<title>Flock Safety camera in North Carolina</title>
-<link>/#map=17/35.92066/-80.58734&amp;cam=14228413301</link>
-<guid isPermaLink="false">osm-node-14228413301</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>35.92066, -80.58734 — https://www.openstreetmap.org/node/14228413301</description>
-</item>
-<item>
-<title>Flock Safety camera in Kentucky</title>
-<link>/#map=17/37.70398/-85.87117&amp;cam=14228591101</link>
-<guid isPermaLink="false">osm-node-14228591101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>37.70398, -85.87117 — https://www.openstreetmap.org/node/14228591101</description>
-</item>
-<item>
-<title>Flock Safety camera in Georgia</title>
-<link>/#map=17/33.70759/-84.14789&amp;cam=14228696701</link>
-<guid isPermaLink="false">osm-node-14228696701</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.70759, -84.14789 — https://www.openstreetmap.org/node/14228696701</description>
-</item>
-<item>
-<title>Flock Safety camera in Georgia</title>
-<link>/#map=17/33.70799/-84.14747&amp;cam=14228697601</link>
-<guid isPermaLink="false">osm-node-14228697601</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.70799, -84.14747 — https://www.openstreetmap.org/node/14228697601</description>
-</item>
-<item>
-<title>Axis Communications camera in Alabama</title>
-<link>/#map=17/33.63227/-86.68476&amp;cam=14228719101</link>
-<guid isPermaLink="false">osm-node-14228719101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.63227, -86.68476 — https://www.openstreetmap.org/node/14228719101</description>
-</item>
-<item>
-<title>Flock Safety camera in Georgia</title>
-<link>/#map=17/33.48378/-81.97140&amp;cam=14228719538</link>
-<guid isPermaLink="false">osm-node-14228719538</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.48378, -81.97140 — https://www.openstreetmap.org/node/14228719538</description>
-</item>
-<item>
-<title>Flock Safety camera in South Carolina</title>
-<link>/#map=17/33.50930/-81.97993&amp;cam=14228823976</link>
-<guid isPermaLink="false">osm-node-14228823976</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.50930, -81.97993 — https://www.openstreetmap.org/node/14228823976</description>
-</item>
-<item>
-<title>Flock Safety camera in North Carolina</title>
-<link>/#map=17/35.92439/-80.59183&amp;cam=14228871906</link>
-<guid isPermaLink="false">osm-node-14228871906</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>35.92439, -80.59183 — https://www.openstreetmap.org/node/14228871906</description>
-</item>
-<item>
-<title>Flock Safety camera in Virginia</title>
-<link>/#map=17/36.73098/-76.58556&amp;cam=14229010201</link>
-<guid isPermaLink="false">osm-node-14229010201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>36.73098, -76.58556 — https://www.openstreetmap.org/node/14229010201</description>
-</item>
-<item>
-<title>Flock Safety camera in Virginia</title>
-<link>/#map=17/36.73246/-76.58435&amp;cam=14229011101</link>
-<guid isPermaLink="false">osm-node-14229011101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>36.73246, -76.58435 — https://www.openstreetmap.org/node/14229011101</description>
-</item>
-<item>
-<title>Flock Safety camera in North Carolina</title>
-<link>/#map=17/35.91349/-80.58094&amp;cam=14229037501</link>
-<guid isPermaLink="false">osm-node-14229037501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>35.91349, -80.58094 — https://www.openstreetmap.org/node/14229037501</description>
-</item>
-<item>
-<title>Flock Safety camera in Alabama</title>
-<link>/#map=17/34.99272/-86.84905&amp;cam=14229049401</link>
-<guid isPermaLink="false">osm-node-14229049401</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>34.99272, -86.84905 — https://www.openstreetmap.org/node/14229049401</description>
-</item>
-<item>
-<title>Flock Safety camera in Tennessee</title>
-<link>/#map=17/36.45843/-86.26754&amp;cam=14229130201</link>
-<guid isPermaLink="false">osm-node-14229130201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>36.45843, -86.26754 — https://www.openstreetmap.org/node/14229130201</description>
-</item>
-<item>
-<title>Flock Safety camera in South Carolina</title>
-<link>/#map=17/34.18395/-79.77740&amp;cam=14229206101</link>
-<guid isPermaLink="false">osm-node-14229206101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>34.18395, -79.77740 — https://www.openstreetmap.org/node/14229206101</description>
-</item>
-<item>
-<title>Motorola Solutions camera in Alabama</title>
-<link>/#map=17/34.73903/-86.67809&amp;cam=14229206901</link>
-<guid isPermaLink="false">osm-node-14229206901</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>34.73903, -86.67809 — https://www.openstreetmap.org/node/14229206901</description>
-</item>
-<item>
-<title>Flock Safety camera in Georgia</title>
-<link>/#map=17/33.98417/-84.46334&amp;cam=14229249701</link>
-<guid isPermaLink="false">osm-node-14229249701</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.98417, -84.46334 — https://www.openstreetmap.org/node/14229249701</description>
-</item>
-<item>
-<title>Flock Safety camera in South Carolina</title>
-<link>/#map=17/32.15300/-80.76030&amp;cam=14229439301</link>
-<guid isPermaLink="false">osm-node-14229439301</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>32.15300, -80.76030 — https://www.openstreetmap.org/node/14229439301</description>
-</item>
-<item>
-<title>Flock Safety camera in Georgia</title>
-<link>/#map=17/33.92322/-84.28092&amp;cam=14229476101</link>
-<guid isPermaLink="false">osm-node-14229476101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.92322, -84.28092 — https://www.openstreetmap.org/node/14229476101</description>
-</item>
-<item>
-<title>Axis Communications camera in Alabama</title>
-<link>/#map=17/33.65471/-86.72625&amp;cam=14229504401</link>
-<guid isPermaLink="false">osm-node-14229504401</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.65471, -86.72625 — https://www.openstreetmap.org/node/14229504401</description>
-</item>
-<item>
-<title>Flock Safety camera in Alabama</title>
-<link>/#map=17/33.49813/-86.79655&amp;cam=14229504601</link>
-<guid isPermaLink="false">osm-node-14229504601</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.49813, -86.79655 — https://www.openstreetmap.org/node/14229504601</description>
-</item>
-<item>
-<title>Flock Safety camera in Alabama</title>
-<link>/#map=17/33.49659/-86.79966&amp;cam=14229504701</link>
-<guid isPermaLink="false">osm-node-14229504701</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.49659, -86.79966 — https://www.openstreetmap.org/node/14229504701</description>
-</item>
-<item>
-<title>Flock Safety camera in North Carolina</title>
-<link>/#map=17/35.89811/-78.86706&amp;cam=14229515702</link>
-<guid isPermaLink="false">osm-node-14229515702</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>35.89811, -78.86706 — https://www.openstreetmap.org/node/14229515702</description>
-</item>
-<item>
-<title>Flock Safety camera in North Carolina</title>
-<link>/#map=17/35.89815/-78.86708&amp;cam=14229517501</link>
-<guid isPermaLink="false">osm-node-14229517501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>35.89815, -78.86708 — https://www.openstreetmap.org/node/14229517501</description>
-</item>
-<item>
-<title>Motorola Solutions camera in Alabama</title>
-<link>/#map=17/34.72019/-87.66516&amp;cam=14229599201</link>
-<guid isPermaLink="false">osm-node-14229599201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>34.72019, -87.66516 — https://www.openstreetmap.org/node/14229599201</description>
-</item>
-<item>
-<title>Flock Safety camera in Alabama</title>
-<link>/#map=17/33.56823/-86.78327&amp;cam=14229606201</link>
-<guid isPermaLink="false">osm-node-14229606201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.56823, -86.78327 — https://www.openstreetmap.org/node/14229606201</description>
-</item>
-<item>
-<title>Axis Communications camera in Alabama</title>
-<link>/#map=17/33.54163/-86.74787&amp;cam=14229903601</link>
-<guid isPermaLink="false">osm-node-14229903601</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.54163, -86.74787 — https://www.openstreetmap.org/node/14229903601</description>
-</item>
-<item>
-<title>Axis Communications camera in Alabama</title>
-<link>/#map=17/33.56146/-86.72870&amp;cam=14229904201</link>
-<guid isPermaLink="false">osm-node-14229904201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.56146, -86.72870 — https://www.openstreetmap.org/node/14229904201</description>
-</item>
-<item>
-<title>Axis Communications camera in Alabama</title>
-<link>/#map=17/33.53030/-86.72949&amp;cam=14229904601</link>
-<guid isPermaLink="false">osm-node-14229904601</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.53030, -86.72949 — https://www.openstreetmap.org/node/14229904601</description>
-</item>
-<item>
-<title>Flock Safety camera in Tennessee</title>
-<link>/#map=17/36.40518/-86.77989&amp;cam=14230292901</link>
-<guid isPermaLink="false">osm-node-14230292901</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>36.40518, -86.77989 — https://www.openstreetmap.org/node/14230292901</description>
-</item>
-<item>
-<title>Flock Safety camera in South Carolina</title>
-<link>/#map=17/33.04936/-80.17324&amp;cam=14231589501</link>
-<guid isPermaLink="false">osm-node-14231589501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.04936, -80.17324 — https://www.openstreetmap.org/node/14231589501</description>
-</item>
-<item>
-<title>Flock Safety camera in Tennessee</title>
-<link>/#map=17/36.38733/-86.41243&amp;cam=14232310401</link>
-<guid isPermaLink="false">osm-node-14232310401</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>36.38733, -86.41243 — https://www.openstreetmap.org/node/14232310401</description>
-</item>
-<item>
-<title>Flock Safety camera in Georgia</title>
-<link>/#map=17/33.70439/-84.16988&amp;cam=14232638101</link>
-<guid isPermaLink="false">osm-node-14232638101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>33.70439, -84.16988 — https://www.openstreetmap.org/node/14232638101</description>
-</item>
-<item>
-<title>Flock Safety camera in Tennessee</title>
-<link>/#map=17/35.56865/-86.34846&amp;cam=14232744808</link>
-<guid isPermaLink="false">osm-node-14232744808</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>35.56865, -86.34846 — https://www.openstreetmap.org/node/14232744808</description>
-</item>
-<item>
-<title>Flock Safety camera in Virginia</title>
-<link>/#map=17/36.76225/-76.55599&amp;cam=14232749701</link>
-<guid isPermaLink="false">osm-node-14232749701</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>36.76225, -76.55599 — https://www.openstreetmap.org/node/14232749701</description>
-</item>
-<item>
-<title>Flock Safety camera in Virginia</title>
-<link>/#map=17/36.75871/-76.53728&amp;cam=14232750101</link>
-<guid isPermaLink="false">osm-node-14232750101</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>36.75871, -76.53728 — https://www.openstreetmap.org/node/14232750101</description>
-</item>
-<item>
-<title>Flock Safety camera in Virginia</title>
-<link>/#map=17/36.74662/-76.61493&amp;cam=14232771201</link>
-<guid isPermaLink="false">osm-node-14232771201</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>36.74662, -76.61493 — https://www.openstreetmap.org/node/14232771201</description>
-</item>
-<item>
-<title>Flock Safety camera in Virginia</title>
-<link>/#map=17/36.74061/-76.58317&amp;cam=14232816501</link>
-<guid isPermaLink="false">osm-node-14232816501</guid>
-<pubDate>Tue, 20 Oct 2026 12:14:33 GMT</pubDate>
-<description>36.74061, -76.58317 — https://www.openstreetmap.org/node/14232816501</description>
+<title>Flock Safety camera in New York</title>
+<link>/#map=17/43.04912/-76.17084&amp;cam=14267830701</link>
+<guid isPermaLink="false">osm-node-14267830701</guid>
+<pubDate>Wed, 21 Oct 2026 12:41:10 GMT</pubDate>
+<description>43.04912, -76.17084 — https://www.openstreetmap.org/node/14267830701</description>
 </item>
 </channel></rss>
